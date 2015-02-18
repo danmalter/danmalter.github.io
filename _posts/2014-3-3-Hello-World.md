@@ -10,7 +10,7 @@ Next you can update your site name, avatar and other options using the _config.y
 
 ```{r regression}
 x = (1:5)
-x
+pritn(x)
 plot(x)
 ```
 
