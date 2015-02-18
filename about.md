@@ -12,4 +12,4 @@ A place to include any other types of information that you'd like to include abo
 
 ### Contact me
 
-[danmalter@gmail.com](mailto:email@domain.com)
+[danmalter@gmail.com](mailto:danmalter@gmail.com)
