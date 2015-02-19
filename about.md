@@ -1,15 +1,16 @@
 ---
 layout: page
 title: About
-permalink: /about/
+header: About
+group: navigation
+tagline: Jason C Fisher
 ---
+{% include JB/setup %}
 
-Some information about you!
+A hydrologist with the U.S. Geological Survey.
+My interests include groundwater modeling, optimization techniques, infographics, and [software development](https://github.com/jfisher-usgs).
+See [curriculum vitae](/cv.html) for additional information.
 
-### More Information
+![center](/figs/tower.jpg)
 
-A place to include any other types of information that you'd like to include about yourself. 
-
-### Contact me
-
-[danmalter@gmail.com](mailto:danmalter@gmail.com)
+##### "Hills cherish the ambition to turn into partial differential equations." --Donald Hall

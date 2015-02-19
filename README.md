@@ -1,6 +1,4 @@
-dim302.github.io
-================
+# Blog
 
-Personal GitHub Website
-
-- Files and folders for my personal GitHub website
+A [Jekyll](http://jekyllbootstrap.com) powered static 
+[blog](http://jfisher-usgs.github.com/) on GitHub.
