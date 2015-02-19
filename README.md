@@ -1,4 +1,6 @@
-# Blog
+dim302.github.io
+================
 
-A [Jekyll](http://jekyllbootstrap.com) powered static 
-[blog](http://jfisher-usgs.github.com/) on GitHub.
+Personal GitHub Website
+
+- Files and folders for my personal GitHub website
