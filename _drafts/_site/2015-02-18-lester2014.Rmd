@@ -1,7 +1,10 @@
 
 
+```{r, eval=FALSE}
+knitr::opts_chunk$set(fig.path='{{ site.url }}/images/2015-02-18-lester2014-')
+```
 
-```{r}
+```{r, eval=FALSE}
 setwd("~/pitchRx/Jon Lester")
 ```
 
