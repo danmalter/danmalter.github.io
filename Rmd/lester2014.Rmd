@@ -1,0 +1,168 @@
+---
+title: "Jon Lester June 28, 2014 Pitches vs. NY Yankeees"
+author: "Danny Malter"
+date: "December 22, 2014"
+output: html_document
+---
+
+```{r}
+setwd("~/pitchRx/Jon Lester")
+```
+
+Load in the required packages
+```{r, warning=FALSE, message=FALSE}
+require(mosaic)
+require(ggplot2)
+require(dplyr)
+library(plyr)
+require(ggplot2)
+require(RSQLite)
+require(pitchRx)
+require(knitr)
+require(animation)
+```
+
+Create a pitchRx database between the date ranges
+```{r, warning=FALSE, message=FALSE, results='hide'}
+db20140628 <- src_sqlite("MLB20140628.sqlite3", create = TRUE)
+scrape(start = "2014-06-28", end = "2014-06-28", connect = db20140628$con)
+```
+
+Join the location and names table into a new que table.  Select Jon Lester.
+```{r}
+locations <- select(tbl(db20140628, "pitch"), 
+                    pitch_type, px, pz, des, num, gameday_link, inning)
+names <- select(tbl(db20140628, "atbat"), pitcher_name, batter_name, 
+                num, b_height, gameday_link, event, stand)
+que <- inner_join(locations, filter(names, 
+                                    pitcher_name == "Jon Lester"),
+                  by = c("num", "gameday_link"))
+pitchfx <- collect(que)
+
+# Last pitch of an at-bat
+last.pitch <- ddply(pitchfx, .(num), function(x) x[nrow(x), ])
+```
+
+Create a new column with the full pitch type name.  Full pitch type is not to be used in strikeFX.
+```{r}
+pitchfx$pitch_type_full <- factor(pitchfx$pitch_type,
+                  levels=c("FF", "FC", "SI", "CH", "CU"),
+                  labels=c("Four-seam FB","Fastball (cutter)",
+                           "Sinker","Changeup", "Curveball"))
+```
+
+Count of each type of pitch
+```{r}
+table(pitchfx$pitch_type_full)
+```
+
+Count of each type of pitch by batter stand and inning
+```{r}
+with(pitchfx, table(pitch_type_full, stand))
+with(pitchfx, table(pitch_type_full, inning))
+```
+
+Count of pitch type by umpire call
+```{r}
+ball.strike <- subset(pitchfx, des == "Ball" | des == "Swinging Strike" | des == "Called Strike")
+ggplot(ball.strike, aes(x = pitch_type_full, fill = des)) +
+    geom_bar(position = "dodge") +
+    guides(fill=guide_legend(title='Call')) +
+    ggtitle("Count of Pitch Type") +
+    xlab('Pitch Type') +
+    ylab('Count')
+```
+
+Pitch type thrown to each type of batter
+```{r, warning=FALSE}
+# Overlay a strike zone
+topKzone <- 3.5
+botKzone <- 1.6
+inKzone <- -0.95
+outKzone <- 0.95
+kZone <- data.frame(
+  x=c(inKzone, inKzone, outKzone, outKzone, inKzone),
+  y=c(botKzone, topKzone, topKzone, botKzone, botKzone)
+)
+
+ggplot(pitchfx, aes(px, pz, color=pitch_type_full)) + geom_point() +
+  geom_path(aes(x, y), data=kZone, lwd=2, col="red") +
+  ylim(0, 5) + facet_wrap(~ batter_name, ncol=3) +
+  scale_color_discrete(name="Pitch Type") +
+  ggtitle("Pitch Type by Player (Catcher's Perspective)")
+```
+
+Derek Jeter's pitches broken down
+```{r, warning=FALSE}
+jeter <- subset(pitchfx, batter_name=="Derek Jeter")
+jeter.last <- ddply(jeter, .(num), function(x) x[nrow(x), ])
+
+ggplot(jeter.last, aes(px, pz, color=pitch_type_full)) + geom_point() +
+  geom_path(aes(x, y), data=kZone, lwd=2, col="red") +
+  ylim(0, 5) + facet_wrap(~ event, ncol=3) +
+  scale_color_discrete(name="Pitch Type") +
+  ggtitle("Derek Jeter's Events by Pitch (Catcher's Perspective)")
+
+ggplot(jeter, aes(px, pz, color=pitch_type_full)) + geom_point() +
+  geom_path(aes(x, y), data=kZone, lwd=2, col="red") +
+  ylim(0, 5) + facet_wrap(~ des, ncol=3) +
+  scale_color_discrete(name="Pitch Type") +
+  ggtitle("Derek Jeter's Description by All Pitches (Catcher's Perspective)")
+```
+
+Visualize Pitches
+All pitches
+```{r, warning=FALSE}
+strikeFX(pitchfx, geom="tile", layer=facet_grid(.~stand))
+```
+
+Just Called Strikes
+```{r, warning=FALSE}
+lester.called.strikes <- subset(pitchfx, des == "Called Strike")
+strikeFX(lester.called.strikes, geom="tile", layer=facet_grid(.~stand))
+```
+
+Just Balls
+```{r, warning=FALSE}
+lester.balls <- subset(pitchfx, des == "Ball")
+strikeFX(lester.balls, geom="tile", layer=facet_grid(.~stand))
+```
+
+Probability of a strike
+```{r, warning=FALSE, message=FALSE}
+require(mgcv)
+```
+
+```{r, warning=FALSE}
+noswing <- subset(pitchfx, des %in% c("Ball", "Called Strike"))
+noswing$strike <- as.numeric(noswing$des %in% "Called Strike")
+m1 <- bam(strike ~ s(px, pz, by=factor(stand)) +
+          factor(stand), data=noswing, family = binomial(link='logit'))
+strikeFX(noswing, model=m1, layer=facet_grid(.~stand))
+```
+
+Animation of pitches
+```{r, warning=FALSE, message=FALSE, results='hide'}
+data <- scrape(start="2014-06-28", end="2014-06-28")
+```
+
+
+```{r, eval=FALSE, fig.show='animate', warning=FALSE}
+names <- c("Jon Lester")
+atbats <- subset(data$atbat, pitcher_name %in% names)
+pitchFX <- plyr::join(atbats, data$pitch, by=c("num", "url"), type="inner")
+pitch.fast <- subset(pitchFX, pitch_type %in% c("FF", "FC", "SI"))
+pitch.offspeed <- subset(pitchFX, pitch_type %in% c("CU", "CH"))
+
+require(animation)
+
+setwd("~/pitchRx")
+animateFX(pitch.fast, layer=list(facet_grid(pitcher_name~stand, labeller = label_both), theme_bw(), coord_equal()))
+animateFX(pitch.offspeed, layer=list(facet_grid(pitcher_name~stand, labeller = label_both), theme_bw(), coord_equal()))
+ani.options(interval = 0.1)
+saveHTML({animateFX(pitch.fast, layer=list(facet_grid(pitch_type~stand, labeller = label_both), theme_bw(), coord_equal()))}, img.name="lester_fast_pitches")
+saveHTML({animateFX(pitch.offspeed, layer=list(facet_grid(pitch_type~stand, labeller = label_both), theme_bw(), coord_equal()))}, img.name="lester_slow_pitches")
+```
+Full Animation: http://www.ariball.com/news/12232014lester.html
+
+
