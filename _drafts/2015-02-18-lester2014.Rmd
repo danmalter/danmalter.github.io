@@ -8,7 +8,7 @@ category: R
 {% raw %}
 
 ```{r, eval=FALSE}
-knitr::opts_chunk$set(fig.path='dim302.github.io/images/2015-02-18-lester2014-')
+knitr::opts_chunk$set(fig.path='{{ site.url }}/images/2015-02-18-lester2014-')
 ```
 
 ```{r, eval=FALSE}
