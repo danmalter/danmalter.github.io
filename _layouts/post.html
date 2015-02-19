@@ -1,5 +1,9 @@
----
-layout: default
----
-{% include JB/setup %}
-{% include themes/twitter-2.0/post.html %}
+{% include main_header.html %}
+{% include main_sidebar.html %}
+
+<section>
+	{{ content }}
+	{% include disqus.html %}
+</section>
+
+{% include main_footer.html %}
