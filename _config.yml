@@ -2,5 +2,5 @@ markdown: redcarpet
 redcarpet:
   extensions: ["tables"]
 exclude: ["*.Rmd"]
-name: Nicole White
+name: Danny Malter
 description: R | Python | Math
