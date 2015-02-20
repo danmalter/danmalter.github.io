@@ -4,7 +4,3 @@ redcarpet:
 exclude: ["*.Rmd"]
 name: Danny Malter
 description: R | Python | Math
-
-<div >
-<embed width="532" height="532" name="plugin" src="/images/animation.swf" type="application/x-shockwave-flash"> 
-</div>
