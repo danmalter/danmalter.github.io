@@ -8,7 +8,7 @@ tags: [pitchRx, animint]
 {% raw %}
 
 
-{% highlight r %}
+```r
 library(devtools)
 devtools::source_gist(id = "da555f08f3c9ba2c0b8e")
 install_github("tdhock/animint")
@@ -38,7 +38,8 @@ viz <- list(bars = ggplot() +
                          alpha = 0.65, data = pitches))
 gg2animint(viz)
 animint2dir(viz)
-{% endhighlight %}
+```
+{% endraw %}
 
 
 <iframe src="http://danmalter.github.io/pitchRx/sale_kershaw1/" width="1200" height="500"> </iframe>
