@@ -87,5 +87,3 @@ plist2 <- list(strike = strike,
 
 structure(plist2, class = "animint")
 ```
-
-<iframe src="http://danmalter.github.io/sale_kershaw1//" width="1200" height="500"> </iframe>
