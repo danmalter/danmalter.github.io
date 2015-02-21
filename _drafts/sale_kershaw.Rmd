@@ -17,10 +17,11 @@ library(animint)
 library(pitchRx)
 library(dplyr)
 library(servr)
+require(animation)
 ```
 
 ```{r, warning=FALSE, message=FALSE, results='hide'}
-mlb.data <- scrape(start="2014-09-24", end="2014-10-15")
+mlb.data <- scrape(start="2014-09-24", end="2014-10-1")
 names <- c("Chris Sale", "Clayton Kershaw")
 atbats <- subset(mlb.data$atbat, pitcher_name %in% names)
 pitchFX <- plyr::join(atbats, mlb.data$pitch, by=c("num", "url"), type="inner")
