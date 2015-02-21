@@ -5,7 +5,6 @@ author: Danny Malter
 categories: [PITCHfx, interactive graphics]
 tags: [pitchRx, animint]
 ---
-{% include JB/setup %}
 
 
 ```{r dat, results='asis', tidy=FALSE, eval=FALSE}
