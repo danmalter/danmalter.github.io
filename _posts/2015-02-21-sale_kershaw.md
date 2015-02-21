@@ -42,4 +42,4 @@ animint2dir(viz)
 {% endraw %}
 
 
-<iframe src="http://danmalter.github.io/pitchRx/sale_kershaw1/" width="600" height="400"> </iframe>
+<iframe src="http://danmalter.github.io/pitchRx/sale_kershaw1/" width="600" height="800"> </iframe>
