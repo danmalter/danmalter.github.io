@@ -3,4 +3,4 @@ redcarpet:
   extensions: ["tables"]
 exclude: ["*.Rmd"]
 name: Danny Malter
-description: R | Python | Math
+description: 
