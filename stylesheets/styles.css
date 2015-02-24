@@ -256,7 +256,7 @@ footer {
 
 .circular {
 	width: 125px;
-	height: 125px;
+	height: 1250px;
 	border-radius: 50px;
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
@@ -266,4 +266,5 @@ footer {
 .circular img {
   border-radius:50%;
   transition: transform 0.5s ease;
+  transform: scale(0.8);
 }
