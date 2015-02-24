@@ -46,9 +46,10 @@ a small {
 }
 
 .wrapper {
-  width:960%;
+  width:960px;
   margin:0 auto;
-  
+  height: 100%;
+  min-height: 100%;
 }
 
 blockquote {
