@@ -41,7 +41,7 @@ setup_twitter_oauth(api_key,api_secret,access_token,access_token_secret)
 ```
 
 
-#### Data Processing #### 
+#### Data Processing
 
 Load in Hu & Liu's [opinion lexicon](http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html#lexicon) of positive and negative words
 
@@ -157,7 +157,7 @@ nlcentral.scores = rbind(cardinals.scores, pirates.scores, brewers.scores, reds.
 nlwest.scores = rbind(dodgers.scores, giants.scores, padres.scores, rockies.scores, diamondbacks.scores)
 ```
 
-#### Results #### 
+#### Results
 
 The top 6 bar graphs show the count of tweets for each team on the y-axis and the Twitter sentiment score on the x-axis, broken down by division. For example, the Blue Jays had roughly 800 of the 1500 tweets with a sentiment score of 0, about 500 with a sentiment score of +1, about 50 of the tweets had a sentiment score of +2 and so on.
 
