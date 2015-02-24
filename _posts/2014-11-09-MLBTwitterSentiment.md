@@ -190,6 +190,5 @@ ggplot(aleast.scores, aes(x=team, y=score, group=team)) +
 ![plot of chunk unnamed-chunk-19](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-19-1.png) 
 ![plot of chunk unnamed-chunk-20](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-20-1.png) ![plot of chunk unnamed-chunk-20](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-20-2.png) ![plot of chunk unnamed-chunk-20](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-20-3.png) ![plot of chunk unnamed-chunk-20](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-20-4.png) ![plot of chunk unnamed-chunk-20](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-20-5.png) 
 
-{% include google_analytics.html %}
 
 {% endraw %}
