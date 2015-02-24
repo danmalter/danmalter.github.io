@@ -263,7 +263,8 @@ footer {
 	background: url(https://pbs.twimg.com/profile_images/570079399957917696/6HlJvznd.jpeg) no-repeat;
 	}
 	
-	.circular img {
-	opacity: 0;
-	filter: alpha(opacity=0);
-	}
+.circular img {
+  border-radius:50%;
+  transition: transform 0.5s ease;
+  transform: scale(0.8);
+}
