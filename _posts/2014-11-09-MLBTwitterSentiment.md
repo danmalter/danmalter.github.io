@@ -1,10 +1,9 @@
 ---
 title: "Twitter Sentiment of MLB Teams"
-author: "Danny Malter"
-date: "November 9, 2014"
-output: html_document
+layout: post
+comments: true
+category: R
 ---
-======================================================
 
 {% raw %}
 
