@@ -8,4 +8,4 @@ category: R
 You can  view the full app
 [here](https://danmalter.shinyapps.io/HR-Hitters)
 
-<iframe src="https://danmalter.shinyapps.io/HR-Hitters" width="600" height="600"></iframe>
+<iframe src="https://danmalter.shinyapps.io/HR-Hitters" width="900" height="600"></iframe>
