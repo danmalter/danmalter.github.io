@@ -8,7 +8,7 @@ category: R
 {% raw %}
 
 #### Introduction ####
-In this assignment, I have scraped Twitter data for all 30 major league baseball teams and have given the tweet a positve or negative rating based off of Hu & Liu's [opinion lexicon](http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html).  For example, a tweet with 5 positve words and 3 negative words will be given a sentiment score of +2.  Each team is searched for in Twitter by using a hashtag followed by the team name. Teams with common names or with the same name as a team from another sport were included with the addition of the word ‘mlb’. For this analysis, 1,500 tweets were scraped for each team.
+In this tutorial, I have scraped Twitter data for all 30 major league baseball teams and have given the tweet a positve or negative rating based off of Hu & Liu's [opinion lexicon](http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html).  For example, a tweet with 5 positve words and 3 negative words will be given a sentiment score of +2.  Each team is searched for in Twitter by using a hashtag followed by the team name. Teams with common names or with the same name as a team from another sport were included with the addition of the word ‘mlb’. For this analysis, 1,500 tweets were scraped for each team.
 
 Although the season is nearly two weeks over, playoff teams tend to have a higher positive rating than non-playoff teams. The Royals, which were searched for by using both ‘#royals’ and ‘mlb’ in order to eliminate any common tweets with the word ‘royals’, are heavily weighted with positive tweets. After reading through tweets about the Royals, there seems to be a lot of optimism already about free agency and the 2015 season.
 
