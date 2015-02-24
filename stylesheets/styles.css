@@ -255,8 +255,8 @@ footer {
 }
 
 .circular {
-  width: 175px; 
-  height: 175px;
+  width: 150px; 
+  height: 150px;
   border-radius:80%;
   margin:25px;
 }
