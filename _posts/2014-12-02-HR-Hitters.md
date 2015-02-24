@@ -1,5 +1,5 @@
 ---
-title: "Historic Baseball Offensive Statistics"
+title: "Baseball Offensive Statistics Shiny App"
 layout: post
 comments: true
 category: R
@@ -9,6 +9,6 @@ category: R
 You can  view the full app
 [here](https://danmalter.shinyapps.io/HR-Hitters)
 
-<iframe src="https://danmalter.shinyapps.io/HR-Hitters" width="800" height="600"></iframe>
+<iframe src="https://danmalter.shinyapps.io/HR-Hitters" width="400" height="600"></iframe>
 
 {% endraw %}
