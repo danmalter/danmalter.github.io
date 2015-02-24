@@ -48,11 +48,6 @@ a small {
 .wrapper {
   width:960px;
   margin:0 auto;
-  min-height: 100%;
-  height:auto !important;
-  height:100%;
-  overflow: hidden !important; /* FF scroll-bar */ 
-  width: 100%;
 }
 
 blockquote {
@@ -260,8 +255,8 @@ footer {
 }
 
 .circular {
-  width: 175px; 
-  height: 175px;
+  width: 165px; 
+  height: 165px;
   border-radius:90%;
   margin:10px;
 }
