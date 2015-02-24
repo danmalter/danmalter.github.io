@@ -254,16 +254,17 @@ footer {
   }
 }
 
-.circular {
-	width: 150px;
-	height: 150px;
-	border-radius: 150px;
-	-webkit-border-radius: 50px;
-	-moz-border-radius: 50px;
-	background: url(https://pbs.twimg.com/profile_images/570079399957917696/6HlJvznd.jpeg) no-repeat;
-	}
-
-.circular img {
-	opacity: 0;
-	filter: alpha(opacity=0);
-	}
+.circle {
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+}
+.circle img {
+    border-radius: 50%;
+    display: block;
+}
+.background-circle {
+    background-image: url( 'https://pbs.twimg.com/profile_images/570079399957917696/6HlJvznd.jpeg' );
+    height: 200px;
+    width: 200px;
+}
