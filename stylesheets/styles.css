@@ -257,12 +257,12 @@ footer {
 .circular {
   width: 175px; 
   height: 175px;
-  border-radius:50%;
+  border-radius:80%;
   margin:25px;
 }
 
 .circular img {
-  border-radius:30%;
+  border-radius:50%;
   transition: transform 0.5s ease;
   transform: scale(0.8);
 }
