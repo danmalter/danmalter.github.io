@@ -50,7 +50,7 @@ pos.words <- scan('/Users/Malter/Twitter/positive-words.txt', what='character', 
 neg.words <- scan('/Users/Malter/Twitter/negative-words.txt', what='character', comment.char=';')
 ```
 
-Twitter Score Sentiment <br>
+Twitter Score Sentiment
 To give a sentiment score to each tweet, I used a scoring sentiment function created by [Jeff Breen](https://github.com/jeffreybreen/twitter-sentiment-analysis-tutorial-201107)
 
 ```r
@@ -77,7 +77,7 @@ score.sentiment = function(sentences, pos.words, neg.words, .progress='none')
 }
 ```
 
-I then want to scrape Twitter for each MLB team using the team's official hashtag.  Team names that coincide with other sports or common terms were included with an @ rather than a # to include the teams official Twitter handle. <br>
+I then want to scrape Twitter for each MLB team using the team's official hashtag.  Team names that coincide with other sports or common terms were included with an @ rather than a # to include the teams official Twitter handle.
 - Example code for AL East
 
 ```r
@@ -89,7 +89,7 @@ redsox.tweets <- searchTwitter('#redsox', n=500, lang="en")
 ```
 
 
-Create an array of the output text for each division. <br>
+Create an array of the output text for each division.
 - Example code for AL East
 
 ```r
@@ -101,7 +101,7 @@ redsox.text = laply(redsox.tweets, function(t) t$getText())
 ```
 
 
-Strip out funny characters, such as emoticons. <br>
+Strip out funny characters, such as emoticons.
 - Example code for AL East
 
 ```r
@@ -113,7 +113,7 @@ redsox.text = gsub("[^[:alnum:]|^[:space:]]", "", redsox.text)
 ```
 
 
-Use the above scoring function to give a score to each team's tweet recorded. <br>
+Use the above scoring function to give a score to each team's tweet recorded.
 
 ```r
 orioles.scores <- score.sentiment(orioles.text, pos.words, 
@@ -129,7 +129,7 @@ redsox.scores <- score.sentiment(redsox.text, pos.words,
 ```
 
 
-Give a name and code to each team. <br>
+Give a name and code to each team.
 - Example code for AL East
 
 ```r
