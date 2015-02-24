@@ -171,7 +171,7 @@ ggplot(data=aleast.scores) +
     labs(title="AL East Sentiment")
 ```
 
-![plot of chunk unnamed-chunk-17](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-17-1.png){ width: 200px; } 
+![plot of chunk unnamed-chunk-17](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-17-1.png) 
 ![plot of chunk unnamed-chunk-18](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-18-1.png) ![plot of chunk unnamed-chunk-18](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-18-2.png) ![plot of chunk unnamed-chunk-18](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-18-3.png) ![plot of chunk unnamed-chunk-18](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-18-4.png) ![plot of chunk unnamed-chunk-18](/figure/2014-11-09-MLBTwitterSentiment/unnamed-chunk-18-5.png) 
 
 The bottom 6 box plots have the team's Twitter sentiment score on the y-axis and the team name on the x-axis. There are 1,500 dots for each team with each dot representing the score given for each tweet. The larger the height of the box plot, the larger the distribution between positive and negative tweets. 
