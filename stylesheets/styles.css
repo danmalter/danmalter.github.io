@@ -262,7 +262,7 @@ footer {
 }
 
 .circular img {
-  border-radius:50%;
+  border-radius:55%;
   transition: transform 0.5s ease;
   transform: scale(0.8);
 }
