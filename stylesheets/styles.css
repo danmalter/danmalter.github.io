@@ -48,7 +48,6 @@ a small {
 .wrapper {
   width:960px;
   margin:0 auto;
-  display:inline-block;
 }
 
 blockquote {
@@ -254,3 +253,23 @@ footer {
     color:#444;
   }
 }
+
+.circular {
+  width: 160px; 
+  height: 160px;
+  border-radius:90%;
+  margin:10px;
+}
+
+.circular img {
+  border-radius:50%;
+  transition: transform 0.5s ease;
+  transform: scale(0.8);
+}
+
+.circular img:hover {
+  transform: scale(.9);
+  /*
+  transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  */
+} 
