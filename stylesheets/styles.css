@@ -255,14 +255,14 @@ footer {
 }
 
 .circular {
-  width: 200px; 
-  height:200px;
-  border-radius:25%;
+  width: 175px; 
+  height: 175px;
+  border-radius:50%;
   margin:25px;
 }
 
 .circular img {
-  border-radius:50%;
+  border-radius:30%;
   transition: transform 0.5s ease;
   transform: scale(0.8);
 }
