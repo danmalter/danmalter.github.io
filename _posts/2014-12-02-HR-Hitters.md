@@ -9,6 +9,6 @@ category: R
 You can  view the full app
 [here](https://danmalter.shinyapps.io/HR-Hitters)
 
-<iframe src="https://danmalter.shinyapps.io/HR-Hitters" width="200" height="600"></iframe>
+<iframe src="https://danmalter.shinyapps.io/HR-Hitters" width="300" height="600"></iframe>
 
 {% endraw %}
