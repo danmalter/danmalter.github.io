@@ -256,15 +256,15 @@ footer {
 
 .circle {
     border: 1px solid black;
-    border-radius: 50%;
+    border-radius: 20%;
     display: inline-block;
 }
 .circle img {
-    border-radius: 50%;
+    border-radius: 20%;
     display: block;
 }
 .background-circle {
     background-image: url( 'https://pbs.twimg.com/profile_images/570079399957917696/6HlJvznd.jpeg' );
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
