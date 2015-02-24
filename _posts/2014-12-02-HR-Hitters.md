@@ -1,6 +1,5 @@
 ---
 title: "Baseball Offensive Statistics Shiny App"
-layout: post
 comments: true
 category: R
 ---
