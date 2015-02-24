@@ -48,8 +48,11 @@ a small {
 .wrapper {
   width:960px;
   margin:0 auto;
-  height: 100%;
   min-height: 100%;
+  height:auto !important;
+  height:100%;
+  overflow: hidden !important; /* FF scroll-bar */ 
+  width: 100%;
 }
 
 blockquote {
