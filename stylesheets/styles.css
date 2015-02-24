@@ -266,5 +266,4 @@ footer {
 .circular img {
   border-radius:50%;
   transition: transform 0.5s ease;
-  transform: scale(0.8);
 }
