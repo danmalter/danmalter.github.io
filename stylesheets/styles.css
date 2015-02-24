@@ -46,9 +46,9 @@ a small {
 }
 
 .wrapper {
-  width:960px;
+  width:960%;
   margin:0 auto;
-  overflow:scroll;
+  
 }
 
 blockquote {
