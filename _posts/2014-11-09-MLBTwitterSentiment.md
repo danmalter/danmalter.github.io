@@ -33,24 +33,25 @@ library(bit64)
 Access Twitter's API
 
 ```r
-#api_key <- "####"
-#api_secret <- "####"
-#access_token <- "####"
-#access_token_secret <- "####"
-#setup_twitter_oauth(api_key,api_secret,access_token,access_token_secret)
+api_key <- "####"
+api_secret <- "####"
+access_token <- "####"
+access_token_secret <- "####"
+setup_twitter_oauth(api_key,api_secret,access_token,access_token_secret)
 ```
 
 
 #### Data Processing  #### 
-Load in Hu & Liu's [opinion lexicon](http://www.cs.uic.edu/~liub/FBS/opinion-lexicon-English.rar) of positive and negative words
+
+Load in Hu & Liu's [opinion lexicon](http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html#lexicon) of positive and negative words
 
 ```r
 pos.words <- scan('/Users/Malter/Twitter/positive-words.txt', what='character', comment.char=';')
 neg.words <- scan('/Users/Malter/Twitter/negative-words.txt', what='character', comment.char=';')
 ```
 
-Twitter Score Sentiment<br>
-Use a score sentiment function created by [Jeff Breen](https://github.com/jeffreybreen/twitter-sentiment-analysis-tutorial-201107)
+Twitter Score Sentiment <br>
+To give a sentiment score to each tweet, I used a scoring sentiment function created by [Jeff Breen](https://github.com/jeffreybreen/twitter-sentiment-analysis-tutorial-201107)
 
 ```r
 score.sentiment = function(sentences, pos.words, neg.words, .progress='none')
@@ -76,7 +77,7 @@ score.sentiment = function(sentences, pos.words, neg.words, .progress='none')
 }
 ```
 
-Scrape Twitter for each MLB team using the team's official hashtag.  Team names that coincide with other sports or common terms were included with an @ rather than a #. <br>
+I then want to scrape Twitter for each MLB team using the team's official hashtag.  Team names that coincide with other sports or common terms were included with an @ rather than a # to include the teams official Twitter handle. <br>
 - Example code for AL East
 
 ```r
@@ -112,7 +113,7 @@ redsox.text = gsub("[^[:alnum:]|^[:space:]]", "", redsox.text)
 ```
 
 
-Give a score to each team's tweet recorded. <br>
+Use the above scoring function to give a score to each team's tweet recorded. <br>
 
 ```r
 orioles.scores <- score.sentiment(orioles.text, pos.words, 
@@ -128,7 +129,7 @@ redsox.scores <- score.sentiment(redsox.text, pos.words,
 ```
 
 
-Give a name and code to each team <br>
+Give a name and code to each team. <br>
 - Example code for AL East
 
 ```r
@@ -145,7 +146,7 @@ redsox.scores$code = 'BOS'
 ```
 
 
-Use rbind to put together tweets from each division
+Use rbind to combine tweets from each division in order to later graph by divisions.
 
 ```r
 aleast.scores = rbind(orioles.scores, yankees.scores, bluejays.scores, rays.scores, redsox.scores)
@@ -157,9 +158,9 @@ nlwest.scores = rbind(dodgers.scores, giants.scores, padres.scores, rockies.scor
 ```
 
 #### Results  #### 
+
 The top 6 bar graphs show the count of tweets for each team on the y-axis and the Twitter sentiment score on the x-axis, broken down by division. For example, the Blue Jays had roughly 800 of the 1500 tweets with a sentiment score of 0, about 500 with a sentiment score of +1, about 50 of the tweets had a sentiment score of +2 and so on.
 
-Create a bar plot for each division <br>
 - Example code for AL East <br>
 
 ```r
@@ -175,7 +176,6 @@ ggplot(data=aleast.scores) +
 
 The bottom 6 box plots have the team's Twitter sentiment score on the y-axis and the team name on the x-axis. There are 1,500 dots for each team with each dot representing the score given for each tweet. The larger the height of the box plot, the larger the distribution between positive and negative tweets. 
 
-Create a box plot for each division <br>
 - Example code for AL East <br>
 
 
