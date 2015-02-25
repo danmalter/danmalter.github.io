@@ -78,6 +78,7 @@ score.sentiment = function(sentences, pos.words, neg.words, .progress='none')
 ```
 
 I then want to scrape Twitter for each MLB team using the team's official hashtag.  Team names that coincide with other sports or common terms were included with an @ rather than a # to include the teams official Twitter handle. <br>
+
 - Example code for AL East
 
 ```r
@@ -90,6 +91,7 @@ redsox.tweets <- searchTwitter('#redsox', n=500, lang="en")
 
 
 Create an array of the output text for each division. <br>
+
 - Example code for AL East
 
 ```r
@@ -102,6 +104,7 @@ redsox.text = laply(redsox.tweets, function(t) t$getText())
 
 
 Strip out funny characters, such as emoticons. <br>
+
 - Example code for AL East
 
 ```r
@@ -130,6 +133,7 @@ redsox.scores <- score.sentiment(redsox.text, pos.words,
 
 
 Give a name and code to each team. <br>
+
 - Example code for AL East
 
 ```r
