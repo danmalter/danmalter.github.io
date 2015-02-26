@@ -204,6 +204,8 @@ ggplot(aleast.scores, aes(x=team, y=score, group=team)) +
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-57468410-2', 'auto');
-  ga('send', 'pageview');
+  ga('send', 'pageview' {
+  'title': '2014 MLB Twitter Sentiment'
+  });
 
 </script>
