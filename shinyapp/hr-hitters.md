@@ -1,9 +1,6 @@
 ---
-layout: post
-title: "Fun with pitchRx and animint"
+title: "Baseball Offensive Statistics Shiny App"
 author: Danny Malter
-categories: [PITCHfx, interactive graphics]
-tags: [pitchRx, animint]
 ---
 
 <iframe src="https://danmalter.shinyapps.io/HR-Hitters/" width="1200" height="500"> </iframe>
