@@ -2,6 +2,6 @@
 title: "Baseball Offensive Statistics Shiny App"
 ---
 <script>
-top.window.location = 'https://danmalter.shinyapps.io/shinyapp/HR-Hitters';
+top.window.location = 'http://danmalter.github.io/shinyapp/hr-hitters';
 </script>
 
