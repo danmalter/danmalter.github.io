@@ -84,22 +84,10 @@ img {
 
 <pre class="r"><code>library(ggvis)
 library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: 'dplyr'
-## 
-## The following object is masked from 'package:stats':
-## 
-##     filter
-## 
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
+
 <pre class="r"><code>ncaa &lt;- paste(&quot;https://www.dropbox.com/s/pappjoov6ozvvf0/ncaa.csv?dl=0&quot;)
 ncaa &lt;- repmis::source_data(ncaa, sep = &quot;,&quot;, header = TRUE)</code></pre>
-<pre><code>## Downloading data from: https://www.dropbox.com/s/pappjoov6ozvvf0/ncaa.csv?dl=0 
-## 
-## SHA-1 hash of the downloaded data file is:
-## 21c4d15b5f7f63db967d5250ab59b8055e5b1df6</code></pre>
+
 <pre class="r"><code>ncaa$id &lt;- 1:nrow(ncaa)
 
 all_values &lt;- function(x) {
