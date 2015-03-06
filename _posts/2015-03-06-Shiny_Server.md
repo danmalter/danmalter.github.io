@@ -60,7 +60,7 @@ sudo apt-get install r-base
 sudo apt-get install r-base-dev
 ```
 
-Install Shiny package, [Shiny Server](http://www.rstudio.com/products/shiny/download-server/), and other packages that you may need.  Down the road, other packages can be uploaded through a drag and drop process with and SFTP client and will discussed later.
+Install the Shiny package, <a href="http://www.rstudio.com/products/shiny/download-server/" target="_blank">Shiny Server</a>, and other packages that you may need.  Down the road, other packages can be uploaded through a drag and drop process with and SFTP client and will discussed later.
 
 To install the Shiny package, run the following command in the Terminal.
 
@@ -78,7 +78,7 @@ sudo gdebi shiny-server-1.3.0.403-amd64.deb
 ```
 
 #### Install an SFTP client to Upload Files ####
-This process can all be done in the Terminal, but a perhaps easier way to upload R files to the terminal is through an SFTP client, such as [Cyberduck](http://download.cnet.com/Cyberduck/3000-2160_4-10246246.html).
+This process can all be done in the Terminal, but a perhaps easier way to upload R files to the terminal is through an SFTP client, such as <a href="http://download.cnet.com/Cyberduck/3000-2160_4-10246246.html" target="_blank">Cyberduck</a>.
 
 - Once you hav downloaded Cyberduck, click "Open Connection" and select SFT (SSH File Transfer Protocol).  Enter in your Public DNS from your Amazon EC2 instance and put "ubuntu" in for the username.   Under More Options, check "Use Public Key Authentication" and direct the path to your AWS keypair on your computer.  Then click "Connect"
 
