@@ -42,7 +42,7 @@ Open the Terminal in your Mac and type the following command:
 ssh -i [path to your AWS keypair .pem file] ubuntu@[your public DNS address]
 ```
 
-An example of this would be:
+Example:
 
 ```r
 ssh -i /Users/Malter/Documents/AWSkeypair.pem ubuntu@ec2-52-1-117-130.compute-1.amazonaws.com
@@ -93,7 +93,7 @@ To give Cyberduck permission in all of the directories within the server, type i
 sudo chown -R [Cyberduck username] [directory where you want write permissions]
 ```
 
-An example of this would be:
+Example:
 
 ```r
 sudo chown -R ubuntu /srv/*
@@ -103,14 +103,14 @@ There should already be a foler in the /srv/shiny-server directory called "sampl
 
 [public DNS]:3838
 
-Example:
+Example:<br>
 <a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838" target="_blank">http://ec2-52-1-117-130.compute-1.amazonaws.com:3838</a>
 
 ### Host Multiple Shiny Application through this Server ###
 
 In order to host other applications, simply create a new folder in /srv/shiny-server and drag in the respective ui, server and other files that go with the application.  For example, I have created a new folder called "HR-Hitter" located at /srv/shiny-server/HR-Hitters.
 
-This can be seen at:
+Example: <br>
 <a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/" target="_blank">http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/</a>
 
 <a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/" target="_blank"> </a>
