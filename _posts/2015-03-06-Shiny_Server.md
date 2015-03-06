@@ -12,25 +12,26 @@ category: R
 ### Setting up an Amazon EC2 Instance ###
 
 - Create an Amazon Web Services (AWS) account if you do not have one.  This can be done using your regular Amazon account information. 
+
 - On the Amazon Web Services page, click on EC2 Virtual Servers in the Cloud. 
+
 - Once on the EC2 dashboard, click the "Launch Instance" button.
 
 - There are more than one ways up setting up an Instance, but for the purpose of this demonstration, select Ubuntu Server 14.04.  This is a free tier 64-bit server.
 
 - Continue clicking next through the configuration options until you reach Step 6: Configure Security Group. 
-Input the security settings as seen in the below image. T
-he initial SSH setting makes sure only you can access your Amazon EC2 instance to make changes. 
+Input the security settings as seen in the below image. The initial SSH setting makes sure only you can access your Amazon EC2 instance to make changes. 
 The HTTP setting allows anyone to access your web application. 
 The last setting connection is for Shiny server specifically. Once you have input all the correct settings, click “Review and Launch”. 
 <b>Just a note that these are suggested options for security, please use discretion and read Amazon EC2 security documentation for additional details.</b>
   
 ![plot of chunk shinyImage1](/figure/shiny_server/shinyImage1.png) 
 
-- On the next page, you will get a wanring about security, but you can just go ahead and click the "Launch" button.
+- On the next page, you will get a warning about security, but you can just go ahead and click the "Launch" button.
 
 - Unless you already have an AWS keypair from a previous instance, you will need to create a new key pair and give it a name.  DOWNLOAD the keypair and place it somewhere that you will remember.  Then click the "Launch Instances" button.
 
-- You can click the "View Instances" to see your instance, which should be running witha green circle next to it.  By clicking on the instance, you can see useful information, such as the Public DNS that will be used later.
+- You can click the "View Instances" to see your instance, which should be running with a green circle next to it.  By clicking on the instance, you can see useful information, such as the Public DNS that will be used later.
 
 ![plot of chunk shinyImage2](/figure/shiny_server/shinyImage2.png) 
 
