@@ -105,14 +105,14 @@ There should already be a foler in the /srv/shiny-server directory called "sampl
 
 Example:
 
-http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/:3838
+<a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838" target="_blank">
 
 ### Host Multiple Shiny Application through this Server ###
 
 In order to host other applications, simply create a new folder in /srv/shiny-server and drag in the respective ui, server and other files that go with the application.  For example, I have created a new folder called "HR-Hitter" located at /srv/shiny-server/HR-Hitters.
 
 This can be seen at:
-http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/
+<a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/" target="_blank">
 
 ![plot of chunk shinyImage4](/figure/shiny_server/shinyImage4.png) 
 
