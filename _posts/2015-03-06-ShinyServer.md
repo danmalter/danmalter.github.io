@@ -1,8 +1,8 @@
 ---
 title: "Guide to Hosting Shiny Apps on Amazon EC2 for Mac OSX"
-author: "Danny Malter"
-date: "Friday, March 06, 2015"
-output: html_document
+layout: post
+comments: true
+category: R
 ---
 
 {% raw %}
@@ -36,13 +36,13 @@ The last setting connection is for Shiny server specifically. Once you have inpu
 # Connect to Server vis SSH #
 Open the Terminal in your Mac and type the following command:
 
-```{r}
+```r
 ssh -i [path to your AWS keypair .pem file] ubuntu@[your public DNS address]
 ```
 
 An example of this would be:
 
-```{r}
+```r
 ssh -i /Users/Malter/Documents/AWSkeypair.pem ubuntu@ec2-52-1-117-130.compute-1.amazonaws.com
 ```
 
@@ -52,7 +52,7 @@ You will be promted about whether you are sure that you want to connect, and sho
 # Install [R](http://www.rstudio.com/products/shiny/download-server/) #
 Run the following commands in the Terminal.
 
-```{r}
+```r
 sudo apt-get update
 sudo apt-get install r-base
 sudo apt-get install r-base-dev
@@ -62,14 +62,14 @@ Install Shiny package, [Shiny Server](http://www.rstudio.com/products/shiny/down
 
 To install the Shiny package, run the following command in the Terminal.
 
-```{r}
+```r
 sudo su - \
 -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
 ```
 
 To install Shiny Server, run the following commands in the Terminal.
 
-```{r}
+```r
 sudo apt-get install gdebi-core
 wget http://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.3.0.403-amd64.deb
 sudo gdebi shiny-server-1.3.0.403-amd64.deb
@@ -87,13 +87,13 @@ Once connected, you will be automatically placed into the directory /home/ubuntu
 
 To give Cyberduck permission in all of the directories within the server, type into the Terminal:
 
-```{r}
+```r
 sudo chown -R [Cyberduck username] [directory where you want write permissions]
 ```
 
 An example of this would be:
 
-```{r}
+```r
 sudo chown -R ubuntu /srv/*
 ```
 
@@ -121,19 +121,19 @@ As noted earlier, you can upload R packages one of two ways, through the termina
 
 - The location of R packages on a Mac are in hidden folders.  You can see the specific path where packages are located in RStudio if you click on Tools --> Install Packages.  To open this folder on your Mac, type into the Terminal "open"" followed by the path to your libraries.  This will automatically open a new Finder window to this directory.
 
-```{r}
+```r
 open /Library/Frameworks/R.framework/Versions/3.1/Resources/library
 ```
 
 - The location of packages in Cyberduck is through the path /usr/local/lib/R/site-library.  Typically, you should be able to drag folders from your computer to the site-library folder on Cyberduck, but I came across some security issues preventing me from doing this.  To get around that, I typed the following into the terminal, which then allowed me to drag library folders from my computer onto the server.
 
-```{r}
+```r
 sudo chmod -R 777 /usr/local/lib/R
 ```
 
 Note: This command is through Ubuntu, so you will have to either be connected to your Server or reconnect using: 
 
-```{r}
+```r
 ssh -i [path to your AWS keypair .pem file] ubuntu@[your public DNS address]
 ```
 
