@@ -141,6 +141,20 @@ Note: This command is through Ubuntu, so you will have to either be connected to
 ssh -i [path to your AWS keypair .pem file] ubuntu@[your public DNS address]
 ```
 
+### Keeping R up to Date ###
+
+- You may come across that the Ubuntu version of R is not up to date with the latest version of R.  Full 
+instructions can be read on <a href="http://cran.r-project.org/bin/linux/ubuntu/" target="_blank">CRAN</a>, 
+but here is a summary.  First you need a <a href="http://cran.r-project.org/mirrors.html" target="_blank">CRAN mirror</a> and then type the folowing into the Terminal.
+
+```r
+sudo su
+echo "deb http://www.stats.bris.ac.uk/R/bin/linux/ubuntu precise/" >> /etc/apt/sources.list
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+apt-get update
+apt-get upgrade
+```
+
 
 {% endraw %}
 
