@@ -51,7 +51,7 @@ ssh -i /Users/Malter/Documents/AWSkeypair.pem ubuntu@ec2-52-1-117-130.compute-1.
 You will be promted about whether you are sure that you want to connect, and should press enter.
 
 
-#### Install [R](http://www.rstudio.com/products/shiny/download-server/) ####
+#### Install R - [Official Instructions](http://www.rstudio.com/products/shiny/download-server/) ####
 Run the following commands in the Terminal.
 
 ```r
