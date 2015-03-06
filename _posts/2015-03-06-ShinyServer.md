@@ -7,7 +7,9 @@ category: R
 
 {% raw %}
 
-# Setting up an Amazon EC2 Instance #
+# Guide to Hosting Shiny Apps on Amazon EC2 for Mac OSX #
+
+#### Setting up an Amazon EC2 Instance ####
 
 - Create an Amazon Web Services (AWS) account if you do not have one.  This can be done using your regular Amazon account information. 
 - On the Amazon Web Services page, click on EC2 Virtual Servers in the Cloud. 
@@ -33,7 +35,7 @@ The last setting connection is for Shiny server specifically. Once you have inpu
 ![plot of chunk shinyImage2](/figure/shiny_server/shinyImage2.png) 
 
 
-# Connect to Server vis SSH #
+#### Connect to Server vis SSH ####
 Open the Terminal in your Mac and type the following command:
 
 ```r
@@ -49,7 +51,7 @@ ssh -i /Users/Malter/Documents/AWSkeypair.pem ubuntu@ec2-52-1-117-130.compute-1.
 You will be promted about whether you are sure that you want to connect, and should press enter.
 
 
-# Install [R](http://www.rstudio.com/products/shiny/download-server/) #
+#### Install [R](http://www.rstudio.com/products/shiny/download-server/) ####
 Run the following commands in the Terminal.
 
 ```r
@@ -75,7 +77,7 @@ wget http://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.3.0.403-amd
 sudo gdebi shiny-server-1.3.0.403-amd64.deb
 ```
 
-# Install an SFTP client to Upload Files #
+#### Install an SFTP client to Upload Files ####
 This process can all be done in the Terminal, but a perhaps easier way to upload R files to the terminal is through an SFTP client, such as [Cyberduck](http://download.cnet.com/Cyberduck/3000-2160_4-10246246.html).
 
 - Once you hav downloaded Cyberduck, click "Open Connection" and select SFT (SSH File Transfer Protocol).  Enter in your Public DNS from your Amazon EC2 instance and put "ubuntu" in for the username.   Under More Options, check "Use Public Key Authentication" and direct the path to your AWS keypair on your computer.  Then click "Connect"
@@ -105,7 +107,7 @@ Example:
 
 http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/:3838
 
-# Host Multiple Shiny Application through this Server #
+#### Host Multiple Shiny Application through this Server ####
 
 In order to host other applications, simply create a new folder in /srv/shiny-server and drag in the respective ui, server and other files that go with the application.  For example, I have created a new folder called "HR-Hitter" located at /srv/shiny-server/HR-Hitters.
 
@@ -115,7 +117,7 @@ http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/
 ![plot of chunk shinyImage4](/figure/shiny_server/shinyImage4.png) 
 
 
-# Upload to R Packages to Shiny Server #
+#### Upload more R Packages to Shiny Server ####
 
 As noted earlier, you can upload R packages one of two ways, through the terminal or with a drag and drop method using an SFTP client.  We already discussed how to upload a new package in the Terminal, so now i will show you how to upload a new package using Cyberduck.
 
