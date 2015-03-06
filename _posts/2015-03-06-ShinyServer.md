@@ -5,6 +5,8 @@ date: "Thursday, February 26, 2015"
 output: html_document
 ---
 
+{% raw %}
+
 # Setting up an Amazon EC2 Instance #
 
 - Create an Amazon Web Services (AWS) account if you do not have one.  This can be done using your regular Amazon account information. 
@@ -134,3 +136,17 @@ Note: This command is through Ubuntu, so you will have to either be connected to
 ```{r}
 ssh -i [path to your AWS keypair .pem file] ubuntu@[your public DNS address]
 ```
+
+
+{% endraw %}
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57468410-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
