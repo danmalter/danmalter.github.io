@@ -1,7 +1,7 @@
 ---
 title: "Guide to Hosting Shiny Apps on Amazon EC2 for Mac OSX"
 author: "Danny Malter"
-date: "Thursday, February 26, 2015"
+date: "Friday, March 06, 2015"
 output: html_document
 ---
 
