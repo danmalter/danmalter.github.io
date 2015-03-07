@@ -1,5 +1,5 @@
 ---
-title: "Twitter Sentiment of MLB Teams"
+title: "Twitter Sentiment Analysis in R"
 layout: post
 comments: true
 category: R
