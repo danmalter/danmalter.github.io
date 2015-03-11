@@ -1,0 +1,46 @@
+---
+title: "2014-15 NCAA Mens Basketball AP Top 10 using ggvis"
+layout: post
+comments: true
+category: R
+---
+
+
+```{r}
+library(ggvis)
+library(dplyr)
+
+ncaa <- paste("https://www.dropbox.com/s/pappjoov6ozvvf0/ncaa.csv?dl=0")
+ncaa <- repmis::source_data(ncaa, sep = ",", header = TRUE)
+```
+
+
+```{r}
+ncaa$id <- 1:nrow(ncaa)
+
+all_values <- function(x) {
+  if(is.null(x)) return(NULL)
+  
+  paste0(ncaa$Team[x$id],            
+         "<br>",
+         ncaa$Record[x$id]
+  )
+}
+```
+
+
+```{r}
+ncaa  %>%
+  ungroup() %>%
+  ggvis(~Week,~Rank, stroke = ~Team) %>%
+  layer_points(size := 40, size.hover := 200, fill = ~Team, key:=~id) %>%
+  layer_lines(stroke.hover = ~Team, strokeWidth.hover := 8, strokeWidth := 1) %>%
+  add_axis("x", orient = "top", ticks = 0, title = "NCAA Men's Basketball AP Top 10",
+           properties = axis_props(
+             axis = list(stroke = "white"),
+             labels = list(fontSize = 0))) %>%
+  add_axis("x", title="Week",  subdivide = 0, values = seq(1, 18, by = 1), format="####") %>%
+  add_axis("y", title="Rank", subdivide = 0, values = seq(1, 10, by = 1), format='####') %>%
+  scale_numeric("y", reverse=TRUE) %>%
+  add_tooltip(all_values, "hover")
+```
