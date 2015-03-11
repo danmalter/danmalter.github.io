@@ -39,7 +39,7 @@ ncaa  %>%
            properties = axis_props(
              axis = list(stroke = "white"),
              labels = list(fontSize = 0))) %>%
-  add_axis("x", title="Week",  subdivide = 0, values = seq(1, 17, by = 1), format="####") %>%
+  add_axis("x", title="Week",  subdivide = 0, values = seq(1, 18, by = 1), format="####") %>%
   add_axis("y", title="Rank", subdivide = 0, values = seq(1, 10, by = 1), format='####') %>%
   scale_numeric("y", reverse=TRUE) %>%
   add_tooltip(all_values, "hover")
