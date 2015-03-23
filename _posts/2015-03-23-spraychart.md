@@ -7,8 +7,9 @@ category: R
 
 {% raw %}
 
+# MLB Spray Charts #
 
-
+- Load in the required packages
 ```r
 library(mosaic)
 library(ggplot2)
@@ -19,17 +20,15 @@ library(RSQLite)
 library(pitchRx)
 ```
 
-
+- Download MLB Gameday data from mlb.com.  Downloading a full season's worth of data may take a few minutes.
 ```r
-setwd("~/GitHub/Spray Chart")
 files <- c("inning/inning_hit.xml", "players.xml", "miniscoreboard.xml")
 my_db <- src_sqlite("MLB2014.sqlite3", create = TRUE)
-#scrape(start = "2014-03-30", end = "2014-09-30", connect = my_db$con, suffix = files)
+scrape(start = "2014-03-30", end = "2014-09-30", connect = my_db$con, suffix = files)
 ```
 
-
+Merge together the locations table to produce a master table.  In this case, I filter just to look at the spray chart of Jose Abreu.
 ```r
-# There is no key that allows the tables to be joined, so I write to a dataframe.
 locations <- select(tbl(my_db, "hip"), des, x, y, batter, pitcher, type, team, inning)
 locations <- as.data.frame(locations, n=-1)
 locations <- locations[!duplicated(locations),]
@@ -62,7 +61,7 @@ names(spraychart)[names(spraychart) == 'des'] <- 'Description'
 spraychart <- subset(spraychart, batter.name=="Jose Abreu")
 ```
 
-
+Create a ggvis tooltip to be used when hovering over points.
 ```r
 # Create ggvis tooltip  
 spraychart$id <- 1:nrow(spraychart)
@@ -79,7 +78,7 @@ all_values <- function(x) {
 ```
 
 
-
+Create a ggvis interactive graph of the coodinates of each outcome.
 ```r
 spraychart %>%
   ggvis(~x, ~-y+250) %>%
