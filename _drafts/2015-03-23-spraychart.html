@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -75,6 +74,24 @@ img {
 
 <p>{% raw %}</p>
 <pre class="r"><code>library(mosaic)</code></pre>
+<pre><code>## Loading required package: car</code></pre>
+<pre><code>## Warning: package 'car' was built under R version 3.1.3</code></pre>
+<pre><code>## Loading required package: dplyr
+## 
+## Attaching package: 'dplyr'
+## 
+## The following object is masked from 'package:stats':
+## 
+##     filter
+## 
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+## 
+## Loading required package: lattice
+## Loading required package: ggplot2</code></pre>
+<pre><code>## Warning: package 'ggplot2' was built under R version 3.1.3</code></pre>
+<pre><code>## 
 ## Attaching package: 'mosaic'
 ## 
 ## The following objects are masked from 'package:dplyr':
@@ -95,9 +112,21 @@ img {
 ##     max, mean, min, prod, range, sample, sum</code></pre>
 <pre class="r"><code>library(ggplot2)
 library(ggvis)</code></pre>
+<pre><code>## Warning: package 'ggvis' was built under R version 3.1.3</code></pre>
+<pre><code>## 
+## Attaching package: 'ggvis'
+## 
+## The following object is masked from 'package:mosaic':
+## 
+##     prop
+## 
+## The following object is masked from 'package:ggplot2':
+## 
+##     resolution</code></pre>
 <pre class="r"><code>library(dplyr)
 library(ggplot2)
 library(RSQLite)</code></pre>
+<pre><code>## Loading required package: DBI</code></pre>
 <pre class="r"><code>library(pitchRx)</code></pre>
 <p>You can also embed plots, for example:</p>
 <pre class="r"><code>setwd(&quot;~/GitHub/Spray Chart&quot;)
@@ -161,6 +190,8 @@ all_values &lt;- function(x) {
              axis = list(stroke = &quot;white&quot;),
              title = list(fontSize = 12),
              labels = list(fontSize = 0)))</code></pre>
+<pre><code>## Warning: Can't output dynamic/interactive ggvis plots in a knitr document.
+## Generating a static (non-dynamic, non-interactive) version of the plot.</code></pre>
 <p><div id="plot_id994837660-container" class="ggvis-output-container">
 <div id="plot_id994837660" class="ggvis-output"></div>
 <div class="plot-gear-icon">
