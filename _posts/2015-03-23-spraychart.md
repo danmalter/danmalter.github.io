@@ -1,5 +1,5 @@
 ---
-title: "MLB Spray Charts"
+title: "Create you own MLB Spray Charts"
 layout: post
 comments: true
 category: R
@@ -8,6 +8,8 @@ category: R
 {% raw %}
 
 # MLB Spray Charts #
+
+This post is an example of scraping XML data files from mlb.com using the pitchRx package to create your own spray charts.  
 
 - Load in the required packages
 
@@ -29,7 +31,7 @@ my_db <- src_sqlite("MLB2014.sqlite3", create = TRUE)
 scrape(start = "2014-03-30", end = "2014-09-30", connect = my_db$con, suffix = files)
 ```
 
-Merge together the locations table to produce a master table.  In this case, I filter just to look at the spray chart of Jose Abreu.
+- Merge together the locations table to produce a master table.  In this case, I filter just to look at the spray chart of Jose Abreu.
 
 ```r
 locations <- select(tbl(my_db, "hip"), des, x, y, batter, pitcher, type, team, inning)
