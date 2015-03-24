@@ -16,8 +16,6 @@ Click to see the full interactive Shiny app. <br>
 - Load in the required packages
 
 ```r
-library(mosaic)
-library(ggplot2)
 library(ggvis)
 library(dplyr)
 library(ggplot2)
