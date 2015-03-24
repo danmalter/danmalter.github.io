@@ -45,6 +45,8 @@ batters <- as.data.frame(batters, n=-1)
 batters <- batters[!duplicated(batters),]
 batters$full.name <- paste(batters$first, batters$last, sep = " ")
 names(batters)[names(batters) == 'id'] <- 'batter.id'
+
+# I have already created a new column with the full name, so I delete the first two columns that contain the first name and the last name
 batters <- batters[,-c(1,2)]
 
 players <- as.data.frame(players, n=-1)
