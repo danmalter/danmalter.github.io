@@ -9,7 +9,9 @@ category: R
 
 # MLB Spray Charts #
 
-This post is an example of scraping XML data files from mlb.com using the [pitchRx](http://cran.r-project.org/web/packages/pitchRx/index.html) package to create your own spray charts.  The interactive Shiny app can be seen [here](https://danmalter.shinyapps.io/Spray-Chart/).
+This post is an example of scraping XML data files from mlb.com using the [pitchRx](http://cran.r-project.org/web/packages/pitchRx/index.html) package to create your own spray charts. <br>
+Click to see the full interactive Shiny app. <br>
+https://danmalter.shinyapps.io/Spray-Chart/
 
 - Load in the required packages
 
