@@ -64,7 +64,7 @@ code, pre {
 }
 
 pre {
-  padding:8px 15px;
+  padding:4px 15px;
   background: #f8f8f8;  
   border-radius:5px;
   border:1px solid #e5e5e5;
@@ -160,7 +160,7 @@ header ul a strong {
 }
 
 section {
-  width:570px;
+  width:650px;
   float:right;
   padding-bottom:50px;
 }
