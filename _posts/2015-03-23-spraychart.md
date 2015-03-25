@@ -79,17 +79,20 @@ Create a ggvis tooltip to be used when hovering over points.
 
 ```r
 # Create ggvis tooltip  
-spraychart$id <- 1:nrow(spraychart)
-
-all_values <- function(x) {
-  if(is.null(x)) return(NULL)
+  spraychart$id <- 1:nrow(spraychart)
   
-  paste0("Pitcher: ",
-         spraychart$pitcher.name[x$id],
-         "<br>",
-         spraychart$Description[x$id]
-  )
-}
+  all_values <- function(x) {
+    if(is.null(x)) return(NULL)
+    
+    paste0("Pitcher: ",
+           spraychart$pitcher.name[x$id],
+           "<br>",
+           "Throws: ",
+           spraychart$pitcher.rl[x$id],
+           "<br>",
+           spraychart$Description[x$id]
+    )
+  }
 ```
 
 
