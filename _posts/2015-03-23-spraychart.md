@@ -54,7 +54,7 @@ batters <- batters[,-c(1,2)]
 players <- as.data.frame(players, n=-1)
 names(players)[names(players) == 'id'] <- 'player.id'
 
-# Get the pitcher throws type
+# Get the pitcher's throw type
 players <- merge(players, batters, by.x="full_name", by.y="full.name")
 players <- players[,-c(3:5)]
 names(players)[names(players) == 'rl'] <- 'pitcher.rl'
