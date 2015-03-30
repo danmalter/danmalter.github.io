@@ -1,5 +1,5 @@
 ---
-title: "Create you own MLB Spray Charts"
+title: "Create your own MLB Spray Charts"
 layout: post
 comments: true
 category: R
