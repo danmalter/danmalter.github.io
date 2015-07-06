@@ -15,7 +15,7 @@ This post is about how to connect to a Microsoft SQL Server database from within
 Note: This step is not neccessary if you use the second option in Step 2.
 
 1.  Open the ODBC Data Source Administrator application.  You can do this by clicking on the Start button and then search for "ODBC".
-2. Click the "Add..." button to add a new User DSN and choose "ODBC Driveer 11 for SQL Server".
+2. Click the "Add..." button to add a new User DSN and choose "ODBC Driver 11 for SQL Server".
 3. Give a name to the new DSN.  This will be used later to make a connection in R.
 4. Copy and paste the SQL Server name into where it asks, "What SQL Server do you want to connect to?"
 5. Login using SQL Server authentication.
@@ -35,7 +35,7 @@ con <- odbcConnect(dsn, uid = "", pwd = "")
 - In this second mothod, you can connect directly to your SQL database with the code below by replacing XXX with the proper names.
 
 ```r
-con <- odbcDriverConnect("Driver= {ODBC Driver 11 for SQL Server};
+con <- odbcDriverConnect("Driver= {SQL Server};
                          Server=XXX; Database=XXX; 
                          Uid=XXX; Pwd=XXX")
 ```
