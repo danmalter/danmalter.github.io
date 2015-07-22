@@ -114,7 +114,7 @@ Note: Amazon Instance is currently turned off, but the app works through RStudio
 In order to host other applications, simply create a new folder in /srv/shiny-server and drag in the respective ui, server and other files that go with the application.  For example, I have created a new folder called "HR-Hitter" located at /srv/shiny-server/HR-Hitters.
 
 Example: <br>
-Note: The instance is currently turned off, but the RStudio app is turned on.<br>
+Note: If the ec2 link does not work, it means the Amazon Instance has been turned off. The same app can bee seen through RStudio through the second link.<br>
 <a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/" target="_blank">http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/</a>
 
 <a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/" target="_blank"> </a>
