@@ -106,7 +106,6 @@ There should already be a folder in the /srv/shiny-server directory called "samp
 
 Example:<br>
 <a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838" target="_blank">http://ec2-52-1-117-130.compute-1.amazonaws.com:3838</a>
-
 <a href="https://danmalter.shinyapps.io/HR-Hitters"target="_blank">App powered by RStudio</a>
 
 ### Host Multiple Shiny Application through this Server ###
