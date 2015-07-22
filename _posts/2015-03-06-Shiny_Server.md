@@ -112,8 +112,8 @@ Example:<br>
 In order to host other applications, simply create a new folder in /srv/shiny-server and drag in the respective ui, server and other files that go with the application.  For example, I have created a new folder called "HR-Hitter" located at /srv/shiny-server/HR-Hitters.
 
 Example: <br>
-Note: If the ec2 link does not work, it means the Amazon Instance has been turned off. The same app can also be seen <a href="https://danmalter.shinyapps.io/HR-Hitters"target="_blank">here</a> through RStudio.<br>
 <a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/" target="_blank"> </a>
+Note: If the ec2 link does not work, it means the Amazon Instance has been turned off. The same app can also be seen <a href="https://danmalter.shinyapps.io/HR-Hitters"target="_blank">here</a> through RStudio.<br>
 
 ![plot of chunk shinyImage4](/figure/shiny_server/shinyImage4.png) 
 
