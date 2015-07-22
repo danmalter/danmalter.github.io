@@ -105,9 +105,8 @@ There should already be a folder in the /srv/shiny-server directory called "samp
 [public DNS]:3838
 
 Example:<br>
-Note: Amazon Instance is currently turned off, but the app works through RStudio. <br>
+Note: If the ec2 link does not work, it means the Amazon Instance has been turned off. The same app can also be seen<a href="https://danmalter.shinyapps.io/HR-Hitters"target="_blank">here.</a><br>
 <a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838" target="_blank">http://ec2-52-1-117-130.compute-1.amazonaws.com:3838</a><br>
-<a href="https://danmalter.shinyapps.io/HR-Hitters"target="_blank">App powered by RStudio</a>
 
 ### Host Multiple Shiny Application through this Server ###
 
