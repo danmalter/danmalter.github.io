@@ -100,12 +100,14 @@ Example:
 sudo chown -R ubuntu /srv/*
 ```
 
-There should already be a foler in the /srv/shiny-server directory called "sample-apps".  You can view this sample application by typing into the url:
+There should already be a folder in the /srv/shiny-server directory called "sample-apps".  You can view this sample application by typing into the url:
 
 [public DNS]:3838
 
 Example:<br>
 <a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838" target="_blank">http://ec2-52-1-117-130.compute-1.amazonaws.com:3838</a>
+
+<a href="https://danmalter.shinyapps.io/HR-Hitters"target="_blank">App powered by RStudio</a>
 
 ### Host Multiple Shiny Application through this Server ###
 
