@@ -113,8 +113,6 @@ In order to host other applications, simply create a new folder in /srv/shiny-se
 
 Example: <br>
 Note: If the ec2 link does not work, it means the Amazon Instance has been turned off. The same app can also be seen <a href="https://danmalter.shinyapps.io/HR-Hitters"target="_blank">here</a> through RStudio.<br>
-<a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/" <br>
-
 <a href="http://ec2-52-1-117-130.compute-1.amazonaws.com:3838/HR-Hitters/" target="_blank"> </a>
 
 ![plot of chunk shinyImage4](/figure/shiny_server/shinyImage4.png) 
