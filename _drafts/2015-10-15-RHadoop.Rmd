@@ -1,0 +1,31 @@
+---
+title: "RHadoop"
+author: "Danny Malter"
+date: "October 14, 2015"
+output: html_document
+---
+
+{% raw %}
+
+This is a guide to integrating R and Hadoop through Amazon EMR.
+
+# Assumptions #
+- You have already set up an [Amazon AWS](http://aws.amazon.com/) account.
+- You have basic knowledge of the following:
+-- [Amazon EMR (Elastic MapReduce)](http://aws.amazon.com/elasticmapreduce/)
+-- [Amazon S3 (Simple Storage)](http://aws.amazon.com/s3/)
+-- [Amazon EC2 (Elastic Compute Cloud)](http://aws.amazon.com/ec2/)
+-- [R Programming](https://www.r-project.org/)
+
+# Guide to Runnng RHadoop over Amazon EMR #
+
+#### Setting up Elastic Map Reduce ####
+
+Step 1: Log into [Amazon AWS](https://aws.amazon.com/)
+
+Step 2: Click the EMR icon - Managed Hadoop Framework
+
+```{r, eval=FALSE}
+knitr::opts_chunk$set(fig.path='dim302.github.io/images/2015-02-18-lester2014')
+```
+
