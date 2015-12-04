@@ -40,10 +40,16 @@ echo username:password | chpasswd
 ```
 <b> NOTE:  Change username and password based on your requirements. </b><br>
 
-- Add Storage: For normal setup, this step can be skipped <br>
-- Tag Instance: Give your Instance a name <br>
-- Congifure Security Group and add the following rules<br>
-Note that port 8787 is what allows the connection to RStudio Server.  Additionally, if you wish to open your server up to other IP addresses, you will have to alter the settings.<br><br>
+<ul>
+  <li>Add Storage: For normal setup, this step can be skipped</li>
+  <li>Tag Instance: Give your Instance a name</li>
+  <li>Congifure Security Group and add the following rules
+      <ul>
+      <li>Note that port 8787 is what allows the connection to RStudio Server.  Additionally, if you wish to open your server up to other IP addresses, you will have to alter the settings.</li>
+      </ul>
+  </li>
+</ul>  
+
 ![plot of chunk image2](/figure/2015-12-03-RStudio-Server/image2.png)
 
 - Launch the Instance:  If you do not already have a private key pair, you will have to download one to your local machine.  Keep this in a private location on your computer.
