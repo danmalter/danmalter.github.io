@@ -60,6 +60,7 @@ echo username:password | chpasswd
 </ul>  
 
 Step 4: Open RStudio Server <br>
+
 - On the AWS Console, find the public DNS of your running instance.  Copy and paste it into a browser followed by :8787
 
 <b> NOTE: </b><br> 
