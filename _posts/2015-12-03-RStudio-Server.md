@@ -16,161 +16,36 @@ Step 1: Log into [Amazon AWS](https://aws.amazon.com/)
 Step 2: Click the EC2 icon - Managed Hadoop Framework <br><br>
 ![plot of chunk image1](/figure/2015-12-03-RStudio-Server/image1.png)
 
-Step 3: Create your cluster <br>
-- Click "Create cluster" and select "Go to advanced options" at the top of the page <br>
-- Give your cluster a name <br>
-- Log folder S3 location: Select any location in S3 for logs <br>
-- Software configuration: This demo is done using Amazon Hadoop 2 version 3.10.0 <br>
-- Add any applications you are interested in using, such as Spark or Mahout <br>
-- Choose an EC2 instance: This demo is done using m1.xlarge (Master & Core) and m1.medium (Task) <br>
-- Choose your EC2 key pair <br><br>
-![plot of chunk image2](/figure/2015-10-15-RHadoop/image2.png) <br>
-
-<b> IMPORTANT BOOTSTRAP INSTRUCTION </b><br>
-
-1. Download the [Amazon EMR Boostrap File](https://docs.google.com/uc?authuser=0&id=0B_DFy-IMDAf4aENDYXdVeGhOV3M&export=download)
-2. Open a new tab and upload the .sh script into your S3 (either create a new folder/bucket in S3 or use an existing folder)
-3. Within EMR, select "custom action" from the "Select a boostrap action" drop down.  Then select "Configure and add"
-4. Link the above .sh file in "S3 location" and press "Add" <br><br>
-![plot of chunk image3](/figure/2015-10-15-RHadoop/image3.png)
--  Select any other fields as you wish and click on the "Create cluster" button
-
-IMPORTANT NOTE: <br>
-The cluster will initially show as "pending".  With the bootstrap script, the cluster will take around 15 to fully complete the setup process.
-
-Initial Stage: <br>
-- All steps should be "Pending"
-
-Second Stage: <br>
-- Progress should be shown as "Bootstrapping"
-
-Final Stage: <br>
-- Cluster will be shown as "Running"
-- Your EMR cluster is now ready to be used with RHadoop.
-
-
-<b> Running R over the Cluster </b><br>
-
-Open the Terminal and connect to your cluster with the following code
+Step 3: Launch an Instance <br>
+- Click "Launch Instance" and choose an Amazon Machine Image.  This example uses an Amazon Linux AMI <br>
+- Choose an Instance type:  Amazon offers 1 free year at the t2.micro level <br>
+- Configure Instance Details: Select advanced details and add the following information<br>
 
 ```r
-ssh -i /path/to/keypair.pem hadoop@Amazon_Public_DNS
+#!/bin/bash
+#install R
+yum install -y R
+#install RStudio-Server
+wget https://download2.rstudio.org/rstudio-server-rhel-0.99.465-x86_64.rpm
+yum install -y --nogpgcheck rstudio-server-rhel-0.99.465-x86_64.rpm
+#install shiny and shiny-server
+R -e "install.packages('shiny', repos='http://cran.rstudio.com/')"
+wget https://download3.rstudio.org/centos5.9/x86_64/shiny-server-1.4.0.718-rh5-x86_64.rpm
+yum install -y --nogpgcheck shiny-server-1.4.0.718-rh5-x86_64.rpm
+#add user(s)
+useradd username
+echo username:password | chpasswd
 ```
+<b> NOTE:  Change username and password based on your requirements. </b><br>
 
-Once connected, either make a directory for your input file or download directly into the /home/hadoop directory.  You can imort data from Amazon S3 with the wget command.  The file link can be found under 'Properties' within S3 and you will need to make sure that the correct permissions are set for the file to be downloaded.
+- Add Storage: For normal setup, this step can be skipped <br>
+- Tag Instance: Give your Instance a name <br>
+- Congifure Security Group and add the following rules<br>
+Note that port 8787 is what allows the connection to RStudio Server.  Additionally, if you wish to open your server up to other IP Addresses, you will have to alter the settings.<br><br>
+![plot of chunk image2](/figure/2015-12-03-RStudio-Server/image2.png)
 
-```r
-# Create a local directory with the data
-mkdir data
-cd data
-wget https://s3-us-west-2.amazonaws.com/bucket-name/shakespeare.txt
+- Launch the Instance:  If you do not already have a private key pair, you will have to download one to your local machine.  Keep this in a private location on your computer.
 
-# Another option by downloading the file from a url
-shakespeare_works <- "data/shakespeare_works.txt"
-if(!file.exists(shakespeare_works)) {
-  download.file(url = "http://www.gutenberg.org/ebooks/100.txt.utf-8",
-                destfile = shakespeare_works)
-}
-```
-
-<b> Word Count Example </b>
-
-The following code is an example of running a word count on a text file using the rmr2 package and loading data into HDFS with the rhdfs package.
-
-```r
-sudo R
-
-Sys.setenv(HADOOP_HOME="/home/hadoop");
-Sys.setenv(HADOOP_CMD="/home/hadoop/bin/hadoop");
-Sys.setenv(JAVA_HOME="/usr/lib/jvm/java") ;
-Sys.setenv(HADOOP_PREFIX="/home/hadoop/");
-Sys.setenv(HADOOP_STREAMING="/home/hadoop/contrib/streaming/hadoop-streaming.jar");
-
-library(rmr2)
-library(rhdfs)
-hdfs.init()
-
-# Copy the file to HDFS
-hdfs.mkdir("/user/shakespeare/wordcount/data")
-hdfs.put("/home/hadoop/data/shakespeare.txt", "/user/shakespeare/wordcount/data")
-
-
-map = function(.,lines) 
-{ keyval(
-	tolower(
-	unlist(
-  	strsplit(
-		x = lines,
-    	split = " +"))),
-1)}
-
-# Splits text by at least one space
-
-reduce = function(word, counts) { 
-	keyval(word, sum(counts))
-	}
-	
-wordcount = function (input, output=NULL) {
-mapreduce(input=input, output=output, input.format="text",
-       map=map, reduce=reduce)
-}	
-
-hdfs.root <- '/user/shakespeare/wordcount'
-hdfs.data <- file.path(hdfs.root, 'data')
-hdfs.out <- file.path(hdfs.root, 'out')   # 'out' must not be an already created folder
-
-system.time(out <- wordcount(hdfs.data, hdfs.out))
-
-results = from.dfs(out)
-results.df = as.data.frame(results, stringsAsFactors=FALSE)
-
-install.packages('tm')
-library(tm)
-sw <- stopwords()
-top.words5 <- results.df[nchar(results.df$key)>5 & !results.df$key %in% sw, ]
-top.words5[order(-top.words5$val, top.words$key)[1:20], ]
-```
-
-<b>Example of output: </b><br>
-
-![plot of chunk image4](/figure/2015-10-15-RHadoop/image4.png) <br>
-
-<b> Aggregation Example </b>
-
-```r
-hdfs.mkdir("/user/purchases/data")
-hdfs.put("/home/hadoop/data/purchases.txt", "/user/purchases/data")
-
-purchases.map <- function(k, v){
-  city <- v[[3]]
-  dollars <- v[[5]]
-  return( keyval(city, dollars) )
-}
-
-purchases.reduce = function(k, v) { 
-	keyval(k, sum(v))
-	}
-
-purchases.format <- make.input.format("csv", sep = "\t")
-
-m = function (input, output=NULL) {
-mapreduce(input='/user/purchases/data', output='/user/purchases/out18', input.format=purchases.format,
-       map=purchases.map), reduce=purchases.reduce)
-} 
-
-hdfs.root <- '/user/purchases/'
-hdfs.data <- file.path(hdfs.root, 'data')
-hdfs.out <- file.path(hdfs.root, 'out') 
-
-system.time(out <- m(hdfs.data, hdfs.out))
-
-results = from.dfs(m)
-results.df = data.frame(results$key, results$val)
-results.df[order(-results.df$results.val, results.df$results.key)[1:20],]
-```
-<b>Example of output: </b><br>
-
-![plot of chunk image5](/figure/2015-10-15-RHadoop/image5.png) <br>
 
 
 <b> REMEMBER TO STOP OR TERMINATE YOUR INSTANCE </b><br>
