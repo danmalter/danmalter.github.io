@@ -1,5 +1,5 @@
 ---
-title: "Setting up RStudio over Amazon EC2"
+title: "Setting up RStudio Server over Amazon EC2"
 layout: post
 comments: true
 category: R
