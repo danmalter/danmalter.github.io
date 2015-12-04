@@ -17,9 +17,11 @@ Step 2: Click the EC2 icon - Virtual Servers in the Cloud <br><br>
 ![plot of chunk image1](/figure/2015-12-03-RStudio-Server/image1.png)
 
 Step 3: Launch an Instance <br>
-- Click "Launch Instance" and choose an Amazon Machine Image.  This example uses an Amazon Linux AMI <br>
-- Choose an Instance type:  Amazon offers 1 free year at the t2.micro level <br>
-- Configure Instance Details: Select advanced details and add the following information<br>
+<ul>
+  <li>Click "Launch Instance" and choose an Amazon Machine Image.  This example uses a Amazon Linux</li>
+  <li>Choose an Instance type:  Amazon offers 1 free year at the t2.micro level</li>
+  <li>Configure Instance Details: Select advanced details and add the following information</li>
+</ul>  
 
 ```r
 #!/bin/bash
@@ -41,12 +43,13 @@ echo username:password | chpasswd
 - Add Storage: For normal setup, this step can be skipped <br>
 - Tag Instance: Give your Instance a name <br>
 - Congifure Security Group and add the following rules<br>
-Note that port 8787 is what allows the connection to RStudio Server.  Additionally, if you wish to open your server up to other IP Addresses, you will have to alter the settings.<br><br>
+Note that port 8787 is what allows the connection to RStudio Server.  Additionally, if you wish to open your server up to other IP addresses, you will have to alter the settings.<br><br>
 ![plot of chunk image2](/figure/2015-12-03-RStudio-Server/image2.png)
 
 - Launch the Instance:  If you do not already have a private key pair, you will have to download one to your local machine.  Keep this in a private location on your computer.
 
-
+Step 4: Open RStudio Server <br>
+- On the AWS Console, find the public DNS of your running instance.  Copy and paste it into a browser followed by :8787
 
 <b> REMEMBER TO STOP OR TERMINATE YOUR INSTANCE </b><br>
 
