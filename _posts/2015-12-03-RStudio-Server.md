@@ -52,7 +52,12 @@ echo username:password | chpasswd
 
 ![plot of chunk image2](/figure/2015-12-03-RStudio-Server/image2.png)
 
-- Launch the Instance:  If you do not already have a private key pair, you will have to download one to your local machine.  Keep this in a private location on your computer.
+<ul>
+  <li>Launch the Instance:</li>
+      <ul>
+      <li>If you do not already have a private key pair, you will have to download one to your local machine.  Keep this in a private location on your computer.</li>
+      </ul>
+</ul>  
 
 Step 4: Open RStudio Server <br>
 - On the AWS Console, find the public DNS of your running instance.  Copy and paste it into a browser followed by :8787
