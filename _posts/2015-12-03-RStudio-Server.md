@@ -1,5 +1,5 @@
 ---
-title: "RHadoop Word Count and Aggregation"
+title: "Setting up RStudio over Amazon EC2"
 layout: post
 comments: true
 category: R
@@ -7,23 +7,14 @@ category: R
 
 {% raw %}
 
-# Guide to Runnng RHadoop over Amazon EMR #
+# Guide to Setting up RStudio of Amazon EC2 #
 
-###  Assumptions ###
-
-That you have already set up an [Amazon AWS](http://aws.amazon.com/) account. <br>
-That you have basic knowledge of the following: <br>
-- [Amazon EMR (Elastic MapReduce)](http://aws.amazon.com/elasticmapreduce/) <br>
-- [Amazon S3 (Simple Storage)](http://aws.amazon.com/s3/) <br>
-- [Amazon EC2 (Elastic Compute Cloud)](http://aws.amazon.com/ec2/) <br>
-- [R Programming](https://www.r-project.org/) <br>
-
-### Setting up Elastic Map Reduce ###
+### Setting up Elastic Cloud Computing ###
 
 Step 1: Log into [Amazon AWS](https://aws.amazon.com/)
 
-Step 2: Click the EMR icon - Managed Hadoop Framework <br><br>
-![plot of chunk image1](/figure/2015-11-03-RHadoop/image1.png)
+Step 2: Click the EC2 icon - Managed Hadoop Framework <br><br>
+![plot of chunk image1](/figure/2015-12-03-RStudio-Server/image1.png)
 
 Step 3: Create your cluster <br>
 - Click "Create cluster" and select "Go to advanced options" at the top of the page <br>
@@ -33,7 +24,7 @@ Step 3: Create your cluster <br>
 - Add any applications you are interested in using, such as Spark or Mahout <br>
 - Choose an EC2 instance: This demo is done using m1.xlarge (Master & Core) and m1.medium (Task) <br>
 - Choose your EC2 key pair <br><br>
-![plot of chunk image2](/figure/2015-11-03-RHadoop/image2.png) <br>
+![plot of chunk image2](/figure/2015-10-15-RHadoop/image2.png) <br>
 
 <b> IMPORTANT BOOTSTRAP INSTRUCTION </b><br>
 
@@ -41,7 +32,7 @@ Step 3: Create your cluster <br>
 2. Open a new tab and upload the .sh script into your S3 (either create a new folder/bucket in S3 or use an existing folder)
 3. Within EMR, select "custom action" from the "Select a boostrap action" drop down.  Then select "Configure and add"
 4. Link the above .sh file in "S3 location" and press "Add" <br><br>
-![plot of chunk image3](/figure/2015-11-03-RHadoop/image3.png)
+![plot of chunk image3](/figure/2015-10-15-RHadoop/image3.png)
 -  Select any other fields as you wish and click on the "Create cluster" button
 
 IMPORTANT NOTE: <br>
@@ -142,7 +133,7 @@ top.words5[order(-top.words5$val, top.words$key)[1:20], ]
 
 <b>Example of output: </b><br>
 
-![plot of chunk image4](/figure/2015-11-03-RHadoop/image4.png) <br>
+![plot of chunk image4](/figure/2015-10-15-RHadoop/image4.png) <br>
 
 <b> Aggregation Example </b>
 
@@ -179,7 +170,7 @@ results.df[order(-results.df$results.val, results.df$results.key)[1:20],]
 ```
 <b>Example of output: </b><br>
 
-![plot of chunk image5](/figure/2015-11-03-RHadoop/image5.png) <br>
+![plot of chunk image5](/figure/2015-10-15-RHadoop/image5.png) <br>
 
 
 <b> REMEMBER TO STOP OR TERMINATE YOUR INSTANCE </b><br>
