@@ -13,7 +13,7 @@ category: R
 
 Step 1: Log into [Amazon AWS](https://aws.amazon.com/)
 
-Step 2: Click the EC2 icon - Managed Hadoop Framework <br><br>
+Step 2: Click the EC2 icon - Virtual Servers in the Cloud <br><br>
 ![plot of chunk image1](/figure/2015-12-03-RStudio-Server/image1.png)
 
 Step 3: Launch an Instance <br>
