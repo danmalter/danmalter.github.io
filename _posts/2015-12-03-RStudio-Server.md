@@ -7,7 +7,7 @@ category: R
 
 {% raw %}
 
-# Guide to Setting up RStudio of Amazon EC2 #
+# Guide to Setting up RStudio over Amazon EC2 #
 
 ### Setting up Elastic Cloud Computing ###
 
