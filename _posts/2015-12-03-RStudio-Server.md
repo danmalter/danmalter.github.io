@@ -62,6 +62,8 @@ echo username:password | chpasswd
 Step 4: Open RStudio Server <br>
 - On the AWS Console, find the public DNS of your running instance.  Copy and paste it into a browser followed by :8787
 
+<b> NOTE:  Even if the instance appears to be showing with the green dot, you will still have to wait for the status check to complete before being able to login to your RStudio session. </b><br>
+
 <b> REMEMBER TO STOP OR TERMINATE YOUR INSTANCE </b><br>
 
 {% endraw %}
