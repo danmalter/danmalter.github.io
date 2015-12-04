@@ -18,7 +18,7 @@ Step 2: Click the EC2 icon - Virtual Servers in the Cloud <br><br>
 
 Step 3: Launch an Instance <br>
 <ul>
-  <li>Click "Launch Instance" and choose an Amazon Machine Image.  This example will be used with an <b>Amazon Linux AMI</b></li>
+  <li>Click "Launch Instance" and choose an Amazon Machine Image.  This example demonstrates how to set up an Amazon Linux AMI</li>
   <li>Choose an Instance type:  Amazon offers 1 free year at the t2.micro level</li>
   <li>Configure Instance Details: Select advanced details and add the following information</li>
 </ul>  
