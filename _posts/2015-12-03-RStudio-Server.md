@@ -69,7 +69,7 @@ Step 4: Open RStudio Server <br>
 </ul>
 
 <b> NOTE: </b><br> 
-Even if the instance appears to be showing with the green dot, you will still have to wait for the status check to complete before being able to login to your RStudio session. </b><br>
+Even if the instance appears to be showing with the green dot under the instance state, you will still have to wait for the status check to complete before being able to login to your RStudio session. </b><br>
 
 <b> REMEMBER TO STOP OR TERMINATE YOUR INSTANCE </b><br>
 
