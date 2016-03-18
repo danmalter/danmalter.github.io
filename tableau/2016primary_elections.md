@@ -3,8 +3,7 @@ title: "2016 Primary Elections"
 author: Danny Malter
 ---
 
-<iframe src="https://public.tableau.com/profile/dim302#!/vizhome/2016PrimaryElection/Dashboard" width="1250" height="1000"></iframe>
-
+<script type='text/javascript' src='http://tableau.corp.web/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1004px; height: 3536px;'><object class='tableauViz' width='1250' height='3536' style='display:none;'><param name='host_url' value='http%3A%2F%2Ftableau.corp.web%2F' /> <param name='site_root' value='&#47;t&#47;Ed2Go' /><param name='name' value='2016PrimaryElection&#47;Dashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showVizHome' value='n' /><param name='bootstrapWhenNotified' value='y' /><param name='filter' value='%3AopenAuthoringInTopWindow=true' /><param name='filter' value='%3AbrowserBackButtonUndo=true' /><param name='filter' value='%3AreloadOnCustomViewSave=true' /><param name='filter' value='%3AshowShareOptions=true' /></object></div>
 
 <!-- 
 <html lang="en-us">
