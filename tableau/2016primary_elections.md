@@ -7,7 +7,7 @@ author: Danny Malter
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Playing "Moneyball" on EA FIFA 16</title>
+    <title>2016 Primary Elections</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -16,8 +16,8 @@ author: Danny Malter
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">2016 Primary Elections" on EA FIFA 16</h1>
-      <h2 class="project-tagline">by Danny Malter <a href="https://ca.linkedin.com/in/danmalter" target="_blank"><img src="img/in.png" height="20" weight="20" style="padding-top:5px;"></a></h2>
+      <h1 class="project-name">2016 Primary Elections</h1>
+      <h2 class="project-tagline">by Danny Malter <a href="https://ca.linkedin.com/in/danmalter" target="_blank"><img src="tableau/img/in.png" height="20" weight="20" style="padding-top:5px;"></a></h2>
     </section>
 
     <section class="main-content">
