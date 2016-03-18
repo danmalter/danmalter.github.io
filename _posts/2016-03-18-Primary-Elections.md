@@ -8,6 +8,6 @@ category: R
 {% raw %}
 
  
-<iframe src="https://public.tableausoftware.com/views/NFL-AFCWestQuarterbacks/FilterusingCustomShapes" width="1200" height="1000"></iframe>
+<iframe src="https://public.tableau.com/profile/publish/2016PrimaryElection/Dashboard#!/publish-confirm" width="1200" height="1000"></iframe>
 
 {% endraw %}
