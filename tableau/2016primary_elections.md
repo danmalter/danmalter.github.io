@@ -1,17 +1,8 @@
----
-title: "2016 Primary Elections""
-author: Danny Malter
----
-
-
-<iframe src="https://public.tableau.com/profile/dim302#!/vizhome/2016PrimaryElection/Dashboard" width="1200" height="1000"></iframe>
-
-
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Playing "Moneyball" on EA FIFA 16</title>
+    <title>2016 Primary Election</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
