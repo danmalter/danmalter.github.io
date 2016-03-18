@@ -3,6 +3,10 @@ title: "2016 Primary Elections"
 author: Danny Malter
 ---
 
+<iframe src="https://public.tableau.com/profile/dim302#!/vizhome/2016PrimaryElection/Dashboard" width="1250" height="1000"></iframe>
+
+
+<!-- 
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
@@ -24,3 +28,4 @@ author: Danny Malter
   
   </body>
 </html>
+-->
