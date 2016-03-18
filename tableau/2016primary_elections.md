@@ -15,11 +15,9 @@
       <h2 class="project-tagline">by Danny Malter <a href="https://ca.linkedin.com/in/danmalter" target="_blank"><img src="img/in.png" height="20" weight="20" style="padding-top:5px;"></a></h2>
     </section>
 
-    <section class="main-content">
 
   <iframe src="https://public.tableau.com/profile/dim302#!/vizhome/2016PrimaryElection/Dashboard" width="1200"     height="1000"></iframe>
 
-    </section>
 
 
   
