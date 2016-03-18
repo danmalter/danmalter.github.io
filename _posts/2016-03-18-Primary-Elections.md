@@ -1,7 +1,8 @@
 ---
 title: "2016 Primary Elections"
+layout: post
 comments: true
-category: r
+category: Tableau
 ---
 
 {% raw %}
