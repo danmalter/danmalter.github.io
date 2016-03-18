@@ -7,7 +7,7 @@ category: R
 
 {% raw %}
 
-<iframe src="https://public.tableau.com/profile/dim302#!/vizhome/2016PrimaryElection/Dashboard:showVizHome=no&:embed=true"
- width="645" height="955"></iframe>
+ 
+<iframe src="https://public.tableausoftware.com/views/NFL-AFCWestQuarterbacks/FilterusingCustomShapes" width="1200" height="1000"></iframe>
 
 {% endraw %}
