@@ -3,7 +3,6 @@ title: "2016 Primary Elections"
 author: Danny Malter
 ---
 
-<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
