@@ -57,7 +57,7 @@ pitcher$uniqueID <- paste(pitcher$num, pitcher$gameday_link, pitcher$inning, sep
  
 <br>
  
-## Jake Arrieta ## 
+## Jake Arrieta
 
 In this example, we will start off by looking at the overall pitch proportions from Jake Arrieta.  The below table shows us the distribution of Arrieta's pitch choices.  In 2015, Arrieta threw a four-seam fastball 18% of the time, a sinker 32% of all pitches, a slider 29%, etc.  This is good information, but does not give much predictive power for the batter.  We know that Arrieta is most likely to throw a sinker, but I don't think any batter will be going up to the plate sitting on that pitch given only this information.
 
