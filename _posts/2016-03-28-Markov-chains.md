@@ -230,13 +230,13 @@ pitcher.matrix &lt;- statetable.msm(pitch_type_full, uniqueID, data=pitcher)
 transition.matrix &lt;- round(t(t(pitcher.matrix) / rep(rowSums(pitcher.matrix), each=ncol(pitcher.matrix))),3)
 transition.matrix</code></pre>
 <pre><code>##     to
-## from             4-seam FB Sinker Changeup Curveball Slider Int. Ball
-##    4-seam FB     0.232  0.234    0.042     0.164  0.327     0.000
-##    FB            0.131  0.370    0.038     0.137  0.325     0.000
-##    Sinker        0.172  0.328    0.090     0.172  0.238     0.000
-##    Changeup      0.202  0.303    0.048     0.098  0.348     0.000
-##    Curveball     0.175  0.298    0.044     0.173  0.310     0.000
-##    Int. Ball     0.000  0.000    0.000     0.000  0.000     1.000</code></pre>
+## from           4-seam FB Sinker Changeup Curveball Slider Int. Ball
+##    4-seam FB   0.232  0.234    0.042     0.164  0.327     0.000
+##    Sinker      0.131  0.370    0.038     0.137  0.325     0.000
+##    Changeup    0.172  0.328    0.090     0.172  0.238     0.000
+##    Curveball   0.202  0.303    0.048     0.098  0.348     0.000
+##    Slider      0.175  0.298    0.044     0.173  0.310     0.000
+##    Int. Ball   0.000  0.000    0.000     0.000  0.000     1.000</code></pre>
 <p><br></p>
 </div>
 <div id="jake-arrieta---first-pitch-of-an-at-bat" class="section level4">
