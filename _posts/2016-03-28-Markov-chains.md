@@ -346,10 +346,10 @@ pitcher.matrix &lt;- statetable.msm(pitch_type_full, uniqueID, data=pitcher)
 transition.matrix &lt;- round(t(t(pitcher.matrix) / rep(rowSums(pitcher.matrix), each=ncol(pitcher.matrix))),3)
 transition.matrix</code></pre>
 <pre><code>##     to
-## from 2-seam FB Changeup Slider
-##    1     0.556    0.254  0.190
-##    2     0.467    0.370  0.164
-##    3     0.507    0.278  0.215</code></pre>
+## from           2-seam FB Changeup Slider
+##    2-seam FB     0.556    0.254    0.190
+##    Changeup      0.467    0.370    0.164
+##    Slider        0.507    0.278    0.215</code></pre>
 <p><br></p>
 </div>
 </div>
@@ -422,12 +422,12 @@ pitcher.matrix &lt;- statetable.msm(pitch_type_full, uniqueID, data=pitcher)
 transition.matrix &lt;- round(t(t(pitcher.matrix) / rep(rowSums(pitcher.matrix), each=ncol(pitcher.matrix))),3)
 transition.matrix</code></pre>
 <pre><code>##     to
-## from 4-seam FB 2-seam FB Changeup Curveball Slider
-##    1     0.482     0.221    0.095     0.072  0.130
-##    2     0.191     0.511    0.084     0.087  0.128
-##    3     0.337     0.194    0.260     0.102  0.107
-##    4     0.255     0.370    0.109     0.170  0.097
-##    5     0.264     0.247    0.060     0.077  0.353</code></pre>
+## from           4-seam FB 2-seam FB Changeup Curveball Slider
+##    4-seam FB     0.482     0.221    0.095     0.072    0.130
+##    2-seam FB     0.191     0.511    0.084     0.087    0.128
+##    Changeup      0.337     0.194    0.260     0.102    0.107
+##    Curveball     0.255     0.370    0.109     0.170    0.097
+##    Slider        0.264     0.247    0.060     0.077    0.353</code></pre>
 <p><br></p>
 </div>
 </div>
