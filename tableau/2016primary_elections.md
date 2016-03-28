@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "2016 Primary Elections"
 author: Danny Malter
@@ -17,6 +18,8 @@ author: Danny Malter
 
 </script>
 =======
+=======
+>>>>>>> origin/master
 ---
 title: "2016 Primary Elections"
 author: Danny Malter
@@ -34,4 +37,7 @@ author: Danny Malter
   ga('send', 'pageview');
 
 </script>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
