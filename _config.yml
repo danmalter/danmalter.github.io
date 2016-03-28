@@ -1,5 +1,4 @@
-markdown: kramdown
-redcarpet:
+kramdown:
   extensions: ["tables"]
 exclude: ["*.Rmd"]
 name: Danny Malter
