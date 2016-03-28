@@ -421,13 +421,13 @@ pandoc.table(pitch.prop, emphasize.strong.cells = which(pitch.prop == 0.315, arr
 pitcher.matrix &lt;- statetable.msm(pitch_type_full, uniqueID, data=pitcher)
 transition.matrix &lt;- round(t(t(pitcher.matrix) / rep(rowSums(pitcher.matrix), each=ncol(pitcher.matrix))),3)
 transition.matrix</code></pre>
-<pre><code>##     to
-## from           4-seam FB 2-seam FB Changeup Curveball Slider
-##    4-seam FB     0.482     0.221    0.095     0.072    0.130
-##    2-seam FB     0.191     0.511    0.084     0.087    0.128
-##    Changeup      0.337     0.194    0.260     0.102    0.107
-##    Curveball     0.255     0.370    0.109     0.170    0.097
-##    Slider        0.264     0.247    0.060     0.077    0.353</code></pre>
+<pre><code>     to
+ from           4-seam FB 2-seam FB Changeup Curveball Slider
+    4-seam FB     0.482     0.221    0.095     0.072    0.130
+    2-seam FB     0.191     0.511    0.084     0.087    0.128
+    Changeup      0.337     0.194    0.260     0.102    0.107
+    Curveball     0.255     0.370    0.109     0.170    0.097
+    Slider        0.264     0.247    0.060     0.077    0.353</code></pre>
 <p><br></p>
 </div>
 </div>
