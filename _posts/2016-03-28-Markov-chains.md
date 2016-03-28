@@ -348,7 +348,7 @@ transition.matrix</code></pre>
 <pre><code>##     to
 ## from           2-seam FB Changeup Slider
 ##    2-seam FB     0.556    0.254    0.190
-##    Changeup      0.467    0.370    0.164
+##    Changeup      0.467    <font color="red"><b>0.370</b></font>    <font color="red"><b>0.164</b></font>
 ##    Slider        0.507    0.278    0.215</code></pre>
 <p><br></p>
 </div>
