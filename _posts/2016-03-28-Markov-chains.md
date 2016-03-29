@@ -348,7 +348,7 @@ transition.matrix</code></pre>
 <pre><code>     to
  from           2-seam FB Changeup Slider
     2-seam FB     0.556    0.254    0.190
-    Changeup      0.467    <font color="red"><b>0.370</b></font>    <font color="red"><b>0.164</b></font>
+    Changeup      0.467    <font color="red"><b>0.370</b></font>    0.164
     Slider        0.507    0.278    0.215</code></pre>
 <p><br></p>
 </div>
@@ -432,7 +432,7 @@ transition.matrix</code></pre>
 </div>
 </div>
 <div id="results" class="section level2">
-<h2>Results</h2>
+<h2>Summary</h2>
 <p>When I use the word significance, it should be noted that I do not test for statistical significance, but did use a full season worth of pitches for each pitcher and felt that it was a decent amount of data for a fair representation. Overall, Markov chains are easy to use in R thanks to packages like <a href="https://cran.r-project.org/web/packages/msm/index.html" target="_blank">msm</a> and <a href="https://cran.r-project.org/web/packages/markovchain/" target="_blank">markovchain</a>. Further, Markov chains can help a batter gain insights that cannot be found on sites like FanGraphs or MLB.com. Potential for a further analysis can be done to enhance the accuracy of the Markov model by not only using pitch type, but the pitch location too. An example of this would be that if Sale threw a fastball in the bottom third of the zone on the previous pitch, then he is going to come back with a high fastball x% of the time on the next pitch.</p>
 <p><br></p>
 </div>
