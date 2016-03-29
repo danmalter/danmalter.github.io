@@ -137,7 +137,7 @@ $(document).ready(function () {
 <p><br></p>
 <div id="quick-introdcution-to-markov-chains" class="section level4">
 <h4>Quick Introdcution to Markov Chains</h4>
-<p>Markov chains are mathematical systems that hop from one “state” to another. In this demonstration, I will look at how Markov chains can be used to help determine the probability of a specific type of pitch being thrown given the pitch type of the previous pitch. States will restart after each game, meaning that the last pitch of each game will not be used to predict the first pitch of the next game. Additionally, all data used is from the 2015 season and comes from MLB Gameday.</p>
+<p>Markov chains are mathematical systems that hop from one “state” to another. In this demonstration, I will look at how Markov chains can be used to help determine the probability of a specific type of pitch being thrown given the pitch type of the previous pitch. States will restart after each inning, meaning that the last pitch of each inning will not be used to predict the first pitch of the next inning. Additionally, all data used is from the 2015 season and comes from MLB Gameday.</p>
 <pre class="r"><code>library(pitchRx)
 library(RSQLite)
 library(dplyr)
@@ -173,7 +173,7 @@ pitchfx$pitch_type_full &lt;- factor(pitchfx$pitch_type,
                                   labels=c(&quot;4-seam FB&quot;,&quot;Sinker&quot;,&quot;Changeup&quot;, 
                                            &quot;Curveball&quot;, &quot;Slider&quot;, &quot;Int. Ball&quot;))
 
-pitcher &lt;- as.data.frame(pitchfx[c(1,5:6,13:14)])
+pitcher &lt;- as.data.frame(pitchfx[c(1,5:7,13:14)])
 pitcher$uniqueID &lt;- paste(pitcher$num, pitcher$gameday_link, pitcher$inning, sep='') </code></pre>
 <p><br></p>
 </div>
