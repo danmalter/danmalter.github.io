@@ -412,7 +412,7 @@ pandoc.table(pitch.prop, emphasize.strong.cells = which(pitch.prop == 0.315, arr
 </tr>
 </tbody>
 </table>
-<p>When looking at the transition matrix for Joe Kelly, we find much more information than we did from Jake Arrieta. In this case, when Kelly threw a four-seam fastball on the previous pitch, we now know that there is a 48% chance he’ll throw a four-seam fastball on the next pitch. A significant jump from the 32% overall probability of a four-seam fastball.</p>
+<p>When looking at the transition matrix for Joe Kelly, we find much more information than we did from Jake Arrieta. In this case, when Kelly threw a four-seam fastball on the previous pitch, we now know that there is a 48% chance he’ll throw a four-seam fastball on the next pitch. A significant jump from the 32% overall probability of a four-seam fastball.  Additionally, when Kelly threw a two-seam fastball on the previous pitch, we now know that he is most likely to come back with that pitch again.</p>
 <p><br></p>
 </div>
 <div id="joe-kelly---multi-class-markov-chain" class="section level4">
