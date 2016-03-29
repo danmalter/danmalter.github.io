@@ -336,7 +336,7 @@ pitcher$uniqueID &lt;- paste(pitcher$num, pitcher$gameday_link, pitcher$inning, 
 </tbody>
 </table>
 <p><br></p>
-<p>When analyzing Sale, Markov chains give a bit more insight into predicting his next pitch than of that for Arrieta. Even though a two-seam fastball is Sale's most thrown pitch, when he threw a changeup on the previous pitch, he is 12% more likely to come back with another changeup than if he had previous thrown a fastball or slider.  This type of information shows the importance of Markov chains because it is simly missed when only looking at overall pitch proportions. Still not necessarily enough information to confidently assume one pitch or another, but enough information to give the batter an edge against one of baseball’s most dominant pitchers.</p>
+<p>When analyzing Sale, Markov chains give a bit more insight into predicting his next pitch than of that for Arrieta. Even though a two-seam fastball is Sale's most thrown pitch, when he threw a changeup on the previous pitch, he is 10-12% more likely to come back with another changeup than if he had previous thrown a fastball or slider.  This type of information shows the importance of Markov chains because it is simply missed when only looking at overall pitch proportions. Still not necessarily enough information to confidently assume one pitch or another, but enough information to give the batter an edge against one of baseball’s most dominant pitchers.</p>
 <p><br></p>
 </div>
 <div id="chris-sale---multi-class-markov-chain" class="section level4">
