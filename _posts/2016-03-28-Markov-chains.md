@@ -405,7 +405,7 @@ pandoc.table(pitch.prop, emphasize.strong.cells = which(pitch.prop == 0.315, arr
 <tbody>
 <tr class="odd">
 <td align="center"><strong>0.315</strong></td>
-<td align="center">0.34</td>
+<td align="center"><strong>0.34</strong></td>
 <td align="center">0.11</td>
 <td align="center">0.092</td>
 <td align="center">0.143</td>
@@ -426,7 +426,7 @@ transition.matrix</code></pre>
 <pre><code>     to
  from           4-seam FB 2-seam FB Changeup Curveball Slider
     4-seam FB     <font color="red"><b>0.482</b></font>     0.221    0.095     0.072    0.130
-    2-seam FB     0.191     0.511    0.084     0.087    0.128
+    2-seam FB     0.191     <font color="red"><b>0.511</b></font>    0.084     0.087    0.128
     Changeup      0.337     0.194    0.260     0.102    0.107
     Curveball     0.255     0.370    0.109     0.170    0.097
     Slider        0.264     0.247    0.060     0.077    0.353</code></pre>
