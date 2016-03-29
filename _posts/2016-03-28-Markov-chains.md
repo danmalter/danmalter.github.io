@@ -137,11 +137,11 @@ $(document).ready(function () {
 <p><br></p>
 <div id="quick-introdcution-to-markov-chains" class="section level4">
 <h4>Quick Introdcution to Markov Chains</h4>
-<<<<<<< HEAD
+
 <p>Markov chains are mathematical systems that hop from one “state” to another. In this demonstration, I will look at how Markov chains can be used to help determine the probability of a specific type of pitch being thrown given the pitch type of the previous pitch. States will restart after each batter, meaning that the last pitch of each batter will not be used to predict the first pitch of the next batter. Additionally, all data used is from the 2015 season and comes from MLB Gameday.</p>
-=======
+
 <p>Markov chains are mathematical systems that hop from one “state” to another. In this demonstration, I will look at how Markov chains can be used to help determine the probability of a specific type of pitch being thrown given the pitch type of the previous pitch. States will restart after each inning, meaning that the last pitch of each inning will not be used to predict the first pitch of the next inning. Additionally, all data used is from the 2015 season and comes from MLB Gameday.</p>
->>>>>>> origin/master
+
 <pre class="r"><code>library(pitchRx)
 library(RSQLite)
 library(dplyr)
