@@ -218,7 +218,7 @@ pandoc.table(pitch.prop)</code></pre>
 </tbody>
 </table>
 <p><br></p>
-<p>Next, we will look at the multi-class transition matrix for Jake Arrieta. With now more information, the below table tells us the probability of a specific pitch given the previous pitch. The transition matrix shows that when Arrieta threw a four-seam fastball on the previous pitch, he would also throw a four-seam fastball on the next pitch 23.2% of the time. We now have more information than previously, which was that Arrieta threw a four-seam fastball 18% of the time. However, not too much information was gained through the use of Markov Chains, so maybe Arrieta just really is that good. Let’s find an example where Markov chains can significantly help a batter.</p>
+<p>Next, we will look at the multi-class transition matrix for Jake Arrieta. With now more information, the below table tells us the probability of a specific pitch given the previous pitch. The transition matrix shows that when Arrieta threw a four-seam fastball on the previous pitch, he would also throw a four-seam fastball on the next pitch 23.2% of the time. We now have more information than previously, which was that Arrieta threw a four-seam fastball on his previous pitch. However, not too much information was gained through the use of Markov Chains, so maybe Arrieta just really is that good. Let’s find an example where Markov chains can significantly help a batter.</p>
 <p><br></p>
 </div>
 <div id="jake-arrieta---multi-class-markov-chain" class="section level4">
@@ -334,7 +334,7 @@ pitcher$uniqueID &lt;- paste(pitcher$num, pitcher$gameday_link, pitcher$inning, 
 </tbody>
 </table>
 <p><br></p>
-<p>When analyzing Sale, Markov chains give a bit more insight into predicting his next pitch than of that for Arrieta. Even though a two-seam fastball is Sale’s most thrown pitch, when he threw a changeup on the previous pitch, he is more likely to come back with another offspead pitch (37% + 16.4%). This type of information shows the importance of Markov chains because it is simly missed when only looking at overall pitch proportions. Still not necessarily enough information to confidently assume one pitch or another, but enough information to give the batter an edge against one of baseball’s most dominant pitchers.</p>
+<p>When analyzing Sale, Markov chains give a bit more insight into predicting his next pitch than of that for Arrieta. Even though a two-seam fastball is Sale's most thrown pitch, when he threw a changeup on the previous pitch, he is 12% more likely to come back with another changeup than if he had previous thrown a fastball or slider.  This type of information shows the importance of Markov chains because it is simly missed when only looking at overall pitch proportions. Still not necessarily enough information to confidently assume one pitch or another, but enough information to give the batter an edge against one of baseball’s most dominant pitchers.</p>
 <p><br></p>
 </div>
 <div id="chris-sale---multi-class-markov-chain" class="section level4">
