@@ -135,8 +135,8 @@ $(document).ready(function () {
 
 
 <p><br></p>
-<div id="quick-introdcution-to-markov-chains" class="section level4">
-<h4>Quick Introdcution to Markov Chains</h4>
+<div id="quick-introduction-to-markov-chains" class="section level4">
+<h4>Quick Introduction to Markov Chains</h4>
 
 <p>Markov chains are mathematical systems that hop from one “state” to another. In this demonstration, I will look at how Markov chains can be used to help determine the probability of a specific type of pitch being thrown given the pitch type of the previous pitch. States will restart after each batter, meaning that the last pitch of each batter will not be used to predict the first pitch of the next batter. Additionally, all data used is from the 2015 season and comes from MLB Gameday.</p>
 
@@ -379,7 +379,7 @@ pitcher$uniqueID &lt;- paste(pitcher$num, pitcher$gameday_link, pitcher$inning, 
 <p><br></p>
 <div id="joe-kelly---overall-pitch-proportions" class="section level4">
 <h4>Joe Kelly - Overall Pitch Proportions</h4>
-<p>In 2015, Joe Kelly threw a four-seam fastball 32% of pitches, a 2-seam fastball 34% of pitchers, etc.</p>
+<p>In 2015, Joe Kelly threw a four-seam fastball 32% of pitches, a 2-seam fastball 34% of pitches, etc.</p>
 <p><br></p>
 <pre class="r"><code>pitcher.table &lt;- table(pitcher$pitch_type_full)
 prop &lt;- prop.table(pitcher.table)
