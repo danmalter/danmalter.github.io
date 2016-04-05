@@ -117,7 +117,7 @@ spraychart %>%
 
 ![plot of chunk unnamed-chunk-5](/figure/2015-03-23-spraycharts/image1.png) 
 
-The full animated application can be seen [here](https://danmalter.shinyapps.io/Spray-Chart/). <p><p>
+The full animated application can be seen [here](https://danmalter.shinyapps.io/Spray-Chart/). 
 
 {% endraw %}
 
