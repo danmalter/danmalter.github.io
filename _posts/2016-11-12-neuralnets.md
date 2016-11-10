@@ -137,17 +137,19 @@ val.pred <- predict(nn_mod1, newdata = validation, type = "class")
 
 # Misclassified Pitch number 13
 table(val.pred, validation$pitch_type)
+confusionMatrix(val.pred, validation$pitch_type)
 ```
 <br>
 The confusion matrix shows that the model misclassified one pitch out of the 98 thrown by Arrieta in Game 2 of the World Series.  The thirteenth pitch he threw was a sinker and my model classified the pitch as a four-seam fastball.
 
 ```r
-val.pred CH CU FF SI SL
-      CH  1  0  0  0  0
-      CU  0 15  0  0  0
-      FF  0  0 49  1  0
-      SI  0  0  0 11  0
-      SL  0  0  0  0 21
+          Reference
+Prediction CH CU FF SI SL
+        CH  1  0  0  0  0
+        CU  0 15  0  0  0
+        FF  0  0 49  1  0
+        SI  0  0  0 11  0
+        SL  0  0  0  0 21
 ```
 
 <br>
