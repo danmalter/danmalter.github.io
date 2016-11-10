@@ -151,14 +151,29 @@ The above confusion matrix shows that the model misclassified one pitch out of t
 <source src="/figure/2016-11-12-neuralnet/pitch4_FF.mov">
 </video>
 
+<br>
+<br> 
+
 ## Misclassified Pitch ##
 
-The below pitch was misclassified as a four-seam fastball.  It appears 
+The below pitch was misclassified as a four-seam fastball.  Arrieta misses his spot by throwing the ball outside of the strike zone.  It appears that there may be a very small cut on the pitch, thus identifying the ball as a sinker, but it is very difficult to detect with the naked eye.  The table below shows how subtle the differences can be by looking at the mean of various factors grouped by pitch type.  Arrieta gets more spin on his sinker than compared to his four-seam fastball, but only a computer can pick up that information.
+
+detach(package:plyr)
+mean.group <- validation %>% 
+  group_by(pitch_type) %>% 
+  summarise (mean_break_angle = mean(break_angle), 
+  mean_break_length = mean(break_length),
+  mean_spin_rate = mean(spin_rate), 
+  mean_spin_dir = mean(spin_dir))
+as.data.frame(mean.group)
 
 <b>Pitch 13: Sinker</b>
 <video width="520" height="440" controls>
 <source src="/figure/2016-11-12-neuralnet/pitch13_SI.mov">
 </video>
+
+<br>
+<br>
 
 {% endraw %}
 
