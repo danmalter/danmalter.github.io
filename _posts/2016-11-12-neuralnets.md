@@ -161,15 +161,15 @@ Image from Baseball Savant
 <br>
 Play the videos of each pitch and see for yourself if you would have been able to identify the difference.
 
+<b>Pitch 1: Sinker</b>
 <video width="520" controls>
 <source src="/figure/2016-11-12-neuralnet/pitch1_SI.mov">
 </video>
-<b>Pitch 1: Sinker</b>
 
-<video width="520" height="440" controls>
+<b>Pitch 4: Four-Seam Fastball</b>
+<video width="520" controls>
 <source src="/figure/2016-11-12-neuralnet/pitch4_FF.mov">
 </video>
-<b>Pitch 4: Four-Seam Fastball</b>
 
 <br>
 
@@ -197,10 +197,10 @@ as.data.frame(mean.group)
 5         SL        -18.04286          7.695238       1120.785     107.67705
 ```
 
-<video width="520" height="440" controls>
+<b>Pitch 13: Sinker</b>
+<video width="520" controls>
 <source src="/figure/2016-11-12-neuralnet/pitch13_SI.mov">
 </video>
-<b>Pitch 13: Sinker</b>
 
 <br>
 <br>
