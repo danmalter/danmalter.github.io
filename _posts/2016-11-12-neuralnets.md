@@ -9,7 +9,7 @@ category: R
 
 # Classifying Jake Arrieta's Pitch Types #
 
-Major League Baseball currently has high definition cameras capturing everything from the release point of the ball being thrown to the amount of horizontal spin on the ball.  Rather than having a person manually write down what each pitch type is, an algorithm does this automatically.  The goal of this analysis is to use MLB's classifications to run a neural network of my own that will match that of Major League Baseball.
+Major League Baseball currently has high definition cameras capturing everything from the release point of the ball being thrown to the amount of horizontal movement on the pitch and even the spin rate of the ball.  Rather than having a human manually write down what each pitch type is, an algorithm does this automatically.  The goal of this analysis is to use MLB's classifications to run a neural network of my own that will match that of Major League Baseball.
 
 The training dataset being used are all of Jake Arrieta's pitches thrown in the 2016 regualar season and the model is validated against Game 2 of the 2016 World Series in which Arrieta threw 98 pitches.
 
@@ -156,6 +156,7 @@ val.pred CH CU FF SI SL
 First, let's take a look at a four-seam fastball and a sinker thrown by Arrieta to show how similar these pitches look and how difficult it  would be for a human to classify.  The below image shows one of each pitch thrown in the first inning, both in nearly the same location and almost identical pitch velocities.
 
 <br>
+![plot of chunk image3](/figure/2016-11-12-neuralnet/image3.png) 
 Image from Baseball Savant
 
 <br>
