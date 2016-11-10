@@ -11,7 +11,7 @@ category: R
 
 Major League Baseball currently has high definition cameras capturing everything from the release point of the ball being thrown to the amount of horizontal movement on the pitch and even the spin rate of the ball.  Rather than having a human manually write down what each pitch type is, an algorithm does this automatically.  The goal of this analysis is to use MLB's classifications to run a neural network of my own that will match that of Major League Baseball.
 
-The training dataset being used are all of Jake Arrieta's pitches thrown in the 2016 regualar season and the model is validated against Game 2 of the 2016 World Series in which Arrieta threw 98 pitches.
+The training dataset being used is from all of Jake Arrieta's pitches thrown in the 2016 regualar season and the model is validated against 98 pitches that Arrieta threw in Game 2 of the 2016 World Series.
 
 Load in the required packages
 
