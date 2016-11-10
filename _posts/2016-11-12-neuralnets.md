@@ -139,7 +139,7 @@ val.pred CH CU FF SI SL
 
 The above confusion matrix shows that the model misclassified one pitch out of the 98 thrown in Game 2 of the World Series.  My model predicted that the pitch was a four-seam fastball when in fact Major League Baseball classified the pitch as a sinker.  First, let's take a look at a four-seam fastball and a sinker thrown by Arrieta to show how similar this would be for a human to classify.  The below image shows one of each pitch thrown in the first inning, both in nearly the same location and almost identical pitch velocities.
 
-<video width="320" height="240" controls>
+<video width="520" height="440" controls>
 <source src="/figure/2016-11-12-neuralnet/pitch1_SI.mov">
 </video>
 
