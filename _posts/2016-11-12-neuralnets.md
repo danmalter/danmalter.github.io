@@ -178,7 +178,7 @@ Play the videos of each pitch and see for yourself if you would have been able t
 
 ## Misclassified Pitch ##
 
-Pitch 13 in the video below was misclassified as a four-seam fastball.  Arrieta misses his spot by throwing the ball outside of the strike zone.  It appears that there may be a very small cut on the pitch, thus identifying the ball as a sinker, but it is very difficult to detect with the naked eye.  The table below shows how subtle the differences can be by looking at the mean of various factors grouped by pitch type.  Arrieta gets more spin on his sinker than compared to his four-seam fastball, but only a computer can pick up that information.
+Pitch 13 in the video below was misclassified as a four-seam fastball.  Arrieta missed his spot by throwing the ball outside of the strike zone.  It appears that there may be a very small cut on the pitch, thus identifying the ball as a sinker, but it is very difficult to detect with the naked eye.  The table below shows how subtle the differences can be by looking at the mean of various factors grouped by pitch type.  Arrieta gets more spin on his sinker than compared to his four-seam fastball, but only a computer can pick up that information.
 
 ```r
 detach(package:plyr)
