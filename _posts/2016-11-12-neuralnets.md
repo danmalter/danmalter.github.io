@@ -84,7 +84,9 @@ Example of the dataset.  A glossary of the pitchFx fields can be seen <a href="h
 
 <br>
 
-## Neural Net from nnet Package ##
+## Neural Network from nnet Package ##
+
+This is a very simple feed-forward neural network with a single hidden layer.  More complicated methods were tested, but not necessary for this type of classification.
 
 ```r
 set.seed(353)
