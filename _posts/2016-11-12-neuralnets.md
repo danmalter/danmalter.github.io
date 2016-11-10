@@ -1,5 +1,5 @@
 ---
-title: "Classifying MLB Pitch Types Using Neural Nets"
+title: "Classifying MLB Pitch Types Using Neural Networks"
 layout: post
 comments: true
 category: R
