@@ -168,7 +168,6 @@ Play the videos of each pitch and see for yourself if you would have been able t
 </video>
 Video from MLB.com
 
-<br>
 
 <b>Pitch 4: Four-Seam Fastball</b>
 <video width="520" controls>
