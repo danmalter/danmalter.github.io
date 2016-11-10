@@ -160,7 +160,7 @@ Image from Baseball Savant
 <br>
 Play the videos of each pitch and see for yourself if you would have been able to identify the difference.
 
-<video width="520" height="580" controls>
+<video width="520" height="580">
 <source src="/figure/2016-11-12-neuralnet/pitch1_SI.mov">
 <source src="/figure/2016-11-12-neuralnet/pitch4_FF.mov">
 </video>
