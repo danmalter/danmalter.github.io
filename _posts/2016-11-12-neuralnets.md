@@ -60,6 +60,7 @@ myTrain <- arrieta[intrain,]
 myTest <- arrieta[-intrain,]
 head(myTrain)
 ```
+<br>
 
 ## Example of the dataset ##
 
@@ -79,6 +80,8 @@ head(myTrain)
 6    23.7        42.0          4.9  227.250  2622.399
 9    23.8        33.7          4.1  214.668  2386.429
 ```
+
+<br>
 
 ## Neural Net from nnet Package ##
 
@@ -106,7 +109,11 @@ test.pred  CH  CU  FF  SI  SL
 plot.nnet(nn_mod1)
 ```
 
+This image shows the layout of the neural network with 15 input nodes (features), 10 hidden nodes and 5 output nodes (pitch types).
+
 ![plot of chunk unnamed-chunk-9](/figure/2016-11-12-neuralnet/image1.png) 
+
+This summary gives an example of the weights and biases values between each node.  
 
 ```r
 # structure (15 inputs, 10 hidden layers, 5 outputs)
