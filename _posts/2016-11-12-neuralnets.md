@@ -146,6 +146,7 @@ Image from Baseball Savant
 <b>Pitch 1: Sinker</b>
 <video width="520" height="440" controls>
 <source src="/figure/2016-11-12-neuralnet/pitch1_SI.mov">
+<source src="/figure/2016-11-12-neuralnet/pitch4_FF.mov">
 </video>
 
 <br>
