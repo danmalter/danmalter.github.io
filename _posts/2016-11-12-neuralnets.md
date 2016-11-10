@@ -145,7 +145,7 @@ The confusion matrix shows that the model misclassified one pitch out of the 98 
 val.pred CH CU FF SI SL
       CH  1  0  0  0  0
       CU  0 15  0  0  0
-      FF  0  0 49  <font color="red">1</font>  0
+      FF  0  0 49  1  0
       SI  0  0  0 11  0
       SL  0  0  0  0 21
 ```
