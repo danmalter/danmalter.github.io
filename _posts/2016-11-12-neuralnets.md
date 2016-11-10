@@ -142,6 +142,7 @@ The above confusion matrix shows that the model misclassified one pitch out of t
 Pitch 1: Sinker
 <video width="520" height="440" controls>
 <source src="/figure/2016-11-12-neuralnet/pitch1_SI.mov">
+<source src="/figure/2016-11-12-neuralnet/pitch4_FF.mov">
 </video>
 
 <br>
