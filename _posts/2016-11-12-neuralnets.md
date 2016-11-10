@@ -13,9 +13,8 @@ Major League Baseball currently has high definition cameras capturing everything
 
 The training dataset being used is from all of Jake Arrieta's pitches thrown in the 2016 regualar season and the model is validated against 98 pitches that Arrieta threw in Game 2 of the 2016 World Series.
 
-Load in the required packages
-
 ```r
+# Load in the required packages
 library(nnet)
 library(caret)
 library(pitchRx)
