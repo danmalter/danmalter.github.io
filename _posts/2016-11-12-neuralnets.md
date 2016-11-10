@@ -63,7 +63,7 @@ head(myTrain)
 ```
 <br>
 
-## Example of the dataset ##
+Example of the dataset.  A glossary of the terms can be seen (here)[https://fastballs.wordpress.com/2007/08/02/glossary-of-the-gameday-pitch-fields/]
 
 ```r
   pitch_type start_speed end_speed pfx_x pfx_z    vx0      vy0     vz0      ax     ay      az
