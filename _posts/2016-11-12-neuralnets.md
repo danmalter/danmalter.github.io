@@ -131,6 +131,8 @@ This summary gives an example of the weights and biases values between each node
 
 <br>
 
+## Validate Model Against New Dataset ##
+
 ```r
 # Validation on new data from 2016 World Series game 2
 val.pred <- predict(nn_mod1, newdata = validation, type = "class")
