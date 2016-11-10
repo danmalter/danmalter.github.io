@@ -142,6 +142,7 @@ The above confusion matrix shows that the model misclassified one pitch out of t
 ![plot of chunk unnamed-chunk-9](/figure/2016-11-12-neuralnet/image3.png) 
 Image from Baseball Savant
 
+<br>
 
 <b>Pitch 1: Sinker</b>
 <video width="520" height="440" controls>
@@ -161,7 +162,7 @@ Image from Baseball Savant
 
 ## Misclassified Pitch ##
 
-The below pitch was misclassified as a four-seam fastball.  Arrieta misses his spot by throwing the ball outside of the strike zone.  It appears that there may be a very small cut on the pitch, thus identifying the ball as a sinker, but it is very difficult to detect with the naked eye.  The table below shows how subtle the differences can be by looking at the mean of various factors grouped by pitch type.  Arrieta gets more spin on his sinker than compared to his four-seam fastball, but only a computer can pick up that information.
+Pitch 13 in the video below was misclassified as a four-seam fastball.  Arrieta misses his spot by throwing the ball outside of the strike zone.  It appears that there may be a very small cut on the pitch, thus identifying the ball as a sinker, but it is very difficult to detect with the naked eye.  The table below shows how subtle the differences can be by looking at the mean of various factors grouped by pitch type.  Arrieta gets more spin on his sinker than compared to his four-seam fastball, but only a computer can pick up that information.
 
 ```r
 detach(package:plyr)
@@ -182,8 +183,6 @@ as.data.frame(mean.group)
 4         SI         31.75000          5.125000       2132.878     226.50800
 5         SL        -18.04286          7.695238       1120.785     107.67705
 ```
-
-The below image shows one of each pitch thrown in the first inning, both in nearly the same location and almost identical pitch velocities.
 
 <b>Pitch 13: Sinker</b>
 <video width="520" height="440" controls>
