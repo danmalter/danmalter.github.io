@@ -112,10 +112,12 @@ test.pred  CH  CU  FF  SI  SL
 plot.nnet(nn_mod1)
 ```
 
+<br>
 This image shows the layout of the neural network with 15 input nodes (features), 10 hidden nodes and 5 output nodes (pitch types).
 
 ![plot of image1](/figure/2016-11-12-neuralnet/image1.png) 
 
+<br>
 This summary gives an example of the weights and biases values between each node.  
 
 ```r
@@ -135,7 +137,7 @@ val.pred <- predict(nn_mod1, newdata = validation, type = "class")
 # Misclassified Pitch number 13
 table(val.pred, validation$pitch_type)
 ```
-
+<br>
 The confusion matrix shows that the model misclassified one pitch out of the 98 thrown in Game 2 of the World Series.  The thirteenth pitch thrown by Arrieta was a sinker and my model classified the pitch as a four-seam fastball.
 
 ```r
