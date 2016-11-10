@@ -7,6 +7,14 @@ category: R
 
 {% raw %}
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text-muted">Code</span> <span class="text-muted caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All</a></li>
+</ul>
+</div>
+
 # Classifying Jake Arrieta's Pitch Types #
 
 Major League Baseball currently has high definition cameras capturing everything from the release point of the ball being thrown to the amount of horizontal spin on the ball.  Rather than having a person manually write down what each pitch type is, an algorithm does this automatically.  The goal of this analysis is to use MLB's classifications to run a neural network of my own that will match that of Major League Baseball.
