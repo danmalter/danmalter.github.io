@@ -142,8 +142,9 @@ The above confusion matrix shows that the model misclassified one pitch out of t
 ![plot of chunk unnamed-chunk-9](/figure/2016-11-12-neuralnet/image3.png) 
 Image from Baseball Savant
 
-<b>Pitch 1: Sinker</b>
+
 <video width="520" height="440" controls>
+<b>Pitch 1: Sinker</b>
 <source src="/figure/2016-11-12-neuralnet/pitch1_SI.mov">
 </video>
 
