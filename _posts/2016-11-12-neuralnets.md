@@ -111,7 +111,7 @@ plot.nnet(nn_mod1)
 
 This image shows the layout of the neural network with 15 input nodes (features), 10 hidden nodes and 5 output nodes (pitch types).
 
-![plot of chunk unnamed-chunk-9](/figure/2016-11-12-neuralnet/image1.png) 
+![plot of image1](/figure/2016-11-12-neuralnet/image1.png) 
 
 This summary gives an example of the weights and biases values between each node.  
 
@@ -123,7 +123,7 @@ nn_mod1$n
 summary(nn_mod1)
 ```
 
-![plot of chunk unnamed-chunk-9](/figure/2016-11-12-neuralnet/image2.png) 
+![plot of image2](/figure/2016-11-12-neuralnet/image2.png) 
 
 ```r
 # Validation on new data from 2016 World Series game 2
@@ -142,11 +142,13 @@ val.pred CH CU FF SI SL
       SL  0  0  0  0 21
 ```
 
+<br>
+
 ## Analysis ##
 
 The above confusion matrix shows that the model misclassified one pitch out of the 98 thrown in Game 2 of the World Series.  My model predicted that the pitch was a four-seam fastball when in fact Major League Baseball classified the pitch as a sinker.  First, let's take a look at a four-seam fastball and a sinker thrown by Arrieta to show how similar these pitches look and how difficult it  would be for a human to classify.  The below image shows one of each pitch thrown in the first inning, both in nearly the same location and almost identical pitch velocities.
 
-![plot of chunk unnamed-chunk-9](/figure/2016-11-12-neuralnet/image3.png) 
+![plot of chunk image3](/figure/2016-11-12-neuralnet/image3.png) 
 Image from Baseball Savant
 
 <br>
@@ -165,7 +167,6 @@ Image from Baseball Savant
 </video>
 
 <br>
-<br> 
 
 ## Misclassified Pitch ##
 
