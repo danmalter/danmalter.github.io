@@ -151,6 +151,15 @@ The above confusion matrix shows that the model misclassified one pitch out of t
 <source src="/figure/2016-11-12-neuralnet/pitch4_FF.mov">
 </video>
 
+## Misclassified Pitch ##
+
+The below pitch was misclassified as a four-seam fastball.  It appears 
+
+<b>Pitch 13: Sinker</b>
+<video width="520" height="440" controls>
+<source src="/figure/2016-11-12-neuralnet/pitch13_SI.mov">
+</video>
+
 {% endraw %}
 
 <script>
