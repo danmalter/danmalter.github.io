@@ -3,6 +3,7 @@ title: "Classifying MLB Pitch Types Using Neural Nets"
 layout: post
 comments: true
 category: R
+code_folding: hide
 ---
 
 {% raw %}
