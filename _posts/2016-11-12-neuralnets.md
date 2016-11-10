@@ -208,6 +208,12 @@ as.data.frame(mean.group)
 Video from MLB.com
 
 <br>
+
+## Conclusion ##
+
+Overall, it is clear that you do not need a very complicated model for predicting pitch types.  This model showed to have a 98% accuracy and even then, there are often times pitches that cannot be categorized as one type of pitch or another for various reasons.  
+
+<br>
 <br>
 
 {% endraw %}
