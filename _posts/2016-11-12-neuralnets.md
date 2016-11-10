@@ -152,7 +152,7 @@ val.pred CH CU FF SI SL
 <br>
 
 ## Analysis ##
-First, let's take a look at a four-seam fastball and a sinker thrown by Arrieta to show how similar these pitches look and how difficult it  would be for a human to classify.  The below image shows one of each pitch thrown in the first inning, both in nearly the same location and almost identical pitch velocities.
+First, let's take a look at a four-seam fastball and a sinker thrown by Arrieta to show how similar these pitches look and how difficult it  would be for a human to classify.  The below image shows one of each pitch thrown in the first inning, both in nearly the same location and almost identical pitch velocities.  Play the videos of each pitch and see for yourself if you would have been able to identify the difference.
 
 ![plot of chunk image3](/figure/2016-11-12-neuralnet/image3.png) 
 Image from Baseball Savant
