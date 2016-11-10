@@ -211,7 +211,7 @@ Video from MLB.com
 
 ## Conclusion ##
 
-Overall, it is clear that you do not need a very complicated model for predicting pitch types.  This model showed to have a 99% accuracy and even then, there are often times pitches that cannot be categorized as one type of pitch or another for various reasons.  
+Overall, it is clear that you do not need a very complicated model for predicting pitch types.  This model showed to have a 98.9% accuracy and even then, there are often times pitches that cannot be categorized as one type of pitch or another for various reasons.  
 
 <br>
 <br>
