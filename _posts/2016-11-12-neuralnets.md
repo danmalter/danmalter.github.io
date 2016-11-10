@@ -125,11 +125,11 @@ nn_mod1$n
 summary(nn_mod1)
 ```
 
-<br>
-
 This summary gives an example of the weights and biases values between each node.  
 
 ![plot of image2](/figure/2016-11-12-neuralnet/image2.png) 
+
+<br>
 
 ```r
 # Validation on new data from 2016 World Series game 2
