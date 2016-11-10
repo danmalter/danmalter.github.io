@@ -140,7 +140,7 @@ table(val.pred, validation$pitch_type)
 confusionMatrix(val.pred, validation$pitch_type)
 ```
 <br>
-The confusion matrix shows that the model misclassified one pitch out of the 98 thrown by Arrieta in Game 2 of the World Series.  The thirteenth pitch he threw was a sinker and my model classified the pitch as a four-seam fastball.
+The confusion matrix shows that the model misclassified one pitch out of the 98 thrown by Arrieta in Game 2 of the World Series.  The thirteenth pitch he threw was a sinker and my model classified the pitch as a four-seam fastball.  We can take a look at the actual video footage to see why the model may have been wrong.  As it turns out, this particular pitch was not thrown well by Arrieta.
 
 ```r
           Reference
