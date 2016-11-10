@@ -125,7 +125,7 @@ nn_mod1$n
 summary(nn_mod1)
 ```
 
-This summary gives an example of the weights and biases values between each node.  The summary can be read as: the bias from the first hidden node is 0, the weight from the first input node to the first hidden node is -0.44.  
+This summary gives an example of the weights and biases values between each node.  The table can be read as: the bias from the first hidden node is 0, the weight from the first input node to the first hidden node is -0.44.  
 
 ![plot of image2](/figure/2016-11-12-neuralnet/image2.png) 
 
