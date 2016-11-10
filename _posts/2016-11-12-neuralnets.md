@@ -15,15 +15,7 @@ The training dataset being used are all of Jake Arrieta's pitches thrown in the 
 
 Load in the required packages
 
-<pre class="r"><code>
-<div class="btn-group pull-right">
-<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text-muted">Code</span> <span class="text-muted caret"></span></button>
-<ul class="dropdown-menu" style="min-width: 50px;">
-<li><a id="rmd-show-all-code" href="#">Show All</a></li>
-<li><a id="rmd-hide-all-code" href="#">Hide All</a></li>
-</ul>
-</div>
-
+```r
 library(nnet)
 library(caret)
 library(pitchRx)
@@ -31,7 +23,7 @@ library(dplyr)
 library(plyr)
 library(RSQLite)
 library(devtools)
-</code></pre>
+```
 
 The following script was used to scrape data from the 2016 season and filtered for Jake Arrieta's pitches.  A similar script was ran for only data on 10/26/16, the date of Game 2 from the 2016 World Series.
 
