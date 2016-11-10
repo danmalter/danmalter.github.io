@@ -116,8 +116,6 @@ This image shows the layout of the neural network with 15 input nodes (features)
 ![plot of image1](/figure/2016-11-12-neuralnet/image1.png) 
 
 <br>
-This summary gives an example of the weights and biases values between each node.  
-
 ```r
 # structure (15 inputs, 10 hidden layers, 5 outputs)
 nn_mod1$n
@@ -125,6 +123,9 @@ nn_mod1$n
 # summary of model
 summary(nn_mod1)
 ```
+
+<br>
+This summary gives an example of the weights and biases values between each node.  
 
 ![plot of image2](/figure/2016-11-12-neuralnet/image2.png) 
 
