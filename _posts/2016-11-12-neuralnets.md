@@ -147,10 +147,7 @@ Pitch 1: Sinker
 
 <br>
 
-Pitch 4: Four-Seam Fastball
-<video width="520" height="440" controls>
-<source src="/figure/2016-11-12-neuralnet/pitch4_FF.mov">
-</video>
+
 
 {% endraw %}
 
