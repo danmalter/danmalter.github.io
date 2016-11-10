@@ -137,12 +137,10 @@ val.pred CH CU FF SI SL
 
 ## Analysis ##
 
-The above confusion matrix shows that the model misclassified one pitch out of the 98 thrown in Game 2 of the World Series.  My model predicted that the pitch was a four-seam fastball when in fact Major League Baseball classified the pitch as a sinker.  First, let's take a look at a four-seam fastball and a sinker thrown by Arrieta to show how similar this would be for a human to classify.  
+The above confusion matrix shows that the model misclassified one pitch out of the 98 thrown in Game 2 of the World Series.  My model predicted that the pitch was a four-seam fastball when in fact Major League Baseball classified the pitch as a sinker.  First, let's take a look at a four-seam fastball and a sinker thrown by Arrieta to show how similar this would be for a human to classify.  The below image shows one of each pitch thrown in the first inning, both in nearly the same location and almost identical pitch velocities.
 
 ![plot of chunk unnamed-chunk-9](/figure/2016-11-12-neuralnet/image3.png) 
 Image from Baseball Savant
-
-The below image shows one of each pitch thrown in the first inning, both in nearly the same location and almost identical pitch velocities.
 
 <b>Pitch 1: Sinker</b>
 <video width="520" height="440" controls>
@@ -163,6 +161,7 @@ The below image shows one of each pitch thrown in the first inning, both in near
 
 The below pitch was misclassified as a four-seam fastball.  Arrieta misses his spot by throwing the ball outside of the strike zone.  It appears that there may be a very small cut on the pitch, thus identifying the ball as a sinker, but it is very difficult to detect with the naked eye.  The table below shows how subtle the differences can be by looking at the mean of various factors grouped by pitch type.  Arrieta gets more spin on his sinker than compared to his four-seam fastball, but only a computer can pick up that information.
 
+```r
 detach(package:plyr)
 mean.group <- validation %>% 
   group_by(pitch_type) %>% 
@@ -171,6 +170,18 @@ mean.group <- validation %>%
   mean_spin_rate = mean(spin_rate), 
   mean_spin_dir = mean(spin_dir))
 as.data.frame(mean.group)
+```
+
+```r
+  pitch_type mean_break_angle mean_break_length mean_spin_rate mean_spin_dir
+1         CH         26.60000          5.800000       1957.302     228.09300
+2         CU        -16.50667         13.326667       1976.298      50.75767
+3         FF         26.34082          4.057143       2162.419     209.88673
+4         SI         31.75000          5.125000       2132.878     226.50800
+5         SL        -18.04286          7.695238       1120.785     107.67705
+```
+
+The below image shows one of each pitch thrown in the first inning, both in nearly the same location and almost identical pitch velocities.
 
 <b>Pitch 13: Sinker</b>
 <video width="520" height="440" controls>
