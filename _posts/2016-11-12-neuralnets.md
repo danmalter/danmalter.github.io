@@ -166,6 +166,7 @@ Play the videos of each pitch and see for yourself if you would have been able t
 <video width="520" controls>
 <source src="/figure/2016-11-12-neuralnet/pitch1_SI.mov">
 </video>
+Video from MLB.com
 
 <br>
 
@@ -173,6 +174,7 @@ Play the videos of each pitch and see for yourself if you would have been able t
 <video width="520" controls>
 <source src="/figure/2016-11-12-neuralnet/pitch4_FF.mov">
 </video>
+Video from MLB.com
 
 <br>
 
@@ -204,6 +206,7 @@ as.data.frame(mean.group)
 <video width="520" controls>
 <source src="/figure/2016-11-12-neuralnet/pitch13_SI.mov">
 </video>
+Video from MLB.com
 
 <br>
 <br>
