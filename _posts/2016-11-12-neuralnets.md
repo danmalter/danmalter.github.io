@@ -27,7 +27,7 @@ library(devtools)
 The following script was used to scrape data from the 2016 season and filtered for Jake Arrieta's pitches.  A similar script was ran for only data on 10/26/16, the date of Game 2 from the 2016 World Series.
 
 ```r
-db2016 <- src_sqlite("MLB2015_All.sqlite3", create = FALSE)
+db2016 <- src_sqlite("MLB2016_All.sqlite3", create = FALSE)
 scrape(start = "2016-04-01", end = "2016-10-01", connect = db2016$con)
 
 locations <- select(tbl(db2016, "pitch"), 
