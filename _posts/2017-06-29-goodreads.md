@@ -10,6 +10,30 @@ output:
 {% raw %}
 
 
+<!-- Here we style our button a little bit -->
+<style>
+  .showopt {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #004c93;
+    color: #FFFFFF; 
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle !important;
+    border-radius: 8px;
+    float:right;
+  }
+  .showopt:hover {
+    background-color: #dfe4f2;
+    color: #004c93;
+}
+
+
+</style>
+
+<!--Include script for hiding output chunks-->
+<script src="/javascript/hideOutput.js"></script>
+
 # Analyzing Book Titles with 'Boy' and 'Girl' #
 
 This analysis is inspired by the FiveThirtyEight post, [The Gone Girl With The Dragon Tattoo On The Train](https://fivethirtyeight.com/features/the-gone-girl-with-the-dragon-tattoo-on-the-train/), in which the authors asks the question, 
