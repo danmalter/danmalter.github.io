@@ -7,7 +7,6 @@ output:
   html_document:
   code_folding: hide
 ---
-{% raw %}
 
 
 <!-- Here we style our button a little bit -->
@@ -38,6 +37,7 @@ pre.plot {
 <!--Include script for hiding output chunks-->
 <script src="javascripts/hideOutput.js"></script>
 
+{% raw %}
 
 # Analyzing Book Titles with 'Boy' and 'Girl' #
 
