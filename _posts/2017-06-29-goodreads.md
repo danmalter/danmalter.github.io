@@ -35,18 +35,18 @@ pre.plot {
 </style>
 
 <!--Include script for hiding output chunks-->
-<script src="javascripts/hideOutput.js"></script>
+<script src="/javascripts/hideOutput.js"></script>
 
 {% raw %}
 
-# aAnalyzing Book Titles with 'Boy' and 'Girl' #
+# Analyzing Book Titles with 'Boy' and 'Girl' #
 
 This analysis is inspired by the FiveThirtyEight post, [The Gone Girl With The Dragon Tattoo On The Train](https://fivethirtyeight.com/features/the-gone-girl-with-the-dragon-tattoo-on-the-train/), in which the authors asks the question, 
 "why are there so many books with 'girl' in the title?".  The goal of this analysis is to replicate the code used to collect reading data 
 from [Goodreads.com](https://www.goodreads.com/).
 
 <div class="fold s">
-```r
+```{r}
 # Load in the required packages
 library(rvest)
 library(stringr)
