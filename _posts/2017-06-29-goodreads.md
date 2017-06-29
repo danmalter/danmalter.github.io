@@ -10,7 +10,7 @@ output:
 
 
 <!-- Here we style our button a little bit -->
-<style>
+
 .showopt {
   background-color: #004c93;
   color: #FFFFFF; 
@@ -32,7 +32,6 @@ pre.plot {
   background-color: white !important;
 }
 
-</style>
 
 <!--Include script for hiding output chunks-->
 <script src="/javascripts/hideOutput.js"></script>
