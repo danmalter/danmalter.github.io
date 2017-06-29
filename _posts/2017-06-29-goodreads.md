@@ -1,5 +1,5 @@
 ---
-  title: "Goodreads Analysis of Titles with 'Boy' and 'Girl'"
+  title: "Goodreads Analysis of Titles Containing 'Boy' and 'Girl'"
 layout: post
 comments: true
 category: R
@@ -46,7 +46,7 @@ This analysis is inspired by the FiveThirtyEight post, [The Gone Girl With The D
 from [Goodreads.com](https://www.goodreads.com/).
 
 <div class="fold s">
-```{r}
+```r
 # Load in the required packages
 library(rvest)
 library(stringr)
