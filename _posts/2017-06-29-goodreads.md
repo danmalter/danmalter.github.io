@@ -281,6 +281,21 @@ boy$boy.published <- as.numeric(as.character(boy$boy.published))
 boy$boy.editions <- as.numeric(as.character(boy$boy.editions))
 boy[is.na(boy)] <- 0
 boy <- boy[grepl("boy", boy$boy.title) | grepl("Boy", boy$boy.title), ]
+
+# summary statistics by year
+girl.table <- girl %>% 
+  group_by(girl.published) %>%
+  summarise(girl.avg.rating=mean(girl.avg.rating), girl.total.ratings=sum(girl.total.ratings), girl.editions=sum(girl.editions), girl.count=n())
+girl.table
+
+boy.table <- boy %>% 
+  group_by(boy.published) %>%
+  summarise(boy.avg.rating=mean(boy.avg.rating), boy.total.ratings=sum(boy.total.ratings), boy.editions=sum(boy.editions), boy.count=n())
+boy.table
+
+final.df <- merge(boy.table, girl.table, by.x="boy.published", by.y="girl.published", all=TRUE)
+final.df[is.na(final.df)] <- 0
+colnames(final.df)[colnames(final.df) == 'boy.published'] <- 'published'
 ```
 
 ### Count of Books on Goodreads ###
