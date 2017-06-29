@@ -43,7 +43,7 @@ This analysis is inspired by the FiveThirtyEight post, [The Gone Girl With The D
 "why are there so many books with 'girl' in the title?".  The goal of this analysis is to replicate the code used to collect reading data 
 from [Goodreads.com](https://www.goodreads.com/).
 
-<div class="fold s">
+
 ```r
 # Load in the required packages
 library(rvest)
@@ -52,7 +52,7 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 ```
-</div>
+
 
 ```r
 # initialize tables
