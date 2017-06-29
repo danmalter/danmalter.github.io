@@ -18,7 +18,6 @@ This analysis is inspired by the FiveThirtyEight post, [The Gone Girl With The D
 from [Goodreads.com](https://www.goodreads.com/).
 
 
-<pre class="r"><code>
 ```r
 # Load in the required packages
 library(rvest)
@@ -27,7 +26,6 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 ```
- </code></pre>
 
 ```r
 # initialize tables
