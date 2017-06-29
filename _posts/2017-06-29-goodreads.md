@@ -18,6 +18,21 @@ This analysis is inspired by the FiveThirtyEight post, [The Gone Girl With The D
 from [Goodreads.com](https://www.goodreads.com/).
 
 
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text-muted">Code</span> <span class="text-muted caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All</a></li>
+</ul>
+</div>
+
+
 ```r
 # Load in the required packages
 library(rvest)
