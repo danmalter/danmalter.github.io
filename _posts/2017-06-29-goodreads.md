@@ -7,6 +7,8 @@ output:
   html_document:
   code_folding: hide
 ---
+{% raw %}
+
 $(document).ready(function() {
 
   $chunks = $('.fold');
@@ -68,11 +70,10 @@ pre.plot {
   background-color: white !important;
 }
 
-{% raw %}
 
 
 
-# aAnalyzing Book Titles with 'Boy' and 'Girl' #
+# bAnalyzing Book Titles with 'Boy' and 'Girl' #
 
 This analysis is inspired by the FiveThirtyEight post, [The Gone Girl With The Dragon Tattoo On The Train](https://fivethirtyeight.com/features/the-gone-girl-with-the-dragon-tattoo-on-the-train/), in which the authors asks the question, 
 "why are there so many books with 'girl' in the title?".  The goal of this analysis is to replicate the code used to collect reading data 
