@@ -31,7 +31,7 @@ output:
 </style>
 
 <!--Include script for hiding output chunks-->
-<script src="/javascript/hideOutput.js"></script>
+<script src="/javascripts/hideOutput.js"></script>
 
 # Analyzing Book Titles with 'Boy' and 'Girl' #
 
