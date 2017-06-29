@@ -39,7 +39,7 @@ pre.plot {
 
 {% raw %}
 
-# Analyzing Book Titles with 'Boy' and 'Girl' #
+# Analyzing Book Titles Containing 'Boy' and 'Girl' #
 
 This analysis is inspired by the FiveThirtyEight post, [The Gone Girl With The Dragon Tattoo On The Train](https://fivethirtyeight.com/features/the-gone-girl-with-the-dragon-tattoo-on-the-train/), in which the authors asks the question, 
 "why are there so many books with 'girl' in the title?".  The goal of this analysis is to replicate the code used to collect reading data 
