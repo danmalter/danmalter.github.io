@@ -3,14 +3,12 @@
 layout: post
 comments: true
 category: R
-output:
-  html_document:
-  code_folding: hide
 ---
 
 
 <!-- Here we style our button a little bit -->
 
+<style>
 .showopt {
   background-color: #004c93;
   color: #FFFFFF; 
@@ -31,6 +29,7 @@ output:
 pre.plot {
   background-color: white !important;
 }
+</style>
 
 
 <!--Include script for hiding output chunks-->
