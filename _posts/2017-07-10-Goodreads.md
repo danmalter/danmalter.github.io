@@ -391,7 +391,7 @@ boy &lt;- subset(boy, boy.title != &quot;\&quot;A Boy called 'It'\&quot;&quot;) 
                                                                                                                                                                                                                                                                            <div id="top-10-books-with-boy-or-boys-in-the-title" class="section level4">
                                                                                                                                                                                               <h4>Top 10 Books with ‘Boy’ or ‘Boys’ in the Title</h4>
                                                                                                                                                                                               <pre class="r"><code>
-                                                                                               ### Analysis ###
+### Analysis ###
 
 # Top 10 "Boy" Books
 boy.top10 <- boy %>%
