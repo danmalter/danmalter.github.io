@@ -392,16 +392,19 @@ boy &lt;- subset(boy, boy.title != &quot;\&quot;A Boy called 'It'\&quot;&quot;) 
                                                                                                                                                                                               <h4>Top 10 Books with ‘Boy’ or ‘Boys’ in the Title</h4>
                                                                                                                                                                                               <pre class="r"><code>
                                                                                                ### Analysis ###
-                                                                                               # Top 10 &quot;Boy&quot; Books
-                                                                                               boy.top10 &lt;- boy %&gt;%
-distinct(boy.title, boy.total.ratings, boy.published) %&gt;%
-arrange(-boy.total.ratings) %&gt;%
-filter(rank(desc(boy.total.ratings)) &lt;= 10)
-names(boy.top10)[names(boy.top10) == &quot;boy.title&quot;] &lt;- &quot;Title&quot;
-names(boy.top10)[names(boy.top10) == &quot;boy.total.ratings&quot;] &lt;- &quot;Total Ratings&quot;
-names(boy.top10)[names(boy.top10) == &quot;boy.published&quot;] &lt;- &quot;Date Published&quot;
-                                                                                               kable(boy.top10) %&gt;%
-                                                                                               kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;responsive&quot;))
+
+# Top 10 "Boy" Books
+boy.top10 <- boy %>%
+  distinct(boy.title, boy.total.ratings, boy.published) %>%
+  arrange(-boy.total.ratings) %>%
+  filter(rank(desc(boy.total.ratings)) <= 10)
+
+names(boy.top10)[names(boy.top10) == "boy.title"] <- "Title"
+names(boy.top10)[names(boy.top10) == "boy.total.ratings"] <- "Total Ratings"
+names(boy.top10)[names(boy.top10) == "boy.published"] <- "Date Published"
+
+kable(boy.top10) %>%
+kable_styling(bootstrap_options = c("striped", "hover", "responsive"))
                                                                                                </code></pre>
                                                                                                                                                                                                                                                                            <table>
                                                                                                                                                                                                                                                                            <thead>
