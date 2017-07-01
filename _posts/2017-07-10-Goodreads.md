@@ -689,8 +689,7 @@ script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_
 document.getElementsByTagName("head")[0].appendChild(script);
                                                                                               })();
                                                                                              </script>
-                                                                                             </body>
-</html>
+                                                                                             
 
 {% endraw %}
 
@@ -704,4 +703,6 @@ ga('create', 'UA-57468410-2', 'auto');
 ga('send', 'pageview');
 
 </script>
+</body>
+</html>
 
