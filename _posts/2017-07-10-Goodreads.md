@@ -628,10 +628,9 @@ ggplot(final.df, aes(x = published)) +
                                                                                                <h4>Average Rating by Year</h4>
                                                                                                <p>In regards to average rating for these book on Goodreads, it is almost identical at 3.74 for boys and 3.75 for girls. I would expect that the total average rating for all books on Goodreads is also right around 3.75.</p>
                                                                                                <pre class="r"><code>
-                                                                                               # Average Rating
+# Average Rating
 kable(paste0('Girl: ', round(mean(girl$girl.avg.rating),2), sep='')) 
-kable(paste0('Boy: ', round(mean(boy$boy.avg.rating),2), sep=''))
-                                                                                               </code></pre>
+kable(paste0('Boy: ', round(mean(boy$boy.avg.rating),2), sep=''))                              </code></pre>
                                                                                                <table>
 <tbody>
                                                                                               <tr class="odd">
