@@ -685,9 +685,6 @@ script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_
 document.getElementsByTagName("head")[0].appendChild(script);
                                                                                               })();
                                                                                              </script>
-                                                                                             
-</body>
-</html>
 
   
 {% endraw %}
