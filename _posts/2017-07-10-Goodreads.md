@@ -390,9 +390,9 @@ boy &lt;- subset(boy, boy.title != &quot;\&quot;A Boy called 'It'\&quot;&quot;) 
                                                                                                                                                                                                                                                                            <p><br></p>
                                                                                                                                                                                                                                                                            <div id="top-10-books-with-boy-or-boys-in-the-title" class="section level4">
                                                                                                                                                                                               <h4>Top 10 Books with ‘Boy’ or ‘Boys’ in the Title</h4>
-                                                                                                                                                                                                                                                                           <pre class="r"><code>### Analysis ###
-                                                                                                                                                                                                                                                                           
-                                                                                                                                                                                              # Top 10 &quot;Boy&quot; Books
+                                                                                                                                                                                              <pre class="r"><code>
+                                                                                               ### Analysis ###
+                                                                                               # Top 10 &quot;Boy&quot; Books
                                                                                                boy.top10 &lt;- boy %&gt;%
 distinct(boy.title, boy.total.ratings, boy.published) %&gt;%
 arrange(-boy.total.ratings) %&gt;%
@@ -401,7 +401,8 @@ names(boy.top10)[names(boy.top10) == &quot;boy.title&quot;] &lt;- &quot;Title&qu
 names(boy.top10)[names(boy.top10) == &quot;boy.total.ratings&quot;] &lt;- &quot;Total Ratings&quot;
 names(boy.top10)[names(boy.top10) == &quot;boy.published&quot;] &lt;- &quot;Date Published&quot;
                                                                                                kable(boy.top10) %&gt;%
-                                                                                               kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;responsive&quot;))</code></pre>
+                                                                                               kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;responsive&quot;))
+                                                                                               </code></pre>
                                                                                                                                                                                                                                                                            <table>
                                                                                                                                                                                                                                                                            <thead>
                                                                                                                                                                                                                                                                            <tr class="header">
