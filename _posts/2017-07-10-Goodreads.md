@@ -403,72 +403,75 @@ names(boy.top10)[names(boy.top10) == "boy.published"] <- "Date Published"
 kable(boy.top10) %>%
 kable_styling(bootstrap_options = c("striped", "hover", "responsive"))
                                                                                                </code></pre>
-                                                                                                                                                                                                                                                                           <table>
-                                                                                                                                                                                                                                                                           <thead>
-                                                                                                                                                                                                                                                                           <tr class="header">
-                                                                                                                                                                                                                                                                           <th align="left">Title</th>
-                                                                                                                                                                                                                                                                           <th align="right">Total Ratings</th>
-                                                                                                                                                                                                                                                                           <th align="right">Date Published</th>
-                                                                                                                                                                                                                                                                           </tr>
-                                                                                                                                                                                                                                                                           </thead>
-                                                                                                                                                                                                                                                                           <tbody>
-                                                                                                                                                                                                                                                                           <tr class="odd">
-                                                                                                                                                                                                                                                                           <td align="left">The Boy in the Striped Pajamas</td>
-                                                                                                                                                                                                                                                                           <td align="right">318779</td>
-                                                                                                                                                                                                                                                                           <td align="right">2006</td>
-                                                                                                                                                                                                                                                                           </tr>
-                                                                                                                                                                                                                                                                           <tr class="even">
-                                                                                                                                                                                                                                                                           <td align="left">Where the Red Fern Grows: The Story of Two Dogs and a Boy</td>
-                                                                                                                                                                                                                                                                           <td align="right">278208</td>
-                                                                                                                                                                                                                                                                           <td align="right">1961</td>
-                                                                                                                                                                                                                                                                           </tr>
-                                                                                                                                                                                                                                                                           <tr class="odd">
-                                                                                                                                                                                                                                                                           <td align="left">Oliver Twist: The Parish Boy’s Progress</td>
-                                                                                                                                                                                                                                                                           <td align="right">249995</td>
-                                                                                                                                                                                                                                                                           <td align="right">1838</td>
-                                                                                                                                                                                                                                                                           </tr>
-                                                                                                                                                                                                                                                                           <tr class="even">
-                                                                                                                                                                                                                                                                           <td align="left">Heaven is for Real: A Little Boy’s Astounding Story of His Trip to Heaven and Back</td>
-                                                                                                                                                                                                                                                                           <td align="right">242323</td>
-                                                                                                                                                                                                                                                                           <td align="right">2010</td>
-                                                                                                                                                                                                                                                                           </tr>
-                                                                                                                                                                                                                                                                           <tr class="odd">
-                                                                                                                                                                                                                                                                           <td align="left">Peter and Wendy: The Boy Who Wouldn’t Grow Up</td>
-                                                                                                                                                                                                                                                                           <td align="right">194446</td>
-                                                                                                                                                                                                                                                                           <td align="right">1911</td>
-                                                                                                                                                                                                                                                                           </tr>
-                                                                                                                                                                                                                                                                           <tr class="even">
-                                                                                                                                                                                                                                                                           <td align="left">Lola and the Boy Next Door (Anna and the French Kiss, #2)</td>
-                                                                                                                                                                                                                                                                                                                        <td align="right">122083</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">2011</td>
-                                                                                                                                                                                                                                                                                                                          </tr>
-                                                                                                                                                                                                                                                                                                                          <tr class="odd">
-                                                                                                                                                                                                                                                                                                                          <td align="left">A Long Way Gone: Memoirs of a Boy Soldier</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">119382</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">2007</td>
-                                                                                                                                                                                                                                                                                                                          </tr>
-                                                                                                                                                                                                                                                                                                                          <tr class="even">
-                                                                                                                                                                                                                                                                                                                          <td align="left">About a Boy</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">111520</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">1998</td>
-                                                                                                                                                                                                                                                                                                                          </tr>
-                                                                                                                                                                                                                                                                                                                          <tr class="odd">
-                                                                                                                                                                                                                                                                                                                          <td align="left">Dr. Seuss’s Green Eggs and Ham: For Soprano, Boy Soprano, and Orchestra</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">90304</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">1998</td>
-                                                                                                                                                                                                                                                                                                                          </tr>
-                                                                                                                                                                                                                                                                                                                          <tr class="even">
-                                                                                                                                                                                                                                                                                                                          <td align="left">The Boy Who Sneaks in My Bedroom Window</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">54926</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">2011</td>
-                                                                                                                                                                                                                                                                                                                          </tr>
-                                                                                                                                                                                                                                                                                                                          </tbody>
-                                                                                                                                                                                                                                                                                                                          </table>
-                                                                                                                                                                                                                                                                                                                          <p><br></p>
-                                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                                          <div id="top-10-books-with-girl-or-girls-in-the-title" class="section level4">
-                                                                                                                                                                                                                                                                                             <h4>Top 10 Books with ‘Girl’ or ‘Girls’ in the Title</h4>
-                                                                                                                                                                                                                                                                                             <pre class="r"><code>
+                                                                                                                                                                                              <table>
+                                                                                                                                                                                              <thead>
+  <tr class="header">
+  <th align="left">Title</th>
+  <th align="right">Total Ratings</th>
+  <th align="right">Date Published</th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr class="odd">
+  <td align="left">The Boy in the Striped Pajamas</td>
+  <td align="right">318,779</td>
+  <td align="right">2006</td>
+  </tr>
+
+  <tr class="even">
+  <td align="left">Where the Red Fern Grows: The Story of Two Dogs and a Boy</td>
+  <td align="right">278,208</td>                                                                 <td align="right">1961</td>
+  </tr>
+
+  <tr class="odd">
+  <td align="left">Oliver Twist: The Parish Boy’s Progress</td>
+  <td align="right">249,995</td>
+  </tr>
+                                                                                                 <tr class="even">
+  <td align="left">Heaven is for Real: A Little Boy’s Astounding Story of His Trip to Heaven and Back</td>
+  <td align="right">242,323</td>
+  <td align="right">2010</td>
+  </tr>
+                                                                                                 <tr class="odd">
+  <td align="left">Peter and Wendy: The Boy Who Wouldn’t Grow Up</td>
+  <td align="right">194,446</td>
+  <td align="right">1911</td>
+  </tr>
+                                                                                                 <tr class="even">
+  <td align="left">Lola and the Boy Next Door (Anna and the French Kiss, #2)</td>
+  <td align="right">122,083</td>
+  <td align="right">2011</td>
+  </tr>
+                                                                                                 <tr class="odd">
+  <td align="left">A Long Way Gone: Memoirs of a Boy Soldier</td>
+  <td align="right">119,382</td>
+  <td align="right">2007</td>
+  </tr>
+                                                                                                 <tr class="even">
+  <td align="left">About a Boy</td>
+  <td align="right">111,520</td>
+  <td align="right">1998</td>
+  </tr>
+                                                                                                 <tr class="odd">
+  <td align="left">Dr. Seuss’s Green Eggs and Ham: For Soprano, Boy Soprano, and Orchestra</td>
+  <td align="right">90,304</td>
+  <td align="right">1998</td>
+  </tr>
+                                                                                                 <tr class="even">
+  <td align="left">The Boy Who Sneaks in My Bedroom Window</td>
+  <td align="right">54,926</td>
+  <td align="right">2011</td>
+  </tr>
+                                                                                               </tbody>
+</table>
+
+<p><br></p>
+                                                                                               </div>
+
+<div id="top-10-books-with-girl-or-girls-in-the-title" class="section level4">
+                                                                                               <h4>Top 10 Books with ‘Girl’ or ‘Girls’ in the Title</h4>
+                                                                                               <pre class="r"><code>
 # Top 10 "Girl" Books
 girl.top10 <- girl %>%
   distinct(girl.title, girl.total.ratings, girl.published) %>%
@@ -482,73 +485,85 @@ names(girl.top10)[names(girl.top10) == "girl.published"] <- "Date Published"
 kable(girl.top10) %>%
 kable_styling(bootstrap_options = c("striped", "hover", "responsive"))
                                                                                                </code></pre>
-                                                                                                                                                                                                                                                                                                                          <table>
-                                                                                                                                                                                                                                                                                                                          <thead>
-                                                                                                                                                                                                                                                                                                                          <tr class="header">
-                                                                                                                                                                                                                                                                                                                          <th align="left">Title</th>
-                                                                                                                                                                                                                                                                                                                          <th align="right">Total Ratings</th>
-                                                                                                                                                                                                                                                                                                                          <th align="right">Date Published</th>
-                                                                                                                                                                                                                                                                                                                          </tr>
-                                                                                                                                                                                                                                                                                                                          </thead>
-                                                                                                                                                                                                                                                                                                                          <tbody>
-                                                                                                                                                                                                                                                                                                                          <tr class="odd">
-                                                                                                                                                                                                                                                                                                                          <td align="left">The Diary of a Young Girl (The Diary of Anne Frank)</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">1990749</td>
-                                                                                                                                                                                                                                                                                                                          <td align="right">1947</td>
-                                                                                                                                                                                                                                                                                                                          </tr>
-                                                                                                                                                                                                                                                                                                                          <tr class="even">
-                                                                                                                                                                                                                                                                                                                          <td align="left">The Girl with the Dragon Tattoo (Millennium, #1)</td>
-                                                                                                                                                                                                                                                                                                                                                                            <td align="right">1896353</td>
-                                                                                                                                                                                                                                                                                                                                                                              <td align="right">2005</td>
-                                                                                                                                                                                                                                                                                                                                                                              </tr>
-                                                                                                                                                                                                                                                                                                                                                                              <tr class="odd">
-                                                                                                                                                                                                                                                                                                                                                                              <td align="left">Gone Girl</td>
-                                                                                                                                                                                                                                                                                                                                                                              <td align="right">1598463</td>
-                                                                                                                                                                                                                                                                                                                                                                              <td align="right">2012</td>
-                                                                                                                                                                                                                                                                                                                                                                              </tr>
-                                                                                                                                                                                                                                                                                                                                                                              <tr class="even">
-                                                                                                                                                                                                                                                                                                                                                                              <td align="left">Young Girls</td>
-                                                                                                                                                                                                                                                                                                                                                                              <td align="right">1300976</td>
-                                                                                                                                                                                                                                                                                                                                                                              <td align="right">1868</td>
-                                                                                                                                                                                                                                                                                                                                                                              </tr>
-                                                                                                                                                                                                                                                                                                                                                                              <tr class="odd">
-                                                                                                                                                                                                                                                                                                                                                                              <td align="left">The Girl on the Train</td>
-                                                                                                                                                                                                                                                                                                                                                                              <td align="right">1171604</td>
-                                                                                                                                                                                                                                                                                                                                                                              <td align="right">2015</td>
-                                                                                                                                                                                                                                                                                                                                                                              </tr>
-                                                                                                                                                                                                                                                                                                                                                                              <tr class="even">
-                                                                                                                                                                                                                                                                                                                                                                              <td align="left">The Girl Who Played with Fire (Millennium, #2)</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                              <td align="right">640475</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <td align="right">2006</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                </tr>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <tr class="odd">
-                                                                                                                                                                                                                                                                                                                                                                                                                                <td align="left">The Girl Who Kicked the Hornet’s Nest (Millennium, #3)</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <td align="right">521051</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <td align="right">2007</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </tr>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <tr class="even">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <td align="left">Girl with a Pearl Earring</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <td align="right">485129</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <td align="right">1999</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </tr>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <tr class="odd">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <td align="left">The Other Boleyn Girl (The Plantagenet and Tudor Novels, #9)</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <td align="right">396422</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <td align="right">2001</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </tr>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <tr class="even">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <td align="left">Kiss the Girls (Alex Cross, #2)</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <td align="right">277299</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <td align="right">1995</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </tr>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </tbody>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </table>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <p><br></p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <div id="total-ratings-on-goodreads.com" class="section level4">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <h4>Total Ratings on goodreads.com</h4>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <p>We see that for every year shown on this graph, titles with ‘Girl’ get more reviews than book titles with ‘Boy’ and the side by side comparison gives an idea of how much more popular the titles with ‘Girl’ are in the years when the most popular of those books were published.</p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <pre class="r"><code>
+                                                                                               <table>
+<thead>
+                                                                                               <tr class="header">
+<th align="left">Title</th>
+<th align="right">Total Ratings</th>
+<th align="right">Date Published</th>
+</tr>
+                                                                                               </thead>
+                                                                                               <tbody>
+  <tr class="odd">
+  <td align="left">The Diary of a Young Girl (The Diary of Anne Frank)</td>
+  <td align="right">1,990,749</td>
+  <td align="right">1947</td>
+  </tr>
+                                                                                                 <tr class="even">
+  <td align="left">The Girl with the Dragon Tattoo (Millennium, #1)</td>
+  <td align="right">1,896,353</td>
+  <td align="right">2005</td>
+  </tr>
+
+<tr class="odd">
+<td align="left">Gone Girl</td>
+<td align="right">159,8463</td>
+<td align="right">2012</td>
+</tr>
+
+  <tr class="even">
+  <td align="left">Young Girls</td>
+  <td align="right">1,300,976</td>
+  <td align="right">1868</td>
+  </tr>
+
+  <tr class="odd">
+  <td align="left">The Girl on the Train</td>
+  <td align="right">1,171,604</td>
+  <td align="right">2015</td>
+  </tr>
+
+  <tr class="even">
+  <td align="left">The Girl Who Played with Fire (Millennium, #2)</td>
+  <td align="right">640,475</td>
+  <td align="right">2006</td>
+  </tr>
+  
+  <tr class="odd">
+  <td align="left">The Girl Who Kicked the Hornet’s Nest (Millennium, #3)</td>
+  <td align="right">521,051</td>
+  <td align="right">2007</td>
+  </tr>
+
+  <tr class="even">
+  <td align="left">Girl with a Pearl Earring</td>
+  <td align="right">485,129</td>
+  <td align="right">1999</td>
+  </tr>
+
+  <tr class="odd">
+  <td align="left">The Other Boleyn Girl (The Plantagenet and Tudor Novels, #9)</td>
+  <td align="right">396,422</td>
+  <td align="right">2001</td>
+  </tr>
+
+  <tr class="even">
+  <td align="left">Kiss the Girls (Alex Cross, #2)</td>
+  <td align="right">277,299</td>
+  <td align="right">1995</td>
+  </tr>
+
+</tbody>
+</table>
+
+<p><br></p>
+
+</div>
+                                                                                               <div id="total-ratings-on-goodreads.com" class="section level4">
+                                                                                               <h4>Total Ratings on goodreads.com</h4>
+                                                                                               <p>
+We see that for every year shown on this graph, titles with ‘Girl’ get more reviews than book titles with ‘Boy’ and the side by side comparison gives an idea of how much more popular the titles with ‘Girl’ are in the years when the most popular of those books were published.       </p>
+                                                                                               <pre class="r"><code>
 # summary statistics by year
 girl.table <- girl %>% 
   group_by(girl.published) %>%
