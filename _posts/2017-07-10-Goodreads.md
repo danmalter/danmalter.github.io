@@ -144,7 +144,7 @@ button.code-folding-btn:focus {
   
   <p><br></p>
   <div id="analyzing-book-titles-with-boy-and-girl" class="section level1">
-  <p>This analysis is inspired by the FiveThirtyEight post, <a href="https://fivethirtyeight.com/features/the-gone-girl-with-the-dragon-tattoo-on-the-train/">The Gone Girl With The Dragon Tattoo On The Train</a>, in which the authors asks the question, “why are there so many books with ‘girl’ in the title?”. The goal of this analysis is to replicate the code used to collect reading data from <a href="https://www.goodreads.com/">Goodreads.com</a>. To measure popularity, I am assuming that the more often a book is rated on Goodreads, whether a positive or negative rating, it is more popular becasue it means that the book was at least read.</p>
+  <p>This analysis is inspired by the FiveThirtyEight post, <a href="https://fivethirtyeight.com/features/the-gone-girl-with-the-dragon-tattoo-on-the-train/" target="_blank">The Gone Girl With The Dragon Tattoo On The Train</a>, in which the authors asks the question, “why are there so many books with ‘girl’ in the title?”. The goal of this analysis is to replicate the code used to collect reading data from <a href="https://www.goodreads.com/" target="_blank">Goodreads.com</a>. To measure popularity, I am assuming that the more often a book is rated on Goodreads, whether a positive or negative rating, it is more popular becasue it means that the book was at least read.</p>
   <pre class="r"><code># Load in the required packages
 library(rvest)
 library(stringr)
