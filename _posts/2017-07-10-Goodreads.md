@@ -1,5 +1,5 @@
 ---
-title: "Goodreads Analysis of Titles with 'Boy' and 'Girl'"
+title: "Goodreads Analysis of Book Titles with 'Boy' and 'Girl'"
 layout: post
 code_folding: hide
 comments: true
