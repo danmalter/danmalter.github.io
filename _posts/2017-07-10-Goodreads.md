@@ -427,6 +427,7 @@ kable_styling(bootstrap_options = c("striped", "hover", "responsive"))
   <tr class="odd">
   <td align="left">Oliver Twist: The Parish Boy’s Progress</td>
   <td align="right">249,995</td>
+  <td align="right">1838</td>
   </tr>
                                                                                                  <tr class="even">
   <td align="left">Heaven is for Real: A Little Boy’s Astounding Story of His Trip to Heaven and Back</td>
