@@ -137,7 +137,7 @@ button.code-folding-btn:focus {
   
   
   
-  <h1 class="title toc-ignore">Goodreads Analysis of Titles with ‘Boy’ and ‘Girl’</h1>
+  <h1 class="title toc-ignore">Goodreads Analysis of Book Titles with ‘Boy’ and ‘Girl’</h1>
   
   </div>
   
