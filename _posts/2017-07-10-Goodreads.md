@@ -664,6 +664,7 @@ kable(paste0('Boy: ', round(mean(boy$boy.avg.rating),2), sep=''))               
     </tr>
   </tbody>
 </table>
+
                                                                                                <pre class="r"><code>
 # Average Rating by Year
 ggplot(final.df, aes(x = published)) + 
