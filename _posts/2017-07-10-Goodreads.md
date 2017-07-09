@@ -646,14 +646,18 @@ ggplot(final.df, aes(x = published)) +
 # Average Rating
 kable(paste0('Girl: ', round(mean(girl$girl.avg.rating),2), sep='')) 
 kable(paste0('Boy: ', round(mean(boy$boy.avg.rating),2), sep=''))                              </code></pre>
-                                                                                               <table>
+                                                                                             <table>
+  <thead>
+    <tr class="header">
+      <th align="left">Average Rating</th>
+    </tr>
+  </thead>
+  
   <tbody>
     <tr class="odd">
       <td align="left">Girl: 3.75</td>
     </tr>
   </tbody>
-</table>
-                                                                                               <table>
   <tbody>
     <tr class="odd">
       <td align="left">Boy: 3.74</td>
