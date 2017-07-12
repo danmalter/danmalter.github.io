@@ -8,9 +8,6 @@ category: R
   
 {% raw %}
 
-
-<!DOCTYPE html>
-  
   <html xmlns="http://www.w3.org/1999/xhtml">
   
   <head>
@@ -142,12 +139,8 @@ button.code-folding-btn:focus {
   </ul>
   </div>
   
-  
-  
-  <h1 class="title toc-ignore">Anthony Rizzo Didn’t Only Beat Cancer</h1>
-  <h4 class="author"><em>Danny Malter</em></h4>
-  <h4 class="date"><em>7/9/2017</em></h4>
-  
+  <h2 class="title toc-ignore">Anthony Rizzo Didn’t Only Beat Cancer</h2>
+
   </div>
   
   
