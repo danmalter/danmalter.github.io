@@ -251,21 +251,6 @@ nrow(unique.players)</code></pre>
 <p>To sum things up, Rizzo not only overcame cancer, he overcame some big odds against him ever succeeding after a poor rookie year.</p>
   
 <br>
-
-img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.landscape {
-    height: 30px;
-    width: 80px;
-}
-
-<div class="landscape">
-    <<img src="/figure/2017-07-13-anthony-rizzo/image1.png">
-</div>
-
 <br>
 
 </div>
