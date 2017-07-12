@@ -241,6 +241,8 @@ nrow(unique.players)</code></pre>
   The data used is from 1970-2015 <br>
 </p>
 
+<br>
+
 <p>There’s no doubt about it, Anthon Rizzo is a class act for Major League Baseball. Every time I view or read something from Chicago media, the Anothony Rizzo Family Foundation has just donated millions of dollars to help fight cancer, he’s visiting children at Lurie Children’s Hospital in Chicago northside, or he’s spending his off days riding a bike on Chicago’s lake front path just like any other person in Chicago.</p>
 
 <p>Rizzo, a sixth round draft pick by the Boston Red Sox in the 2007 MLB Draft, found out just a year later that he’d be diagnosed with Hodgkin’s lymphoma. There is no need to explain how difficult it is to get drafted by a MLB team in the first place, but I can’t imagine how much more difficult it would be after going through six months of chemotherapy. As of today, we all know the ending of the story that includes a successful MLB career, a World Series ring and a fan base in Chicago that loves him. However, little do people realize that Rizzo actually started his MLB career off terriblly and succeeded in a way that only a few other MLB players have ever done. In other words, Rizzo beat more than just cancer.</p>
