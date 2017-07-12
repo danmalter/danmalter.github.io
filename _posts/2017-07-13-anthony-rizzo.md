@@ -252,7 +252,19 @@ nrow(unique.players)</code></pre>
   
 <br>
 
-<img src="/figure/2017-07-13-anthony-rizzo/image1.png" style="width:604px;height:208px;">
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.landscape {
+    height: 30px;
+    width: 80px;
+}
+
+<div class="landscape">
+    <<img src="/figure/2017-07-13-anthony-rizzo/image1.png">
+</div>
 
 <br>
 
