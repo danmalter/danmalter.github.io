@@ -287,7 +287,7 @@ rownames(new.rizzo) &lt;- 1:nrow(new.rizzo)
 </thead>
 <tbody>
 <tr class="odd">
-<td>20184</td>
+<td>1</td>
 <td align="left">Anthony</td>
 <td align="left">Rizzo</td>
 <td align="right">2011</td>
@@ -306,7 +306,7 @@ rownames(new.rizzo) &lt;- 1:nrow(new.rizzo)
 <td align="right">0.286</td>
 </tr>
 <tr class="even">
-<td>20185</td>
+<td>2</td>
 <td align="left">Anthony</td>
 <td align="left">Rizzo</td>
 <td align="right">2012</td>
@@ -325,7 +325,7 @@ rownames(new.rizzo) &lt;- 1:nrow(new.rizzo)
 <td align="right">0.344</td>
 </tr>
 <tr class="odd">
-<td>20186</td>
+<td>3</td>
 <td align="left">Anthony</td>
 <td align="left">Rizzo</td>
 <td align="right">2013</td>
@@ -344,7 +344,7 @@ rownames(new.rizzo) &lt;- 1:nrow(new.rizzo)
 <td align="right">0.330</td>
 </tr>
 <tr class="even">
-<td>20187</td>
+<td>4</td>
 <td align="left">Anthony</td>
 <td align="left">Rizzo</td>
 <td align="right">2014</td>
@@ -363,7 +363,7 @@ rownames(new.rizzo) &lt;- 1:nrow(new.rizzo)
 <td align="right">0.393</td>
 </tr>
 <tr class="odd">
-<td>20188</td>
+<td>5</td>
 <td align="left">Anthony</td>
 <td align="left">Rizzo</td>
 <td align="right">2015</td>
