@@ -260,6 +260,7 @@ new.rizzo &lt;- rizzo[c('nameFirst','nameLast','yearID','G','AB','R','H','X2B','
 
 kable(new.rizzo) %&gt;%
   kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;responsive&quot;))
+rownames(new.rizzo) &lt;- 1:nrow(new.rizzo)
   </code></pre>
 
 <table>
