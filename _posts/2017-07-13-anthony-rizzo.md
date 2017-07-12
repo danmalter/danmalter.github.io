@@ -252,7 +252,7 @@ nrow(unique.players)</code></pre>
   
 <br>
 
-<img src="/figure/2017-07-13-anthony-rizzo/image1.png" style="width:304px;height:228px;">
+<img src="/figure/2017-07-13-anthony-rizzo/image1.png" style="width:604px;height:228px;">
 
 <br>
 
