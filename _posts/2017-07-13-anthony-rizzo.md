@@ -144,9 +144,12 @@ button.code-folding-btn:focus {
   </div>
   
   
-  <pre class="r"><code>library(Lahman)
+<pre class="r"><code>
+library(Lahman)
 library(dplyr)
 library(data.table)
+library(knitr)
+library(kableExtra)
 
 # Subset master table to only playerID and player names since that's all we need.
 master &lt;- select(Master, playerID, nameFirst, nameLast)
@@ -243,12 +246,143 @@ nrow(unique.players)</code></pre>
 
 <br>
 
-<p>There’s no doubt about it, Anthon Rizzo is a class act for Major League Baseball. Every time I view or read something from Chicago media, the Anothony Rizzo Family Foundation has just donated millions of dollars to help fight cancer, he’s visiting children at Lurie Children’s Hospital in Chicago northside, or he’s spending his off days riding a bike on Chicago’s lake front path just like any other person in Chicago.</p>
+<p>There’s no doubt about it, Anthon Rizzo is a class act for Major League Baseball. Every time I view or read something from Chicago media, the Anothony Rizzo Family Foundation has just donated millions of dollars to help fight cancer, he’s visiting children at Lurie Children’s Hospital in Chicago's northside, or he’s spending his off days riding a bike on Chicago’s lake front path just like any other person in Chicago.</p>
 
 <p>Rizzo, a sixth round draft pick by the Boston Red Sox in the 2007 MLB Draft, found out just a year later that he’d be diagnosed with Hodgkin’s lymphoma. There is no need to explain how difficult it is to get drafted by a MLB team in the first place, but I can’t imagine how much more difficult it would be after going through six months of chemotherapy. As of today, we all know the ending of the story that includes a successful MLB career, a World Series ring and a fan base in Chicago that loves him. However, little do people realize that Rizzo actually started his MLB career off terriblly and succeeded in a way that only a few other MLB players have ever done. In other words, Rizzo beat more than just cancer.</p>
 
-<p>With 128 AB in his rookie season, Rizzo batted just .141. Since 1970, only 34 offensive players have been given an opportunity to have over 50 at-bats while batting less than .150. Of those 34 players, 8 of them only played one season in the Majors and 26 played at least two seasons. In total, 3,177 offensive players have played at least two seasons while having at least 50 AB in his rookie year. In other words, Rizzo was in the bottom 1% of multi-season players going into his second year.</p>
+<p>With 128 AB in his rookie season, Rizzo batted just .141. Since 1970, only 34 offensive rookie year players have been given an opportunity to have over 50 at-bats while batting less than .150. Of those 34 players, 8 of them only played one season in the Majors and 26 played at least two seasons. In total, 3,177 offensive players have played at least two seasons while having at least 50 AB in his rookie year. In other words, Rizzo was in the bottom 1% of multi-season players going into his second year.</p>
+
 <p>To sum things up, Rizzo not only overcame cancer, he overcame some big odds against him ever succeeding after a poor rookie year.</p>
+
+<pre class="r">
+<code>rizzo &lt;- subset(batting, playerID == 'rizzoan01')
+new.rizzo &lt;- rizzo[c('nameFirst','nameLast','yearID','G','AB','R','H','X2B','X3B','HR','RBI','BB','SO','BA','PA','OBP')]
+
+kable(new.rizzo) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;responsive&quot;))
+  </code></pre>
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="left">nameFirst</th>
+<th align="left">nameLast</th>
+<th align="right">yearID</th>
+<th align="right">G</th>
+<th align="right">AB</th>
+<th align="right">R</th>
+<th align="right">H</th>
+<th align="right">X2B</th>
+<th align="right">X3B</th>
+<th align="right">HR</th>
+<th align="right">RBI</th>
+<th align="right">BB</th>
+<th align="right">SO</th>
+<th align="right">BA</th>
+<th align="right">PA</th>
+<th align="right">OBP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>20184</td>
+<td align="left">Anthony</td>
+<td align="left">Rizzo</td>
+<td align="right">2011</td>
+<td align="right">49</td>
+<td align="right">128</td>
+<td align="right">9</td>
+<td align="right">18</td>
+<td align="right">8</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">9</td>
+<td align="right">21</td>
+<td align="right">46</td>
+<td align="right">0.141</td>
+<td align="right">154</td>
+<td align="right">0.286</td>
+</tr>
+<tr class="even">
+<td>20185</td>
+<td align="left">Anthony</td>
+<td align="left">Rizzo</td>
+<td align="right">2012</td>
+<td align="right">87</td>
+<td align="right">337</td>
+<td align="right">44</td>
+<td align="right">96</td>
+<td align="right">15</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">48</td>
+<td align="right">27</td>
+<td align="right">62</td>
+<td align="right">0.285</td>
+<td align="right">369</td>
+<td align="right">0.344</td>
+</tr>
+<tr class="odd">
+<td>20186</td>
+<td align="left">Anthony</td>
+<td align="left">Rizzo</td>
+<td align="right">2013</td>
+<td align="right">160</td>
+<td align="right">606</td>
+<td align="right">71</td>
+<td align="right">141</td>
+<td align="right">40</td>
+<td align="right">2</td>
+<td align="right">23</td>
+<td align="right">80</td>
+<td align="right">76</td>
+<td align="right">127</td>
+<td align="right">0.233</td>
+<td align="right">697</td>
+<td align="right">0.330</td>
+</tr>
+<tr class="even">
+<td>20187</td>
+<td align="left">Anthony</td>
+<td align="left">Rizzo</td>
+<td align="right">2014</td>
+<td align="right">140</td>
+<td align="right">524</td>
+<td align="right">89</td>
+<td align="right">150</td>
+<td align="right">28</td>
+<td align="right">1</td>
+<td align="right">32</td>
+<td align="right">78</td>
+<td align="right">73</td>
+<td align="right">116</td>
+<td align="right">0.286</td>
+<td align="right">623</td>
+<td align="right">0.393</td>
+</tr>
+<tr class="odd">
+<td>20188</td>
+<td align="left">Anthony</td>
+<td align="left">Rizzo</td>
+<td align="right">2015</td>
+<td align="right">160</td>
+<td align="right">586</td>
+<td align="right">94</td>
+<td align="right">163</td>
+<td align="right">38</td>
+<td align="right">3</td>
+<td align="right">31</td>
+<td align="right">101</td>
+<td align="right">78</td>
+<td align="right">105</td>
+<td align="right">0.278</td>
+<td align="right">710</td>
+<td align="right">0.394</td>
+</tr>
+</tbody>
+</table>
+
   
 <br>
 <br>
