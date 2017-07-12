@@ -252,6 +252,10 @@ nrow(unique.players)</code></pre>
   
 <br>
 
+![plot of chunk unnamed-chunk-9](/figure/2017-07-13-anthony-rizzo/image1.png) 
+
+<br>
+
 </div>
   
   <script>
