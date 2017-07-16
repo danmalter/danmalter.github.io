@@ -141,7 +141,7 @@ button.code-folding-btn:focus {
   
   
   
-  <h4 class="title toc-ignore">Game of Thrones US Baby Names</h4>
+  <h2 class="title toc-ignore">Game of Thrones US Baby Names</h2>
   
   </div>
   
