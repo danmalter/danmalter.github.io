@@ -141,29 +141,28 @@ button.code-folding-btn:focus {
   
   
   
-  <h1 class="title toc-ignore">Game of Thrones US Baby Names</h1>
-  <h4 class="author"><em>Danny Malter</em></h4>
-  <h4 class="date"><em>7/16/2017</em></h4>
+  <h4 class="title toc-ignore">Game of Thrones US Baby Names</h4>
   
   </div>
   
   
-  <pre class="r"><code>library(readr)
+<pre class="r"><code>
+library(readr)
 library(babynames)
 library(ggplot2)
 library(ggthemes)
 library(scales)
 library(gridExtra)
 
-names2016 &lt;- read_csv(&quot;~/Desktop/names2016.csv&quot;, col_types = cols(sex = col_character()))
-babynames &lt;- subset(babynames, year &gt;= 2011)
+names2016 <- read_csv("~/Desktop/names2016.csv", col_types = cols(sex = col_character()))
+babynames <- subset(babynames, year >= 2011)
 
-new.babynames &lt;- rbind(babynames, names2016)
+new.babynames <- rbind(babynames, names2016)
 
-arya &lt;- subset(new.babynames, name == &quot;Arya&quot; &amp; sex == 'F')
-khaleesi &lt;- subset(new.babynames, name == &quot;Khaleesi&quot;)
-daenerys &lt;- subset(new.babynames, name == &quot;Daenerys&quot;)
-tyrion &lt;- subset(new.babynames, name == &quot;Tyrion&quot;)
+arya <- subset(new.babynames, name == "Arya" & sex == 'F')
+khaleesi <- subset(new.babynames, name == "Khaleesi")
+daenerys <- subset(new.babynames, name == "Daenerys")
+tyrion <- subset(new.babynames, name == "Tyrion")
 
 # Arya
 ggplot(arya, aes(x = year)) + 
