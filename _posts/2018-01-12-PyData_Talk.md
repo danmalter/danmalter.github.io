@@ -3,8 +3,7 @@
 ---
   <script>
   window.open(
-    'https://www.youtube.com/watch?v=pZGEe9-fz6w&feature=youtu.be',
-    '_blank'
+    'https://www.youtube.com/watch?v=pZGEe9-fz6w&feature=youtu.be', '_blank'
   );
   </script>
     
