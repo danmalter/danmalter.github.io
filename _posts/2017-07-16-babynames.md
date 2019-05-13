@@ -9,8 +9,6 @@ category: R
 {% raw %}
   
 
-<!DOCTYPE html>
-<!-- saved from url=(0068)file:///Users/Malter/GitHub/Game_of_Thrones_babynames/babynames.html -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
