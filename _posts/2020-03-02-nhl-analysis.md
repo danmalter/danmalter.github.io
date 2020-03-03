@@ -3,6 +3,10 @@ title: "Analyzing NHL Gameplay Data"
 layout: post
 comments: true
 category: R
+image:
+ path: /figure/2020-03-02-nhl-analysis/image1.png
+ width: 1200
+ height: 630
 ---
   
 {% raw %}
