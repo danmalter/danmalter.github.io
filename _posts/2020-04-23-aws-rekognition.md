@@ -19,9 +19,10 @@ unseen image with the name of the individual as well as the emotions tied to the
 
 library(paws)  # used for AWS configuration
 library(magick)  # used for image functions
+library(tidyverse)
 
-aws_access_key_id = "##################"
-aws_secret_access_key = "##################"
+aws_access_key_id = "################"
+aws_secret_access_key = "################"
 
 svc <- rekognition()
 
@@ -52,7 +53,7 @@ svc$list_faces(CollectionId = "photos-r")
 ### Label and identify the face of a new photo ###
 
 # Grab a new photo with multiple faces
-group_photo = "~/Desktop/face_detection/img2.JPG"
+group_photo = "~/Desktop/face_detection/img1.JPG"
 group_file_name = unlist(strsplit(group_photo,split="/"))[[4]]  # used for writing out annotated file
 
 # Read the photo using magick
@@ -70,16 +71,33 @@ length(all_faces)
 
 
 ### For each face in photo, draw a rectange with the name and emotions ###
-
 new.img = img  # Duplicate the original image
+people_df <- NULL
 
 for(face in all_faces) {
-  
+
   # Grab emotions from AWS rekognition model
-  emo.label = ""
+  emo_label = ""
   for(emo in face$Emotions) {
-    emo.label = paste(emo.label,emo$Type, " = ", round(emo$Confidence, 2), "\n", sep="")
+    emo_label = paste(emo_label, emo$Type, " = ", round(emo$Confidence, 2), "\n", sep="")
   }
+  
+  # Grab ages from AWS rekognition
+  age_label = ""
+  for(age in list(face$AgeRange)) {
+    age_label = paste(age_label, "AGE ESTIMATE: = ", (age$Low+age$High)/2, "\n", sep="")
+  }
+  
+  # Grab genders from AWS rekognition
+  #gender_label = ""
+  #for(gndr in list(face$Gender)) {
+  #  gender_label = paste(gender_label, gndr$Value, " = ", round(gndr$Confidence, 2), "\n", sep="")
+  #}
+  
+  # Append all lists together
+  final_label = ""
+  final_label <- rbind(emo_label, age_label)
+  final_label <- paste(final_label, collapse = '')
   
   # Identify the coordinates of the face. Note that AWS returns percentage values of the total image size. This is
   # why the image info object above is needed
@@ -108,18 +126,45 @@ for(face in all_faces) {
     print(paste("Detected: ", faceName, sep=""))
     
     # Annotate with the name of the person
-    text(x=x1+(box$Width*image_width)/2, y=y1,faceName, adj=0.5, cex=3, col="green")
+    text(x=x1+(box$Width*image_width)/2, y=y1-20, faceName, adj=0.5, cex=3, col="green")
   }
   
   # Draw a rectangle around the face
   rect(x1,y1,x2,y2, border="red", lty="dashed", lwd=5)   
   
   # Annotate the photo with the emotions information
-  text(x=x1+(box$Width*image_width)/2, y=y1+50,emo.label, pos=1, cex=1.5, col="red")     
+  text(x=x1+(box$Width*image_width)/2, y=y1+50, final_label, pos=1, cex=1.5, col="red")     
+  
+  # Create a dataframe of individual data appended together
+  individual_emotion_df <- do.call(rbind.data.frame, face$Emotions)
+  
+  individual_emotion_df <- individual_emotion_df %>% 
+    spread(Type, Confidence) %>%
+    add_column(faceName) %>%
+    select(faceName, everything()) # move faceName to beginning
+  
+  individual_age_df <- data.frame(face$AgeRange)
+  colnames(individual_age_df) <- c("age_low", "age_high")
+  
+  individual_df <- cbind(individual_emotion_df, individual_age_df)
+  
+  people_df <- rbind(individual_df, people_df)
+  
 }
+dev.off()
 
-# Write the image out to file
+people_df$age_est <- (people_df$age_low + people_df$age_high)/2
+head(people_df)
+
+# Write the image out to file 
 image_write(new.img, path=paste0("~/Desktop/face_detection/annotated/annotated_", group_file_name))
+```
+
+```
+| faceName | angry      | calm        | confused   | disgusted   | fear        | happy    | sad         | surprised  |
+|----------|------------|-------------|------------|-------------|-------------|----------|-------------|------------|
+| Natalie  | 0.05724448 | 0.008161878 | 0.08076324 | 0.054936308 | 0.048346419 | 99.64977 | 0.037308376 | 0.06347576 |
+| Danny    | 0.01850546 | 0.008797654 | 0.01369155 | 0.005110143 | 0.009048435 | 99.88663 | 0.003529715 | 0.05468611 |
 ```
 
 ![face-detection](/figure/2020-04-23-aws-rekognition/annotated_image.JPG)
