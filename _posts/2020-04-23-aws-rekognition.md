@@ -119,7 +119,6 @@ for(face in all_faces) {
 }
 
 # Write the image out to file
-group_file_name 
 image_write(new.img, path=paste0("~/Desktop/face_detection/annotated/annotated_", group_file_name))
 ```
 
