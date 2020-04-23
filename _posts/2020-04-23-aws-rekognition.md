@@ -171,7 +171,8 @@ image_write(new.img, path=paste0("~/Desktop/face_detection/annotated/annotated_"
 | Danny    | img1     | 0.01850546 | 0.008797654 | 0.01369155 | 0.005110143 | 0.009048435 | 99.88663 | 0.003529715 | 0.05468611 |
 ```
 
-![face-detection](/figure/2020-04-23-aws-rekognition/annotated_image.JPG)
+![face-detection](/figure/2020-04-23-aws-rekognition/annotated_img1.JPG)
+![face-detection](/figure/2020-04-23-aws-rekognition/annotated_img2.JPG)
 
 
 {% endraw %}
