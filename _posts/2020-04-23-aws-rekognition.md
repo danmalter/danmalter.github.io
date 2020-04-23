@@ -164,6 +164,8 @@ head(people_df)
 image_write(new.img, path=paste0("~/Desktop/face_detection/annotated/annotated_", group_file_name))
 ```
 
+Example table if you want to output the data above into a dataframe.
+
 ```
 | faceName | image | angry      | calm        | confused   | disgusted   | fear        | happy    | sad         | surprised  |
 |----------|-------|------------|-------------|------------|-------------|-------------|----------|-------------|------------|
