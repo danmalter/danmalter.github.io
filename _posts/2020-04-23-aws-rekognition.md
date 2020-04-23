@@ -133,7 +133,7 @@ for(face in all_faces) {
   rect(x1,y1,x2,y2, border="red", lty="dashed", lwd=5)   
   
   # Annotate the photo with the emotions information
-  text(x=x1+(box$Width*image_width)/2, y=y1+150, final_label, pos=1, cex=1.5, col="red")     
+  text(x=x1+(box$Width*image_width)/2, y=y1+50, final_label, pos=1, cex=1.5, col="red")     
   
   # Create a dataframe of individual data appended together
   individual_emotion_df <- do.call(rbind.data.frame, face$Emotions)
