@@ -133,15 +133,18 @@ for(face in all_faces) {
   rect(x1,y1,x2,y2, border="red", lty="dashed", lwd=5)   
   
   # Annotate the photo with the emotions information
-  text(x=x1+(box$Width*image_width)/2, y=y1+50, final_label, pos=1, cex=1.5, col="red")     
+  text(x=x1+(box$Width*image_width)/2, y=y1+150, final_label, pos=1, cex=1.5, col="red")     
   
   # Create a dataframe of individual data appended together
   individual_emotion_df <- do.call(rbind.data.frame, face$Emotions)
   
   individual_emotion_df <- individual_emotion_df %>% 
     spread(Type, Confidence) %>%
-    add_column(faceName) %>%
-    select(faceName, everything()) # move faceName to beginning
+    add_column(faceName)
+  individual_emotion_df$image <- strsplit(group_file_name, ".JPG")
+  
+  individual_emotion_df <- individual_emotion_df%>%
+    select(faceName, image, everything()) # move faceName to beginning
   
   individual_age_df <- data.frame(face$AgeRange)
   colnames(individual_age_df) <- c("age_low", "age_high")
@@ -154,6 +157,7 @@ for(face in all_faces) {
 dev.off()
 
 people_df$age_est <- (people_df$age_low + people_df$age_high)/2
+names(people_df) <- tolower(names(people_df))
 head(people_df)
 
 # Write the image out to file 
@@ -161,10 +165,10 @@ image_write(new.img, path=paste0("~/Desktop/face_detection/annotated/annotated_"
 ```
 
 ```
-| faceName | angry      | calm        | confused   | disgusted   | fear        | happy    | sad         | surprised  |
-|----------|------------|-------------|------------|-------------|-------------|----------|-------------|------------|
-| Natalie  | 0.05724448 | 0.008161878 | 0.08076324 | 0.054936308 | 0.048346419 | 99.64977 | 0.037308376 | 0.06347576 |
-| Danny    | 0.01850546 | 0.008797654 | 0.01369155 | 0.005110143 | 0.009048435 | 99.88663 | 0.003529715 | 0.05468611 |
+| faceName | image | angry      | calm        | confused   | disgusted   | fear        | happy    | sad         | surprised  |
+|----------|-------|------------|-------------|------------|-------------|-------------|----------|-------------|------------|
+| Natalie  | 2     | 0.05724448 | 0.008161878 | 0.08076324 | 0.054936308 | 0.048346419 | 99.64977 | 0.037308376 | 0.06347576 |
+| Danny    | 2     | 0.01850546 | 0.008797654 | 0.01369155 | 0.005110143 | 0.009048435 | 99.88663 | 0.003529715 | 0.05468611 |
 ```
 
 ![face-detection](/figure/2020-04-23-aws-rekognition/annotated_image.JPG)
