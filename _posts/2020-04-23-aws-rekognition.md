@@ -1,5 +1,5 @@
 ---
-title: "Using AWS Rekognition with R"
+title: "Face Recogntion using R"
 layout: post
 comments: true
 category: R
@@ -7,7 +7,7 @@ category: R
   
   {% raw %}
 
-# Using AWS Rekognition with R #
+# Face Recognition with R using AWS Rekognition #
 
 This post will demonstrate how to use the AWS Rekognition API with R.  In order to do this, I use 
 the [paws](https://paws-r.github.io/) R package to interact with AWS.  The output image will label a new, 
