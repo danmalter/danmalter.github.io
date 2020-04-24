@@ -1,5 +1,5 @@
 ---
-title: "Face Recogntion using R"
+title: "Face and Emotion Recogntion using R"
 layout: post
 comments: true
 category: R
@@ -7,11 +7,9 @@ category: R
   
   {% raw %}
 
-# Face Recognition with R using AWS Rekognition #
+# Face and Emotion Recognition with R using AWS Rekognition #
 
-This post will demonstrate how to use the AWS Rekognition API with R.  In order to do this, I use 
-the [paws](https://paws-r.github.io/) R package to interact with AWS.  The output image will label a new, 
-unseen image with the name of the individual as well as the emotions tied to the face for that image.
+This post will demonstrate how to use the AWS Rekognition API with R to detect faces of new images as well as to attribute emotions to a given face.  In order to do this, I use the [paws](https://paws-r.github.io/) R package to interact with AWS.  The output image will label a new, unseen image with the name of the individual as well as the emotions tied to the face for that image.
 
 
 ```r
