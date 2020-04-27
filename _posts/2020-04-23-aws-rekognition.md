@@ -1,5 +1,5 @@
 ---
-title: "Face and Emotion Recogntion using R"
+title: "Face and Emotion Recognition using R"
 layout: post
 comments: true
 category: R
