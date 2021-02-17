@@ -31,14 +31,14 @@ Technology like this can be used for various reasons, some of which include the 
 
 <b>Walker Beuhler</b>
 <video width="520" controls>
-<source src="/images/2021-02-17-mlb-openpose/walker_beuhler.mp4">
+<source src="/figure/2021-02-17-mlb-openpose/walker_beuhler.mp4">
 </video>
 
 <br>
 
 <b>Mike Trout</b>
 <video width="520" controls>
-<source src="/images/2021-02-17-mlb-openpose/trout.mp4">
+<source src="/figure/2021-02-17-mlb-openpose/trout.mp4">
 </video>
 
 <br>
