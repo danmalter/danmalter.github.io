@@ -22,7 +22,7 @@ Technology like this can be used for various reasons, some of which include the 
 
 
 - Injury Prevention:
-  - By using player movement tracking data, potential models like outlier detection algorithms can be used to detect if a pitcher's mechanics are differing too much from the norm.  It can also be used to measure a given pitcher's mechanics to those that have previously suffered from pitching related injuries.
+  - By using player movement tracking data, potential models like outlier detection algorithms can be used to detect if a pitcher's mechanics are differing too much from the norm.  In this case, some type of alert system can be programmed to allow a pitcher to know that their mechanics have changed.  This type of data can also be used to measure a given pitcher's mechanics to those that have previously suffered from pitching related injuries.
 
 
 <br>
@@ -40,6 +40,9 @@ Technology like this can be used for various reasons, some of which include the 
 </video>
 
 <br>
+
+There are many other use cases as well, but I think the above points are very feasible with current technology if team's are willing to commit to the resources. Player injury prevention is a hot topic in sports and especially in a sport like baseball with lots of repetitive movements, algorithms like OpenPose can make great impacts to help prevent injuries.
+
 
 Example code to run the above examples can be seen [here](https://github.com/malteranalytics/malteranalytics.github.io/blob/master/research/OpenPose.ipynb){:target="_blank"}.
 
