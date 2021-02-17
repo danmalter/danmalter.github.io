@@ -16,12 +16,10 @@ Technology like this can be used for various reasons, some of which include the 
 - Player Scouting:
   - OpenPose can be used to measure how closely one player's pitching or hitting mechanics are relative to another known player.  By collecting data like angles of body parts, movement, etc. clustering algorithms can be used to measure the similarity between two player's pitches or swings.
 
-<br>
 
 - Tacking Mechanics:
   - Rather than a player or coach going through video one by one, OpenPose technology can be used to better align hundreds of videos all at once. If a pitcher is tweaking their mechanics, data from OpenPose can be overlayed to determine how much of a change is occurring and where specifically the change is.
 
-<br>
 
 - Injury Prevention:
   - By using player movement tracking data, potential models like outlier detection algorithms can be used to detect if a pitcher's mechanics are differing too much from the norm.  It can also be used to measure a given pitcher's mechanics to those that have previously suffered from pitching related injuries.
