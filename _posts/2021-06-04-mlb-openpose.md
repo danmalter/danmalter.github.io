@@ -26,7 +26,7 @@ To start, we’ll look at a still image of the OpenPose algorithm applied to a s
   
 <br>
 
-A video fed through the OpenPose algorithm outputs a video like the one below.  Here we see the OpenPose algorithm in action throughout the duration of the video. During this particular 4 second clip, 101 snapshots were taken by the algorithm.  In other words, we can think of this 4 second clip as 101 unique images in a sequential format.  For each snapshot, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints. 
+By feeding in a video through the OpenPose algorithm, we get an output like the video below.  Here we see the OpenPose algorithm in action throughout the duration of a full pitch for Walker Buehler. During this particular 4 second clip, 101 snapshots were taken by the algorithm, which essentially means that the video is turned into a sequence of 101 still images.  For each snapshot, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints. 
 
 <b>Walker Beuhler Side View</b>
 <video width="520" controls>
