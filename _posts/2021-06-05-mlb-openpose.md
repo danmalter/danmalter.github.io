@@ -21,7 +21,7 @@ Data for this project was captured by collecting various video clips of a given 
 To start, we’ll look at a still image of the OpenPose algorithm applied to a side-view of Walker Buehler pitching.  OpenPose captures 25 data points (keypoints) of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and video.  When a keypoint is not found in the image, OpenPose uses machine learning to estimate where the body part is located, often time referred to as pose estimation. The OpenPose algorithm works with one or multiple people in a single view, but I have found that it works best with only one person in the picture. In cases where non-relevant people are in the background, image processing techniques such as blurring effects or cropping can be used to filter out noise.
 
 
-![Walker Beuhler Image](/figure/2021-06-04-mlb-openpose/beuhler1.png)  
+![Walker Beuhler Image](/figure/2021-06-05-mlb-openpose/beuhler1.png)  
   
 <br>
 
@@ -29,14 +29,14 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 
 <b>Walker Beuhler Side View</b>
 <video width="520" controls>
-<source src="/figure/2021-06-04-mlb-openpose/walker_beuhler2.mp4">
+<source src="/figure/2021-06-05-mlb-openpose/walker_beuhler2.mp4">
 </video>  
 
 <br>
   
 Using the output data from each of the 101 images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of the above pitch.  As Buehler approaches the pitch, his shoulder drops and then elevates again after releasing the ball.  This is evident by simply watching the video, but the advantage of this type of analysis is that this data can pick up changes in a pitcher’s mechanics that the naked eye may not be able to pick up.  Additionally, in a matter of minutes running this algorithm, we can find patterns that would otherwise take hours of video watching to maybe find with a good eye.
 
-![Walker Beuhler Image](/figure/2021-06-04-mlb-openpose/beuhler2.png)  
+![Walker Beuhler Image](/figure/2021-06-05-mlb-openpose/beuhler2.png)  
 
 <br>
 
@@ -44,7 +44,7 @@ Valuable information can be shown from one unique pitch, but deeper analysis can
 
 <br>
 
-![Walker Beuhler Image](/figure/2021-06-04-mlb-openpose/beuhler5.png)  
+![Walker Beuhler Image](/figure/2021-06-05-mlb-openpose/beuhler5.png)  
 
 <br>
 
