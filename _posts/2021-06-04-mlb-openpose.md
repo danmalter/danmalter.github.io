@@ -30,7 +30,7 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 
 <b>Walker Beuhler Side View</b>
 <video width="520" controls>
-<source src="/figure/2021-06-04-mlb-openpose/walker_beuhler.mp4">
+<source src="/figure/2021-06-04-mlb-openpose/walker_beuhler2.mp4">
 </video>  
 
 <br>
