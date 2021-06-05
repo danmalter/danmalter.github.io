@@ -44,8 +44,7 @@ Using the output data from each of the 101 images, a plot for a given keypoint (
 Valuable information can be shown from one unique pitch, but deeper analysis can start to be made from taking multiple pitches of the same pitcher.  The first chart shows an analysis from five different pitches.  Each clip is initiated at a slightly different time prior to Buehler starting his motion, so in order to make more meaning of these five pitchers, the second chart shows the same five pitches overlayed on top of each other starting from the same point in time.  It’s clear that Buehler has a slightly different motion for off-speed pitches than for his four-seam fastball. However, it’s important to note here that the distance is measured in pixels, so in order to know how much of a difference Buehler’s shoulder drops, we’d need to convert those pixels into inches.  With technology such as MLB’s Statcast, this should not be an issue implementing into gameday data.  
 <br>
 
-![Walker Beuhler Image](/figure/2021-06-04-mlb-openpose/beuhler3.png)  
-![Walker Beuhler Image](/figure/2021-06-04-mlb-openpose/beuhler4.png)  
+![Walker Beuhler Image](/figure/2021-06-04-mlb-openpose/beuhler5.png)  
 
 <br>
 
