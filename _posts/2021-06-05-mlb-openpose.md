@@ -25,7 +25,7 @@ To start, we’ll look at a still image of the OpenPose algorithm applied to a s
   
 <br>
 
-By feeding in a video through the OpenPose algorithm, we get an output like the video below.  Here we see the OpenPose algorithm in action throughout the duration of a full pitch for Walker Buehler. During this particular clip, 101 snapshots were taken by the algorithm, which essentially means that the video is turned into a sequence of 101 still images.  This number will differ depending on the length of a particular video.  For each snapshot image, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints (body parts. 
+By feeding in a video through the OpenPose algorithm, we get an output like the video below.  Here we see the OpenPose algorithm in action throughout the duration of a full pitch for Walker Buehler. During this behind view clip, 101 snapshots were taken by the algorithm, which essentially means that the video is turned into a sequence of 101 still images.  This number will differ depending on the length of a particular video.  For each snapshot image, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints (body parts. 
 
 <b>Walker Beuhler Behind View</b>
 <video width="520" controls>
@@ -39,7 +39,7 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 
 <br>
   
-Using the output data from each of the 101 images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of the above pitch.  As Buehler approaches the pitch, his shoulder drops and then elevates again after releasing the ball.  This is evident by simply watching the video, but the advantage of this type of analysis is that this data can pick up changes in a pitcher’s mechanics that the naked eye may not be able to pick up.  Additionally, in a matter of minutes running this algorithm, we can find patterns that would otherwise take hours of video watching to maybe find with a good eye.
+Using the output data from each of the 101 behind view images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of the above pitch.  As Buehler approaches the pitch, his shoulder drops and then elevates again after releasing the ball.  This is evident by simply watching the video, but the advantage of this type of analysis is that this data can pick up changes in a pitcher’s mechanics that the naked eye may not be able to pick up.  Additionally, in a matter of minutes running this algorithm, we can find patterns that would otherwise take hours of video watching to maybe find with a good eye.
 
 ![Walker Beuhler Image](/figure/2021-06-05-mlb-openpose/beuhler2.png)  
 
