@@ -52,7 +52,7 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 </video>
 Walker Buehler Center Field View
 
-[![Alternate Text]({https://github.com/danmalter/danmalter.github.io/blob/master/figure/2021-06-07-mlb-openpose/walker_buehler2.mp4})]
+<a href="https://github.com/danmalter/danmalter.github.io/blob/master/figure/2021-06-07-mlb-openpose/walker_buehler2.mp4" title="Walker Buehler Center Field View"></a>
 
 <br>
   
