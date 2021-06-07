@@ -52,6 +52,8 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 </video>
 Walker Buehler Center Field View
 
+[![Alternate Text]({https://github.com/danmalter/danmalter.github.io/blob/master/figure/2021-06-07-mlb-openpose/walker_buehler2.mp4})]
+
 <br>
   
 Using the output data from each of the 101 center field view images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of the pitch above.  As Buehler approaches the release of the ball, his shoulder drops and then picks back up as he finishes the pitch.  This is evident by simply watching the video, but the advantage of this type of analysis is that this data can pick up changes in a pitcher’s mechanics that the naked eye may not be able to see.  Additionally, given the proper data, thousands of videos can be analyzed in a matter of minutes versus spending hours of film watching.
