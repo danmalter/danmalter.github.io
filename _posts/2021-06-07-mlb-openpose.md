@@ -49,7 +49,7 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 
 <video width="520" controls>
 <source type="video/mp4" src="/figure/2021-06-07-mlb-openpose/walker_buehler2.mp4">
-</video>  
+</video>
 Walker Buehler Center Field View
 
 <br>
