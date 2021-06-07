@@ -28,7 +28,7 @@ Data for this project was captured by collecting various video clips of a given 
   
   
 ### Analysis 
-To start, we’ll look at a still image of the OpenPose algorithm applied to a side-view of Walker Buehler pitching.  OpenPose captures 25 data points (keypoints) of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and video.  When a keypoint is not found in the image, OpenPose uses machine learning to estimate where the body part is located, referred to as pose estimation. The OpenPose algorithm works with one or multiple people in a single view, but I have found that it works best with only one person in the picture. In cases where non-relevant people are in the background, image processing techniques such as blurring effects or cropping can be used to filter out noise.
+To start, we’ll look at a still image of the OpenPose algorithm applied to a side view of Walker Buehler pitching.  OpenPose captures 25 data points (keypoints) of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and video.  When a keypoint is not found in the image, OpenPose uses machine learning to estimate where the body part is located, referred to as pose estimation. The OpenPose algorithm works with one or multiple people in a single view, but I have found that it works best with only one person in the picture. In cases where non-relevant people are in the background, image processing techniques such as blurring effects or cropping can be used to filter out noise.
 
 
 | ![Walker Beuhler Image](/figure/2021-06-07-mlb-openpose/beuhler1.png) |
