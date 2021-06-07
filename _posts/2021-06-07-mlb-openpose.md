@@ -17,7 +17,7 @@ An example of the final algorithm in action is shown below.
 
 <b>Walker Buehler Side View</b>
 <video width="520" controls>
-<source src="/figure/2021-06-07-mlb-openpose/buehler_side_output.mp4">
+<source type="video/mp4" src="/figure/2021-06-07-mlb-openpose/buehler_side_output.mp4">
 </video>  
 
 <br>
@@ -49,7 +49,7 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 
 <b>Walker Buehler Center Field View</b>
 <video width="520" controls>
-<source src="/figure/2021-06-07-mlb-openpose/walker_buehler2.mp4">
+<source type="video/mp4" src="/figure/2021-06-07-mlb-openpose/walker_buehler2.mp4">
 </video>  
 
 <br>
