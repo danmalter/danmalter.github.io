@@ -25,10 +25,18 @@ An example of the final algorithm in action is shown below.
 ### Data Capture
 
 Data for this project was captured by collecting various video clips of a given player from both a side and center field point of view.  All video and images used in this analysis are solely for a research purpose and are not being used for any team specifically.  However, a team can utilize this method of analysis by having a still camera directed at a pitcher throughout a game or during a bullpen/batting practice session.  For the most part, the infrastructure is already in place, so it comes down to a matter of teams collecting and utilizing this type of data.  For simplicity of this analysis, a few different pitches/swings were collected for a small sample of players, but the ideal situation would be to have hundreds of pitches or swings to gain better insights from the data.
+
+OpenPose captures data for 25 keypoints of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and videos.  A mapping of the keypoints to human body part can be seen below.  For each image fed through the algorithm, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints (body parts).  If the algorithm is applied to a video, then the video is essentially broken up into many separate images.
+
+| ![OpenPose Keyoints](/figure/2021-06-07-mlb-openpose/openpose_keypoints.png){ width=70% } |
+|:--:| 
+| *OpenPose keypoints* |
+  
+<br>
   
   
 ### Analysis 
-To start, we’ll look at a still image of the OpenPose algorithm applied to a side view of Walker Buehler pitching.  OpenPose captures 25 data points (keypoints) of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and video.  When a keypoint is not found in the image, OpenPose uses machine learning to estimate where the body part is located, referred to as pose estimation. The OpenPose algorithm works with one or multiple people in a single view, but I have found that it works best with only one person in the picture. In cases where non-relevant people are in the background, image processing techniques such as blurring effects or cropping can be used to filter out noise.
+To start, we’ll look at a still image of the OpenPose algorithm applied to a side view of Walker Buehler throwing a pitch.  When a keypoint cannot be found in the image, OpenPose uses machine learning to estimate where the body part is located, which is referred to as pose estimation.  These cases can happen when a body part is hidden from view in the image or video.  The OpenPose algorithm also works with one or multiple people in a single view, but I have found that it works best with only one person in the picture to reduce background noise. In cases where non-relevant people are in the background, image processing techniques such as blurring effects or cropping can be used to filter out this noise.  This article will not focus on this type of preprocessing work, but OpenCV or deep learning techniques would be appropriate for implementing background blurring effects. 
 
 
 | ![Walker Beuhler Image](/figure/2021-06-07-mlb-openpose/beuhler1.png) |
@@ -37,7 +45,7 @@ To start, we’ll look at a still image of the OpenPose algorithm applied to a s
   
 <br>
 
-By feeding in a video through the OpenPose algorithm, we get an output like the video below.  Here we see the OpenPose algorithm in action throughout the duration of a full pitch for Walker Buehler. During this center field view clip, 101 snapshots were taken by the algorithm, which essentially means that the video is turned into a sequence of 101 still images.  This number will differ depending on the length of a particular video.  For each snapshot image, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints (body parts). 
+By feeding in a video through the OpenPose algorithm, we get an output like the video below.  Here we see the OpenPose algorithm in action throughout the duration of a full pitch for Walker Buehler. During this one center field view clip, 101 snapshots were taken by the algorithm.  Another way to think about this is that the video is turned into a sequence of 101 still images.  This number will differ depending on the length of a particular video.  
 
 <b>Walker Beuhler Center Field View</b>
 <video width="520" controls>
@@ -46,7 +54,7 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 
 <br>
   
-Using the output data from each of the 101 center field view images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of that pitch.  As Buehler approaches the pitch, his shoulder drops and then elevates again after releasing the ball.  This is evident by simply watching the video, but the advantage of this type of analysis is that this data can pick up changes in a pitcher’s mechanics that the naked eye may not be able to see.  Additionally, in a matter of minutes running this algorithm, we can find patterns that would otherwise take hours of video watching to maybe find with a good eye.
+Using the output data from each of the 101 center field view images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of the pitch above.  As Buehler approaches the release of the ball, his shoulder drops and then picks back up as he finishes the pitch.  This is evident by simply watching the video, but the advantage of this type of analysis is that this data can pick up changes in a pitcher’s mechanics that the naked eye may not be able to see.  Additionally, given the proper data, thousands of videos can be analyzed in a matter of minutes versus spending hours of film watching.
 
 | ![Walker Beuhler Image](/figure/2021-06-07-mlb-openpose/beuhler2.png) |
 |:--:| 
@@ -54,7 +62,10 @@ Using the output data from each of the 101 center field view images, a plot for 
 
 <br>
 
-Valuable information can be shown from one unique pitch, but deeper analysis can start to be made from taking multiple pitches of the same pitcher over the duration of a game or multiple appearances.  The left chart below shows an analysis from five different pitches Buehler threw over the same game.  Each clip is initiated at a slightly different time prior to Buehler starting his motion, so in order to make more meaning of these five pitches, the right chart shows the same five pitches overlayed on top of each other starting from the same point in time.  This shows that Buehler has a slightly different motion for his cutter and slider than for his four-seam fastball.  However, it’s important to note here that the distance is measured in pixels, so in order to know how much of a difference Buehler’s shoulder really drops, we’d need to convert those pixels into inches.  With technology such as MLB’s Statcast, this should not be an issue implementing into gameday data.
+Valuable information can be shown from one unique pitch, but deeper analysis can start to be made from taking multiple pitches of the same pitcher over the duration of a game or multiple appearances.  The left chart below shows an analysis from five different pitches Buehler threw over the same game.  Each clip is initiated at a slightly different time prior to Buehler starting his motion, so in order to make more meaning of these five pitches, the right chart shows the same five pitches overlayed on top of each other starting from roughly the same point in time.  The data shows that Buehler has a slightly different motion for his cutter and slider than for his four-seam fastball.  Although not evidence, this possibly can mean that Buehler is tipping his pitches as shown in the clear change in patterns. 
+
+It is important to note here that the distance of the plot is measured in pixels, so in order to know how significant this difference really is to a batter, the pixels need to be converted into inches.  With technology such as MLB’s Statcast, this should not be an issue implementing into gameday data.  In this example, based on an estimated PPI (pixels per inch) of 250px, it’s estimated that difference in shoulder height distance between Buehler’s four-seam fastball versus his cutter and slider is about 0.25 inches.
+
 
 <br>
 
@@ -64,18 +75,18 @@ Valuable information can be shown from one unique pitch, but deeper analysis can
 
 <br>
 
-Further research can still be done in this area, but the difficulty is having the appropriate input data, whether it be an enhancement to Statcast or video feeds provided by specific players or teams.  Below are a few examples of how to use this data.
+There are lots of opportunities for further research still to be done in this area, but the difficulty is having the appropriate input data.  Some options would be for MLB to release video clips of this type for research purposes or to implement this data into MLB’s open-source data as it’s own standalone data source.  Another option would be to work with teams or individual players to collect video footage during offseason training.  In regards for use cases of this data, here are a few ideas.
 
 Player Scouting:
-  - OpenPose can be used to measure how closely one player’s pitching or hitting mechanics are relative to another known player. By collecting data like angles of body parts, movement, etc. clustering algorithms can be used to measure the similarity between two player’s pitches or swings.
+  - OpenPose can be used to measure how closely one player’s pitching or hitting mechanics are relative to another known player. By collecting data like angles of body parts, movement, etc. clustering algorithms can be used to measure the similarity between two player’s pitches or swings.  From a scouting perspective, these types of models can output something along the lines of, “Player A’s swing is 80% similar to Mike Trout”.
 
 
 Tracking Mechanics:
-  - Rather than a player or coach going through video one by one, OpenPose technology can be used to better align hundreds of videos all at once. If a pitcher is tweaking their mechanics, data from OpenPose can be overlayed to determine how much of a change is occurring and where specifically the change occurs.
+  - Rather than a player or coach going through video one by one, OpenPose technology can be used to better align hundreds or thousands of videos all at once. If a pitcher is unknowingly tweaking their mechanics, data from OpenPose can be overlayed to determine how much of a change is occurring and where specifically the change occurs.
 
 
 Injury Prevention:
-  - By using player movement tracking data, potential models like outlier detection algorithms can be used to detect if a pitcher’s mechanics are differing too much from the norm. In this case, some type of alert system can be programmed to allow a pitcher to know that their mechanics have changed in order to prevent a future injury. This type of data can also be used to measure a given pitcher’s mechanics to those that have previously suffered from pitching related injuries.
+  - By using player movement tracking data, potential models like outlier detection algorithms can be used to detect if a pitcher’s mechanics are differing too much from the norm. In this case, some type of alert system can be programmed to allow a pitcher to know that their mechanics have changed and hopefully would help to prevent a future injury. This type of data can also be used to measure a given pitcher’s mechanics to those that have previously suffered from pitching related injuries.
 
 
 Example code to run the above examples can be seen [here](https://github.com/malteranalytics/malteranalytics.github.io/blob/master/research/OpenPose.ipynb){:target="_blank"}.
