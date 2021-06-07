@@ -15,8 +15,6 @@ In this article, I will demonstrate how sample image and video data can be used 
 
 An example of the final algorithm in action is shown below.
 
-<br>
-
 <b>Walker Beuhler Side View</b>
 <video width="520" controls>
 <source src="/assets/images/2021-06-05-mlb-openpose/buehler_side_output.mp4">
