@@ -20,6 +20,7 @@ An example of the final algorithm in action is shown below.
 <source src="/assets/images/2021-06-07-mlb-openpose/buehler_side_output.mp4">
 </video>  
 
+<br>
   
 ### Data Capture
 
