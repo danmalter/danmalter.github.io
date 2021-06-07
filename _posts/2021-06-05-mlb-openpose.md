@@ -63,7 +63,7 @@ Valuable information can be shown from one unique pitch, but deeper analysis can
 
 <br>
 
-Further research still can be done in this area, but the difficulty is having the appropriate input data, whether it be an enhancement to Statcast or video feeds provided by specific players or teams.  Below are a few examples of how to use this data.
+Further research can still be done in this area, but the difficulty is having the appropriate input data, whether it be an enhancement to Statcast or video feeds provided by specific players or teams.  Below are a few examples of how to use this data.
 
 Player Scouting:
   - OpenPose can be used to measure how closely one player’s pitching or hitting mechanics are relative to another known player. By collecting data like angles of body parts, movement, etc. clustering algorithms can be used to measure the similarity between two player’s pitches or swings.
