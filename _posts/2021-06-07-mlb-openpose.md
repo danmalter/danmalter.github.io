@@ -28,7 +28,7 @@ Data for this project was captured by collecting various video clips of a given 
 
 OpenPose captures data for 25 keypoints of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and videos.  A mapping of the keypoints to human body part can be seen below.  For each image fed through the algorithm, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints (body parts).  If the algorithm is applied to a video, then the video is essentially broken up into many separate images.
 
-| ![OpenPose Keyoints](/figure/2021-06-07-mlb-openpose/openpose_keypoints.png){ width=70% } |
+| ![OpenPose Keyoints](/figure/2021-06-07-mlb-openpose/openpose_keypoints.png) |
 |:--:| 
 | *OpenPose keypoints* |
   
