@@ -1,5 +1,5 @@
 ---
-title: "Using OpenPose with MLB Players"
+title: "Using AI with MLB Video to Detect Changes in Mechanics"
 layout: post
 comments: true
 category: R
@@ -7,11 +7,20 @@ category: R
 
 {% raw %}
 
-# Using OpenPose with MLB Players
+# Using AI with MLB Video to Detect Changes in Mechanics
 
 MLB’s Statcast has done a lot to improve how player’s movements are analyzed, but little public research has been done using video and image processing to improve mechanics amongst players and to help prevent injuries.  In part, this is due to the fact that machine learning related to images and videos requires lots of storage and high computing.  Even though storage and computing are relatively cheap, there is a small cost and high complexity associated to working with this type of data, which creates a barrier to entry working with it. Additionally, MLB and individual teams own video rights making accessibility of data difficult. 
 
 In this article, I will demonstrate how sample image and video data can be used in different ways to help pitchers improve their mechanics, prevent future injuries as well as some other use cases. All of the concepts shown below can be used at a larger scale to make more significant impacts.  This analysis will focus on how to use image and video processing techniques to improve how Major League Baseball players perform various actions, such as pitching and hitting.  Implementation of work uses a combined method of MIT’s open-source algorithm, OpenPose, as well as various data analysis and machine learning techniques.  Further information about OpenPose can be seen [here](https://github.com/CMU-Perceptual-Computing-Lab/openpose).
+
+An example of the final algorithm in action is shown below.
+
+<br>
+
+<b>Walker Beuhler Side View</b>
+<video width="520" controls>
+<source src="/assets/images/2021-06-05-mlb-openpose/buehler_side_output.mp4">
+</video>  
 
   
 ### Data Capture
@@ -34,13 +43,6 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 <b>Walker Beuhler Center Field View</b>
 <video width="520" controls>
 <source src="/figure/2021-06-05-mlb-openpose/walker_beuhler2.mp4">
-</video>  
-
-<br>
-
-<b>Walker Beuhler Side View</b>
-<video width="520" controls>
-<source src="/figure/2021-06-05-mlb-openpose/buehler_side_output.mp4">
 </video>  
 
 <br>
