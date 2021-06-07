@@ -47,7 +47,7 @@ To start, we’ll look at a still image of the OpenPose algorithm applied to a s
 
 By feeding in a video through the OpenPose algorithm, we get an output like the video below.  Here we see the OpenPose algorithm in action throughout the duration of a full pitch for Walker Buehler. During this one center field view clip, 101 snapshots were taken by the algorithm.  Another way to think about this is that the video is turned into a sequence of 101 still images.  This number will differ depending on the length of a particular video.  
 
-![Walker Buehler](https://raw.githubusercontent.com/danmalter/danmalter.github.io/master/figure/2021-06-07-mlb-openpose/buehler_cf_output.gif)
+![Walker B](https://raw.githubusercontent.com/danmalter/danmalter.github.io/master/figure/2021-06-07-mlb-openpose/buehler_cf_output.gif)
 
 
 
