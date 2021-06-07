@@ -75,6 +75,8 @@ It is important to note here that the distance of the plot is measured in pixels
 
 <br>
 
+### Future Implementation 
+
 There are lots of opportunities for further research still to be done in this area, but the difficulty is having the appropriate input data.  Some options would be for MLB to release video clips of this type for research purposes or to implement this data into MLB’s open-source data as it’s own standalone data source.  Another option would be to work with teams or individual players to collect video footage during offseason training.  In regards for use cases of this data, here are a few ideas.
 
 Player Scouting:
