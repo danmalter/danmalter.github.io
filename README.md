@@ -1,4 +1,4 @@
-dim302.github.io
+danmalter.github.io
 ================
 
 Personal GitHub Website
