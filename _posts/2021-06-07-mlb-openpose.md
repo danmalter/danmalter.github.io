@@ -80,12 +80,16 @@ Player Scouting:
 
 
 Tracking Mechanics:
-  - Rather than a player or coach going through video one by one, OpenPose technology can be used to better align hundreds or thousands of videos all at once. If a pitcher is unknowingly tweaking their mechanics, data from OpenPose can be overlayed to determine how much of a change is occurring and where specifically the change occurs.
+  - Rather than a player or coach going through video one by one, OpenPose technology can be used to better align hundreds or thousands of videos all at once. If a pitcher is unknowingly changing their mechanics, data from OpenPose can be mapped out with a time dimension, similar to the charts used for Buehler, to determine how much of a change is occurring and which body part is causing mechanics to differ.
 
 
 Injury Prevention:
-  - By using player movement tracking data, potential models like outlier detection algorithms can be used to detect if a pitcher’s mechanics are differing too much from the norm. In this case, some type of alert system can be programmed to allow a pitcher to know that their mechanics have changed and hopefully would help to prevent a future injury. This type of data can also be used to measure a given pitcher’s mechanics to those that have previously suffered from pitching related injuries.
+  - By using this type of pitcher or batter tracking data, models like outlier detection algorithms can be used to detect if a pitcher’s mechanics are differing too much from the norm. If an outlier is detected, an alert system can be programmed to provide information to the pitcher that a significant change in their mechanics was detected and this hopefully would help to prevent a future injury. 
+  
+- This type of data can also be used to measure a given pitcher’s mechanics to those that have
+previously suffered from pitching related injuries. For example, let’s say that Pitcher A suffered from Tommy John surgery. At the start of the season, Pitcher A and Pitcher B start out with a 60% similarity in pitching mechanics. However, by the end of the season, Pitcher B’s mechanics are off and now the similarity between the two pitchers is at 90%. Perhaps this would be a red flag for Pitcher B to investigate further.
 
+Whether it be pitchers like Trevor Bauer filming their practice sessions in the off-season, batters trying to gain an advantage, or simply just trying to prevent injuries, there are lots of use cases for this type of data.  Time will tell if MLB provides this data in more readily available formats, but there is no doubt that teams can already start utilizing this type of data if they aren’t already.
 
 Example code to run the above examples can be seen [here](https://github.com/malteranalytics/malteranalytics.github.io/blob/master/research/OpenPose.ipynb){:target="_blank"}.
 
