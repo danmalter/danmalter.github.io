@@ -91,7 +91,8 @@ previously suffered from pitching related injuries. For example, let’s say tha
 
 Whether it be pitchers like Trevor Bauer filming their practice sessions in the off-season, batters trying to gain an advantage, or simply just trying to prevent injuries, there are lots of use cases for this type of data.  Time will tell if MLB provides this data in more readily available formats, but there is no doubt that teams can already start utilizing this type of data if they aren’t already.
 
-Example code can be seen [here](https://github.com/malteranalytics/malteranalytics.github.io/blob/master/research/OpenPose.ipynb){:target="_blank"}.
+Example code to run the OpenPose algorithm be seen [here](https://github.com/malteranalytics/malteranalytics.github.io/blob/master/research/OpenPose.ipynb){:target="_blank"}. This example code excludes data cleaning, preprocessing and analyzing of data.
+
 
 
 
