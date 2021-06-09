@@ -26,11 +26,11 @@ An example of the final algorithm in action is shown below.
 
 Data for this project was captured by collecting various video clips of a given player from both a side and center field point of view.  All video and images used in this analysis are solely for a research purpose and are not being used for any team specifically.  However, a team can utilize this method of analysis by having a still camera directed at a pitcher throughout a game or during a bullpen/batting practice session.  For the most part, the infrastructure is already in place, so it comes down to a matter of teams collecting and utilizing this type of data.  For simplicity of this analysis, a few different pitches/swings were collected for a small sample of players, but the ideal situation would be to have hundreds of pitches or swings to gain better insights from the data.
 
-OpenPose captures data for 25 keypoints of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and videos.  A mapping of the keypoints to human body part can be seen below.  For each image fed through the algorithm, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints (body parts).  If the algorithm is applied to a video, then the video is essentially broken up into many separate images.
+OpenPose captures data for 25 keypoints of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and videos.  A mapping of the keypoints to human body part can be seen in Image 1.  For each image fed through the algorithm, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints (body parts).  If the algorithm is applied to a video, then the video is essentially broken up into many separate images.
 
 | ![OpenPose Keyoints](/figure/2021-06-08-mlb-openpose/openpose_keypoints.png) |
 |:--:| 
-| *OpenPose keypoints* |
+| *Image 1: OpenPose keypoints* |
   
 <br>
   
@@ -41,7 +41,7 @@ To start, we’ll look at a still image of the OpenPose algorithm applied to a s
 
 | ![Walker Buehler Image](/figure/2021-06-08-mlb-openpose/buehler1.png) |
 |:--:| 
-| *OpenPose applied to a still image of Walker Buehler* | 
+| *Image 2: OpenPose applied to a still image of Walker Buehler* | 
   
 <br>
 
@@ -54,7 +54,7 @@ Using the output data from each of the 101 center field view images, a plot for 
 
 | ![Walker Buehler Image](/figure/2021-06-08-mlb-openpose/buehler2.png) |
 |:--:| 
-| *Walker Buehler's right shoulder mapped out over the duration of a single pitch* |
+| *Image 3: Walker Buehler's right shoulder mapped out over the duration of a single pitch* |
 
 <br>
 
@@ -67,7 +67,7 @@ It is important to note here that the distance of the plot is measured in pixels
 
 | ![Walker Buehler Image](/figure/2021-06-08-mlb-openpose/buehler5.png) |
 |:--:| 
-| *Walker Buehler's right shoulder mapped out over the duration for five distinct pitches* |
+| *Image 4: Walker Buehler's right shoulder mapped out over the duration for five distinct pitches* |
 
 <br>
 
