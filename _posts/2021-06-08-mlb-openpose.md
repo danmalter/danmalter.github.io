@@ -86,8 +86,7 @@ Tracking Mechanics:
 Injury Prevention:
   - By using this type of pitcher or batter tracking data, models like outlier detection algorithms can be used to detect if a pitcher’s mechanics are differing too much from the norm. If an outlier is detected, an alert system can be programmed to provide information to the pitcher that a significant change in their mechanics was detected and this hopefully would help to prevent a future injury. 
   
-- This type of data can also be used to measure a given pitcher’s mechanics to those that have
-previously suffered from pitching related injuries. For example, let’s say that Pitcher A suffered from Tommy John surgery. At the start of the season, Pitcher A and Pitcher B start out with a 60% similarity in pitching mechanics. However, by the end of the season, Pitcher B’s mechanics are off and now the similarity between the two pitchers is at 90%. Perhaps this would be a red flag for Pitcher B to investigate further.
+- This type of data can also be used to measure a given pitcher’s mechanics to those that have previously suffered from pitching related injuries. For example, let’s say that Pitcher A suffered from Tommy John surgery. At the start of the season, Pitcher A and Pitcher B start out with a 60% similarity in pitching mechanics. However, by the end of the season, Pitcher B’s mechanics are off and now the similarity between the two pitchers is at 90%. Perhaps this would be a red flag for Pitcher B to investigate further so that he too does not ultimately suffer from Tommy John.
 
 Whether it be pitchers like Trevor Bauer filming their practice sessions in the off-season, batters trying to gain an advantage, or simply just trying to prevent injuries, there are lots of use cases for this type of data.  Time will tell if MLB provides this data in more readily available formats, but there is no doubt that teams can already start utilizing this type of data if they aren’t already.
 
