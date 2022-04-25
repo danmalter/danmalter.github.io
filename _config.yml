@@ -1,6 +1,0 @@
-markdown: kramdown
-kramdown:
-  extensions: ["tables"]
-exclude: ["*.Rmd"]
-name: Danny Malter
-description: 
