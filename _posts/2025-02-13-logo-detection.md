@@ -1,12 +1,9 @@
 ---
+title: "Brand Logo Detection in Sports"
 layout: post
-title:  "Brand Logo Detection in Sports"
-author: danny
-categories: [NHL]
-image: "https://malteranalytics.github.io/assets/images/2025-02-14-Logo_Detection/logo-screenshot.png"
-tags: [NHL]
-featured: false
+comments: true
 ---
+
 
 #### Tracking Logo Exposure Time in Sports Events for Negotiations and Marketing Deals
 
