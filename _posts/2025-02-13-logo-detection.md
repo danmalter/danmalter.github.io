@@ -4,6 +4,7 @@ layout: post
 comments: true
 ---
 
+{% raw %}
 
 #### Tracking Logo Exposure Time in Sports Events for Negotiations and Marketing Deals
 
@@ -88,3 +89,16 @@ Using Python, we used a video clip from the first period of a game between the C
 <br>
 
 We all know that ad placement matters, but it was interesting to find how much difference in airtime two advertisements can have that are next to each. Over the course of a whole game, this can lead to several extra minutes of exposure. Tracking the time a logo is displayed during sports events provides both teams and sponsors with quantifiable metrics to measure the effectiveness of their deals. By leveraging this data, teams can offer more accurate sponsorship valuations, and companies can make more informed decisions about where and how to invest their marketing dollars. Knowing the duration of logo exposure gives both parties a powerful tool for negotiation and strategy.
+
+{% endraw %}
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57468410-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
