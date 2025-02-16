@@ -1,12 +1,12 @@
 ---
-title: "Brand Logo Detection in Sports"
+title: "Corporate Logo Detection in Sports"
 layout: post
 comments: true
 ---
 
 {% raw %}
 
-#### Tracking Logo Exposure Time in Sports Events for Negotiations and Marketing Deals
+#### Tracking Corporate Logo Exposure on Televised Sports Broadcasts
 
 
 In the world of sports, sponsorship and advertising are integral to a team or league’s revenue. Companies invest millions of dollars to place their logos in key spots for TV viewers, for example along the boards of the ice during an NHL game or rotating sideboards of MLB, NBA and Premier League soccer games. But how is the return on investment of these sponsorships measured? It’s well known how TV viewership varies throughout the broadcasts of each sport and game time slot, but quantifying the exact exposure - and thus value - of an advertisement remains a challenge. Using TV viewership data along with an AI logo detection model, we can solve this challenge with a new business metric in sports advertising; Total Viewership per Second of Exposure. For the purposes of this demonstration, we are using the generic [Google AI Logo Detection]( https://cloud.google.com/vision/docs/detecting-logos){:target="_blank"} model but this or similar models can be retrained to learn better about identifying certain logos. 
